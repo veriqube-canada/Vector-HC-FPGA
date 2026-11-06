@@ -1,0 +1,58 @@
+[ START MERGED ]
+clk_enable_251 reset
+spi1/clk_enable_265 spi1/n1544
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+spi1/add_928_1/S0
+spi1/add_928_1/CI
+spi1/add_928_7/S1
+spi1/add_928_7/CO
+reset_counter_1044_add_4_11/S1
+reset_counter_1044_add_4_11/CO
+usec_interrupt_counter_1049_add_4_1/S0
+usec_interrupt_counter_1049_add_4_1/CI
+usec_interrupt_counter_1049_add_4_9/S1
+usec_interrupt_counter_1049_add_4_9/CO
+reset_counter_usec_1045_add_4_1/S0
+reset_counter_usec_1045_add_4_1/CI
+reset_counter_usec_1045_add_4_9/S1
+reset_counter_usec_1045_add_4_9/CO
+interrupt_counter_1047_add_4_17/S1
+interrupt_counter_1047_add_4_17/CO
+reset_counter_1044_add_4_1/S0
+reset_counter_1044_add_4_1/CI
+interrupt_counter_1047_add_4_1/S0
+interrupt_counter_1047_add_4_1/CI
+endat1/add_934_1/S0
+endat1/add_934_1/CI
+endat1/clk_counter_1050_add_4_1/S0
+endat1/clk_counter_1050_add_4_1/CI
+endat1/add_934_7/S1
+endat1/add_934_7/CO
+endat1/clk_counter_1050_add_4_9/S1
+endat1/clk_counter_1050_add_4_9/CO
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.13.0.56.2 -- WARNING: Map write only section -- Mon Aug 12 15:12:06 2024
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=ENABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "led6" SITE "A12" ;
+LOCATE COMP "endat_dir" SITE "C12" ;
+LOCATE COMP "endat_tx" SITE "B12" ;
+LOCATE COMP "endat_clk" SITE "A15" ;
+LOCATE COMP "endat_rx" SITE "B14" ;
+LOCATE COMP "spi_scs" SITE "A11" ;
+LOCATE COMP "spi_mosi" SITE "C11" ;
+LOCATE COMP "spi_sck" SITE "F10" ;
+LOCATE COMP "interrupt" SITE "E11" ;
+LOCATE COMP "clki" SITE "B13" ;
+LOCATE COMP "spare6" SITE "D10" ;
+LOCATE COMP "led7" SITE "B11" ;
+LOCATE COMP "spi_miso" SITE "D11" ;
+FREQUENCY NET "clk" 100.000000 MHz ;
+FREQUENCY NET "clki_c" 25.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

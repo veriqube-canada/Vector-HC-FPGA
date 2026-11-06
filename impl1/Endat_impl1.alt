@@ -1,0 +1,25 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Mon Aug 12 15:12:24 2024 *
+NOTE DESIGN NAME: EncoderTop *
+NOTE DEVICE NAME: LCMXO3L-1300C-5CABGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS led6 : A12 : out *
+NOTE PINS endat_dir : C12 : out *
+NOTE PINS endat_tx : B12 : out *
+NOTE PINS endat_clk : A15 : out *
+NOTE PINS endat_rx : B14 : in *
+NOTE PINS spi_scs : A11 : in *
+NOTE PINS spi_mosi : C11 : in *
+NOTE PINS spi_sck : F10 : in *
+NOTE PINS interrupt : E11 : in *
+NOTE PINS clki : B13 : in *
+NOTE PINS spare6 : D10 : out *
+NOTE PINS led7 : B11 : out *
+NOTE PINS spi_miso : D11 : out *
+NOTE PINS SYSCONFIG_PIN_MCLK : P6 : inout *
+NOTE PINS SYSCONFIG_PIN_SO : T6 : inout *
+NOTE PINS SYSCONFIG_PIN_SN : R12 : in *
+NOTE PINS SYSCONFIG_PIN_SI : P13 : inout *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

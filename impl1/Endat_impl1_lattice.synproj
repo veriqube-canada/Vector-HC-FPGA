@@ -1,0 +1,45 @@
+-a "MachXO3L"
+-d LCMXO3L-1300C
+-t CABGA256
+-s 5
+-frequency 200
+-optimization_goal Balanced
+-bram_utilization 100
+-ramstyle Auto
+-romstyle auto
+-dsp_utilization 100
+-use_dsp 1
+-use_carry_chain 1
+-carry_chain_length 0
+-force_gsr Auto
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+-mux_style Auto
+-max_fanout 1000
+-fsm_encoding_style Auto
+-twr_paths 3
+-fix_gated_clocks 1
+-loop_limit 1950
+
+
+
+
+-use_io_insertion 1
+-resolve_mixed_drivers 0
+-use_io_reg auto
+-vh2008
+
+-lpf 1
+-lib "work" -vhd "D:/Git/JOJO_Endat/EncoderTop.vhd"
+"D:/Git/JOJO_Endat/endat.vhd"
+"D:/Git/JOJO_Endat/spi_slave.vhd"
+"D:/Git/JOJO_Endat/pll.vhd"
+"D:/Git/JOJO_Endat/pll.vhd"
+-top EncoderTop
+
+
+-p "D:/lscc/diamond/3.13/ispfpga/xo3c00a/data" "D:/Git/JOJO_Endat/impl1" "D:/Git/JOJO_Endat"
+
+-ngd "Endat_impl1.ngd"
+

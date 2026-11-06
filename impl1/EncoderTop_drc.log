@@ -1,0 +1,26 @@
+Results of NGD DRC are available in EncoderTop_drc.log.
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'spare1' has no load.
+WARNING - synthesis: input pad net 'spare1' has no legal load.
+WARNING - synthesis: logical net 'spare2' has no load.
+WARNING - synthesis: input pad net 'spare2' has no legal load.
+WARNING - synthesis: logical net 'spare3' has no load.
+WARNING - synthesis: input pad net 'spare3' has no legal load.
+WARNING - synthesis: logical net 'spare4' has no load.
+WARNING - synthesis: input pad net 'spare4' has no legal load.
+WARNING - synthesis: logical net 'spare5' has no load.
+WARNING - synthesis: input pad net 'spare5' has no legal load.
+WARNING - synthesis: DRC complete with 10 warnings.
+
+Design Results:
+    783 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file Endat_impl1.ngd.

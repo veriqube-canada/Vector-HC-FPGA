@@ -1,0 +1,38 @@
+---------------------------------------------------
+Report for cell EncoderTop
+   Instance path: EncoderTop
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     244.00        100.0
+                                  LUT4	     335.00        100.0
+                                 IOBUF	         13        100.0
+                                PFUREG	        367        100.0
+                                RIPPLE	         38        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             spi_slave	          1        35.8
+                                   pll	          1         0.0
+                                 endat	          1        20.5
+---------------------------------------------------
+Report for cell endat
+   Instance path: EncoderTop/endat1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      50.00        20.5
+                                  LUT4	      93.00        27.8
+                                PFUREG	         54        14.7
+                                RIPPLE	          9        23.7
+---------------------------------------------------
+Report for cell spi_slave
+   Instance path: EncoderTop/spi1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      87.25        35.8
+                                  LUT4	      98.00        29.3
+                                PFUREG	        138        37.6
+                                RIPPLE	          4        10.5
+---------------------------------------------------
+Report for cell pll
+   Instance path: EncoderTop/pll1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
