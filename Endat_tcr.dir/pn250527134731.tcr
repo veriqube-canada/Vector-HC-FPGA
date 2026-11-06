@@ -1,5 +1,0 @@
-#Start recording tcl command: 5/27/2025 12:30:29
-#Project Location: D:/Git/JOJO_Endat; Project name: Endat
-prj_project open "D:/Git/JOJO_Endat/Endat.ldf"
-prj_project close
-#Stop recording: 5/27/2025 13:47:31

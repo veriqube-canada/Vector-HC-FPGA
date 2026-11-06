@@ -16,8 +16,8 @@ Entity EncoderTop is
 				spi_sck, spi_mosi, spi_scs: in std_logic;
 				spi_miso: out std_logic;
 				
-				endat_clk, endat_tx, endat_dir: out std_logic;
-				endat_rx: in std_logic;
+				adc_sclk, adc_cs: out std_logic;
+				adc_sdo: in std_logic;
 				
 				led6, led7: inout std_logic;
 				spare1, spare2, spare3, spare4, spare5, spare6: inout std_logic
@@ -35,30 +35,25 @@ architecture beh of EncoderTop is
 	signal reset, clk: std_logic := '0';
 	signal reset_counter_usec: integer range 0 to 255 := 0;
 	signal reset_counter: integer range 0 to 1023 := 0;
-	signal endat_position, endat_pos_shift: std_logic_vector(31 downto 0);
+	signal adc_data: std_logic_vector(31 downto 0);
 	signal mcu_settings1: std_logic_vector(31 downto 0) := x"11111111";
 	signal interrupt_buf: std_logic_vector(1 downto 0);
 	
 	
 	signal memory_in, memory_out, memory_out_buf, dummy_register: std_logic_vector(31 downto 0);
-	signal address_memory: std_logic_vector(7 downto 0);
+	signal address_memory: std_logic_vector(15 downto 0);
 	signal read_memory, write_memory: std_logic;
-	signal testpoint: std_logic;
 	
 	signal usec_interrupt_counter: integer range 0 to 255;
 	signal interrupt_counter: integer range 0 to 2**16 - 1;
 
-	component endat is
-		port( 	clk, reset  : in  std_logic;
-				
+	component adc_read is
+		port(	clk, reset: in std_logic;
 				global_sync: in std_logic;
-				endat_position: out std_logic_vector(31 downto 0);
-				
-				endat_clk, endat_tx, endat_dir: out std_logic;
-				testpoint : out std_logic;
-				endat_rx: in std_logic
+				adc_sclk, adc_cs: out std_logic;
+				adc_sdo: in std_logic;
+				adc_data: out std_logic_vector(31 downto 0)
 		);
-
 	end component;
 	
 	component spi_slave is
@@ -70,7 +65,7 @@ architecture beh of EncoderTop is
 				
 				read_memory: out std_logic;
 				write_memory: out std_logic;
-				address_memory: out std_logic_vector(7 downto 0);
+				address_memory: out std_logic_vector(15 downto 0);
 				
 				spi_sck, spi_mosi, spi_scs: in std_logic;
 				spi_miso: out std_logic
@@ -85,8 +80,6 @@ architecture beh of EncoderTop is
 
 
 begin 
-
-	spare4 <= testpoint;
 
 	pll1: pll port map(
 		clki	=> clki,
@@ -112,22 +105,18 @@ begin
 	
 	);
 
-	endat1: endat port map(
-		clk 			=> clk,
-		reset 			=> reset,
+	adc1: adc_read port map(
+		clk				=> clk,
+		reset			=> reset,
 		global_sync		=> global_sync,
-		
-		endat_position	=> endat_position,
-		
-		endat_tx		=> endat_tx,
-		endat_rx		=> endat_rx,
-		endat_dir		=> endat_dir,
-		endat_clk		=> endat_clk,
-		testpoint		=> testpoint
+		adc_sclk		=> adc_sclk,
+		adc_cs			=> adc_cs,
+		adc_sdo			=> adc_sdo,
+		adc_data		=> adc_data
 	);
 
 --	led6 <= interrupt;
-	led7 <= endat_rx;
+	led7 <= adc_sdo;
 	spare6 <= spi_scs;
 
 	process (reset,clk)
@@ -178,7 +167,7 @@ begin
 					global_sync <= '0';
 				end if;
 				
-				if usec_interrupt_counter /= 24 and interrupt_buf /= "10" then
+				if usec_interrupt_counter /= 99 and interrupt_buf /= "10" then
 					usec_interrupt_counter <= usec_interrupt_counter + 1;
 					
 					global_sync <= '0';
@@ -202,23 +191,19 @@ begin
 					led6 <= not led6;
 				end if;
 				
-				if write_memory = '1' and address_memory = x"01" then dummy_register 	<= memory_in; end if;
-				if write_memory = '1' and address_memory = x"02" then mcu_settings1 	<= memory_in; end if;
+				if write_memory = '1' and address_memory = x"0001" then dummy_register 	<= memory_in; end if;
+				if write_memory = '1' and address_memory = x"0002" then mcu_settings1 	<= memory_in; end if;
 			end if;
 			
 		end process;
 
---	endat_pos_shift(31 downto 9) <= endat_position(22 downto 0);
---	endat_pos_shift(8 downto 0) <= (others => '0');
 
 	memory_out_buf <=
-					dummy_register						when (read_memory = '1' and address_memory = x"00") else
-					mcu_settings1 						when (read_memory = '1' and address_memory = x"01") else
-					version								when (read_memory = '1' and address_memory = x"02") else
+					dummy_register						when (read_memory = '1' and address_memory = x"0000") else
+					mcu_settings1 						when (read_memory = '1' and address_memory = x"0001") else
+					version								when (read_memory = '1' and address_memory = x"0002") else
 					
-					endat_position(22 downto 0) & "000000000"						when (read_memory = '1' and address_memory = x"03") else
---					endat_pos_shift						when (read_memory = '1' and address_memory = x"03") else
-					endat_position						when (read_memory = '1' and address_memory = x"04") else
+					adc_data when (read_memory = '1' and address_memory = x"0003") else
 					x"01234567"							when (read_memory = '1');
 	
 

@@ -1,332 +1,0 @@
-<HTML>
-<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
-synthesis:  version Diamond (64-bit) 3.13.0.56.2
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Aug 12 15:12:01 2024
-
-
-Command Line:  synthesis -f Endat_impl1_lattice.synproj -gui -msgset D:/Git/JOJO_Endat/promote.xml 
-
-Synthesis options:
-The -a option is MachXO3L.
-The -s option is 5.
-The -t option is CABGA256.
-The -d option is LCMXO3L-1300C.
-Using package CABGA256.
-Using performance grade 5.
-                                                          
-
-##########################################################
-
-### Lattice Family : MachXO3L
-
-### Device  : LCMXO3L-1300C
-
-### Package : CABGA256
-
-### Speed   : 5
-
-##########################################################
-
-                                                          
-
-INFO - synthesis: User-Selected Strategy Settings
-Optimization goal = Balanced
-Top-level module name = EncoderTop.
-Target frequency = 200.000000 MHz.
-Maximum fanout = 1000.
-Timing path count = 3
-BRAM utilization = 100.000000 %
-DSP usage = true
-DSP utilization = 100.000000 %
-fsm_encoding_style = auto
-resolve_mixed_drivers = 0
-fix_gated_clocks = 1
-
-Mux style = Auto
-Use Carry Chain = true
-carry_chain_length = 0
-Loop Limit = 1950.
-Use IO Insertion = TRUE
-Use IO Reg = AUTO
-
-Resource Sharing = TRUE
-Propagate Constants = TRUE
-Remove Duplicate Registers = TRUE
-force_gsr = auto
-ROM style = auto
-RAM style = auto
-The -comp option is FALSE.
-The -syn option is FALSE.
--p D:/lscc/diamond/3.13/ispfpga/xo3c00a/data (searchpath added)
--p D:/Git/JOJO_Endat/impl1 (searchpath added)
--p D:/Git/JOJO_Endat (searchpath added)
-VHDL library = work
-VHDL design file = D:/Git/JOJO_Endat/EncoderTop.vhd
-VHDL design file = D:/Git/JOJO_Endat/endat.vhd
-VHDL design file = D:/Git/JOJO_Endat/spi_slave.vhd
-VHDL design file = D:/Git/JOJO_Endat/pll.vhd
-VHDL design file = D:/Git/JOJO_Endat/pll.vhd
-NGD file = Endat_impl1.ngd
--sdc option: SDC file input not used.
--lpf option: Output file option is ON.
--vh2008
-
-Hardtimer checking is enabled (default). The -dt option is not used.
-The -r option is OFF. [ Remove LOC Properties is OFF. ]
-Technology check ok...
-
-Analyzing Verilog file D:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v. VERI-1482
-Compile design.
-Compile Design Begin
-INFO - synthesis: The default VHDL library search path is now "D:/Git/JOJO_Endat/impl1". VHDL-1504
-Analyzing VHDL file d:/git/jojo_endat/encodertop.vhd. VHDL-1481
-INFO - synthesis: d:/git/jojo_endat/encodertop.vhd(12): analyzing entity encodertop. VHDL-1012
-INFO - synthesis: d:/git/jojo_endat/encodertop.vhd(29): analyzing architecture beh. VHDL-1010
-Analyzing VHDL file d:/git/jojo_endat/endat.vhd. VHDL-1481
-INFO - synthesis: d:/git/jojo_endat/endat.vhd(11): analyzing entity endat. VHDL-1012
-INFO - synthesis: d:/git/jojo_endat/endat.vhd(24): analyzing architecture beh. VHDL-1010
-WARNING - synthesis: d:/git/jojo_endat/endat.vhd(185): /* in comment. VHDL-1586
-WARNING - synthesis: d:/git/jojo_endat/endat.vhd(188): /* in comment. VHDL-1586
-WARNING - synthesis: d:/git/jojo_endat/endat.vhd(192): /* in comment. VHDL-1586
-Analyzing VHDL file d:/git/jojo_endat/spi_slave.vhd. VHDL-1481
-INFO - synthesis: d:/git/jojo_endat/spi_slave.vhd(12): analyzing entity spi_slave. VHDL-1012
-INFO - synthesis: d:/git/jojo_endat/spi_slave.vhd(27): analyzing architecture beh. VHDL-1010
-Analyzing VHDL file d:/git/jojo_endat/pll.vhd. VHDL-1481
-INFO - synthesis: d:/git/jojo_endat/pll.vhd(14): analyzing entity pll. VHDL-1012
-INFO - synthesis: d:/git/jojo_endat/pll.vhd(20): analyzing architecture structure. VHDL-1010
-Analyzing VHDL file d:/git/jojo_endat/pll.vhd. VHDL-1481
-INFO - synthesis: d:/git/jojo_endat/pll.vhd(14): analyzing entity pll. VHDL-1012
-INFO - synthesis: d:/git/jojo_endat/pll.vhd(20): analyzing architecture structure. VHDL-1010
-WARNING - synthesis: d:/git/jojo_endat/endat.vhd(60): case statement does not cover all choices. 'others' clause is needed. VHDL-1037
-unit EncoderTop is not yet analyzed. VHDL-1485
-d:/git/jojo_endat/encodertop.vhd(12): executing EncoderTop(beh)
-
-WARNING - synthesis: d:/git/jojo_endat/encodertop.vhd(32): using initial value "00100010001000100010001000100010" for version since it is never assigned. VHDL-1303
-WARNING - synthesis: d:/git/jojo_endat/encodertop.vhd(27): replacing existing netlist EncoderTop(beh). VHDL-1205
-Top module name (VHDL): EncoderTop
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
-Loading device for application map from file 'xo3c2100.nph' in environment: D:/lscc/diamond/3.13/ispfpga.
-Package Status:                     Final          Version 1.19.
-Top-level module name = EncoderTop.
-WARNING - synthesis: Initial value found on net clk will be ignored due to unrecognized driver type
-######## Converting I/O port led6 to output.
-######## Converting I/O port led7 to output.
-######## Converting I/O port spare1 to input.
-######## Converting I/O port spare2 to input.
-######## Converting I/O port spare3 to input.
-######## Converting I/O port spare4 to input.
-######## Converting I/O port spare5 to input.
-######## Converting I/O port spare6 to output.
-INFO - synthesis: Extracted state machine for register '\spi1/spi_state' with one-hot encoding
-original encoding -> new encoding (one-hot encoding)
-
- 00 -> 0001
-
- 01 -> 0010
-
- 10 -> 0100
-
- 11 -> 1000
-
-INFO - synthesis: Extracted state machine for register '\endat1/endat_state' with one-hot encoding
-original encoding -> new encoding (one-hot encoding)
-
- 000 -> 0001
-
- 001 -> 0010
-
- 010 -> 0100
-
- 011 -> 1000
-
-
-
-
-WARNING - synthesis: Bit 7 of Register \spi1/address_memory is stuck at Zero
-WARNING - synthesis: Bit 7 of Register \endat1/modebits_buffer is stuck at Zero
-WARNING - synthesis: Bit 6 of Register \endat1/modebits_buffer is stuck at Zero
-WARNING - synthesis: Bit 5 of Register \endat1/modebits_buffer is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \endat1/modebits_buffer is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \endat1/modebits_buffer is stuck at Zero
-WARNING - synthesis: I/O Port spare1 's net has no driver and is unused.
-WARNING - synthesis: I/O Port spare2 's net has no driver and is unused.
-WARNING - synthesis: I/O Port spare3 's net has no driver and is unused.
-WARNING - synthesis: I/O Port spare4 's net has no driver and is unused.
-WARNING - synthesis: I/O Port spare5 's net has no driver and is unused.
-WARNING - synthesis: d:/git/jojo_endat/endat.vhd(196): Register \endat1/modebits_buffer__i1 is stuck at One. VDB-5014
-GSR instance connected to net n2135.
-WARNING - synthesis: Initial value found on instance \endat1/modebits_buffer__i3 will be ignored.
-Applying 200.000000 MHz constraint to all clocks
-
-WARNING - synthesis: No user .sdc file.
-Results of NGD DRC are available in EncoderTop_drc.log.
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'spare1' has no load.
-WARNING - synthesis: input pad net 'spare1' has no legal load.
-WARNING - synthesis: logical net 'spare2' has no load.
-WARNING - synthesis: input pad net 'spare2' has no legal load.
-WARNING - synthesis: logical net 'spare3' has no load.
-WARNING - synthesis: input pad net 'spare3' has no legal load.
-WARNING - synthesis: logical net 'spare4' has no load.
-WARNING - synthesis: input pad net 'spare4' has no legal load.
-WARNING - synthesis: logical net 'spare5' has no load.
-WARNING - synthesis: input pad net 'spare5' has no legal load.
-WARNING - synthesis: DRC complete with 10 warnings.
-All blocks are expanded and NGD expansion is successful.
-Writing NGD file Endat_impl1.ngd.
-
-################### Begin Area Report (EncoderTop)######################
-Number of register bits => 367 of 1901 (19 % )
-CCU2D => 38
-EHXPLLJ => 1
-FD1P3AX => 227
-FD1P3AY => 20
-FD1P3IX => 36
-FD1S1A => 32
-FD1S3AX => 40
-FD1S3AY => 2
-FD1S3IX => 9
-FD1S3JX => 1
-GSR => 1
-IB => 6
-L6MUX21 => 7
-LUT4 => 336
-OB => 7
-PFUMX => 17
-################### End Area Report ##################
-
-################### Begin BlackBox Report ######################
-TSALL => 1
-################### End BlackBox Report ##################
-
-################### Begin Clock Report ######################
-Clock Nets
-Number of Clocks: 3
-  Net : pll1/clk, loads : 336
-  Net : spi1/read_memory, loads : 38
-  Net : clki_c, loads : 1
-Clock Enable Nets
-Number of Clock Enables: 88
-Top 10 highest fanout Clock Enables:
-  Net : clk_enable_247, loads : 32
-  Net : spi1/clk_enable_221, loads : 32
-  Net : clk_enable_39, loads : 32
-  Net : reset_counter_usec_7__N_292, loads : 20
-  Net : clk_enable_131, loads : 17
-  Net : clk_enable_248, loads : 8
-  Net : endat1/clk_enable_154, loads : 6
-  Net : spi1/clk_enable_265, loads : 6
-  Net : clk_enable_251, loads : 4
-  Net : endat1/clk_enable_184, loads : 2
-Highest fanout non-clock nets
-Top 10 highest fanout non-clock nets:
-  Net : clk_enable_235, loads : 48
-  Net : endat1/bit_counter_0, loads : 44
-  Net : spi1/bit_counter_2, loads : 43
-  Net : endat1/bit_counter_1, loads : 42
-  Net : spi1/address_memory_2, loads : 40
-  Net : spi1/spi_mosi_buf_1, loads : 40
-  Net : n5278, loads : 39
-  Net : led7_c_c, loads : 34
-  Net : memory_out_buf_31__N_64, loads : 32
-  Net : clk_enable_39, loads : 32
-################### End Clock Report ##################
-
-<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
---------------
---------------------------------------------------------------------------------
-Constraint                              |   Constraint|       Actual|Levels
---------------------------------------------------------------------------------
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets read_memory]             |            -|            -|     0  
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk]                     |  200.000 MHz|   91.954 MHz|    10 *
-                                        |             |             |
---------------------------------------------------------------------------------
-
-
-1 constraints not met.
-
-
-Peak Memory Usage: 107.379  MB
-
---------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.813  secs
---------------------------------------------------------------
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

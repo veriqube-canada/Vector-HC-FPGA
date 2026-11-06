@@ -1,13 +1,9 @@
 BLOCK RESETPATHS ;
 BLOCK ASYNCPATHS ;
 LOCATE COMP "clki" SITE "B13" ;
-LOCATE COMP "endat_rx" SITE "B14" ;
 LOCATE COMP "interrupt" SITE "E11" ;
 LOCATE COMP "spi_mosi" SITE "C11" ;
 LOCATE COMP "spi_scs" SITE "A11" ;
-LOCATE COMP "endat_clk" SITE "A15" ;
-LOCATE COMP "endat_dir" SITE "C12" ;
-LOCATE COMP "endat_tx" SITE "B12" ;
 LOCATE COMP "led6" SITE "A12" ;
 LOCATE COMP "led7" SITE "B11" ;
 LOCATE COMP "spare6" SITE "D10" ;
