@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "VectorHC_impl1.log"
+-o "VectorHC_impl1.csv"
+-pr "VectorHC_impl1.prf"

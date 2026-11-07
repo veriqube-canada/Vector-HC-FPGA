@@ -1,0 +1,48 @@
+-a "MachXO3L"
+-d LCMXO3L-9400C
+-t CABGA256
+-s 5
+-frequency 200
+-optimization_goal Balanced
+-bram_utilization 100
+-ramstyle Auto
+-romstyle auto
+-dsp_utilization 100
+-use_dsp 1
+-use_carry_chain 1
+-carry_chain_length 0
+-force_gsr Auto
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+-mux_style Auto
+-max_fanout 1000
+-fsm_encoding_style Auto
+-twr_paths 3
+-fix_gated_clocks 1
+-loop_limit 1950
+
+
+
+
+-use_io_insertion 1
+-resolve_mixed_drivers 0
+-use_io_reg auto
+-vh2008
+
+-lpf 1
+-lib "work" -vhd "D:/Git/Vector HC FPGA/adc_read.vhd"
+"D:/Git/Vector HC FPGA/heater_pwm.vhd"
+"D:/Git/Vector HC FPGA/heater.vhd"
+"D:/Git/Vector HC FPGA/cell_top.vhd"
+"D:/Git/Vector HC FPGA/spi_slave.vhd"
+"D:/Git/Vector HC FPGA/board_top.vhd"
+"D:/Git/Vector HC FPGA/pll.vhd"
+"D:/Git/Vector HC FPGA/pll.vhd"
+-top board_top
+
+
+-p "D:/lscc/diamond/3.13/ispfpga/xo3c00a/data" "D:/Git/Vector HC FPGA/impl1" "D:/Git/Vector HC FPGA"
+
+-ngd "VectorHC_impl1.ngd"
+

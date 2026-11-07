@@ -1,0 +1,317 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat Nov 07 14:35:48 2026
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     board_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 10.406ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \spi1/address_memory_i0_i7  (from clk_c +)
+   Destination:    FD1P3IX    D              memory_out_i0_i20  (to clk_c +)
+
+   Delay:                  15.260ns  (30.3% logic, 69.7% route), 12 logic levels.
+
+ Constraint Details:
+
+     15.260ns data_path \spi1/address_memory_i0_i7 to memory_out_i0_i20 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 10.406ns
+
+ Path Details: \spi1/address_memory_i0_i7 to memory_out_i0_i20
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \spi1/address_memory_i0_i7 (from clk_c)
+Route        21   e 1.577                                  address_memory[7]
+LUT4        ---     0.448              A to Z              i21655_2_lut_rep_1473
+Route         7   e 1.255                                  n79912
+LUT4        ---     0.448              C to Z              i2_4_lut_adj_276
+Route         2   e 0.954                                  n64731
+LUT4        ---     0.448              B to Z              i1_2_lut_4_lut_4_lut
+Route         1   e 0.788                                  n4_adj_2498
+LUT4        ---     0.448              C to Z              i1_4_lut_adj_272
+Route         1   e 0.788                                  n12_adj_2510
+LUT4        ---     0.448              A to Z              i1_4_lut_rep_846
+Route        22   e 1.531                                  n79285
+LUT4        ---     0.448              A to Z              i52103_2_lut
+Route        10   e 1.340                                  n73991
+MUXL5       ---     0.212             SD to Z              mux_2989_i21
+Route         1   e 0.788                                  n24263
+LUT4        ---     0.448              A to Z              i5093_3_lut
+Route         1   e 0.788                                  n29221
+LUT4        ---     0.448              C to Z              i5094_3_lut_4_lut
+Route         1   e 0.020                                  n29222
+MUXL5       ---     0.212           BLUT to Z              i5375
+Route         1   e 0.020                                  n29503
+MUXL5       ---     0.212             D0 to Z              i5157
+Route         1   e 0.788                                  n29285
+                  --------
+                   15.260  (30.3% logic, 69.7% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 10.406ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \spi1/address_memory_i0_i7  (from clk_c +)
+   Destination:    FD1P3IX    D              memory_out_i0_i28  (to clk_c +)
+
+   Delay:                  15.260ns  (30.3% logic, 69.7% route), 12 logic levels.
+
+ Constraint Details:
+
+     15.260ns data_path \spi1/address_memory_i0_i7 to memory_out_i0_i28 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 10.406ns
+
+ Path Details: \spi1/address_memory_i0_i7 to memory_out_i0_i28
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \spi1/address_memory_i0_i7 (from clk_c)
+Route        21   e 1.577                                  address_memory[7]
+LUT4        ---     0.448              A to Z              i21655_2_lut_rep_1473
+Route         7   e 1.255                                  n79912
+LUT4        ---     0.448              C to Z              i2_4_lut_adj_276
+Route         2   e 0.954                                  n64731
+LUT4        ---     0.448              B to Z              i1_2_lut_4_lut_4_lut
+Route         1   e 0.788                                  n4_adj_2498
+LUT4        ---     0.448              C to Z              i1_4_lut_adj_272
+Route         1   e 0.788                                  n12_adj_2510
+LUT4        ---     0.448              A to Z              i1_4_lut_rep_846
+Route        22   e 1.531                                  n79285
+LUT4        ---     0.448              A to Z              i52103_2_lut
+Route        10   e 1.340                                  n73991
+MUXL5       ---     0.212             SD to Z              mux_2989_i29
+Route         1   e 0.788                                  n24255
+LUT4        ---     0.448              A to Z              i5109_3_lut
+Route         1   e 0.788                                  n29237
+LUT4        ---     0.448              C to Z              i5110_3_lut_4_lut
+Route         1   e 0.020                                  n29238
+MUXL5       ---     0.212           BLUT to Z              i5391
+Route         1   e 0.020                                  n29519
+MUXL5       ---     0.212             D0 to Z              i5173
+Route         1   e 0.788                                  n29301
+                  --------
+                   15.260  (30.3% logic, 69.7% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 10.406ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \spi1/address_memory_i0_i7  (from clk_c +)
+   Destination:    FD1P3IX    D              memory_out_i0_i27  (to clk_c +)
+
+   Delay:                  15.260ns  (30.3% logic, 69.7% route), 12 logic levels.
+
+ Constraint Details:
+
+     15.260ns data_path \spi1/address_memory_i0_i7 to memory_out_i0_i27 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 10.406ns
+
+ Path Details: \spi1/address_memory_i0_i7 to memory_out_i0_i27
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \spi1/address_memory_i0_i7 (from clk_c)
+Route        21   e 1.577                                  address_memory[7]
+LUT4        ---     0.448              A to Z              i21655_2_lut_rep_1473
+Route         7   e 1.255                                  n79912
+LUT4        ---     0.448              C to Z              i2_4_lut_adj_276
+Route         2   e 0.954                                  n64731
+LUT4        ---     0.448              B to Z              i1_2_lut_4_lut_4_lut
+Route         1   e 0.788                                  n4_adj_2498
+LUT4        ---     0.448              C to Z              i1_4_lut_adj_272
+Route         1   e 0.788                                  n12_adj_2510
+LUT4        ---     0.448              A to Z              i1_4_lut_rep_846
+Route        22   e 1.531                                  n79285
+LUT4        ---     0.448              A to Z              i52103_2_lut
+Route        10   e 1.340                                  n73991
+MUXL5       ---     0.212             SD to Z              mux_2989_i28
+Route         1   e 0.788                                  n24256
+LUT4        ---     0.448              A to Z              i5107_3_lut
+Route         1   e 0.788                                  n29235
+LUT4        ---     0.448              C to Z              i5108_3_lut_4_lut
+Route         1   e 0.020                                  n29236
+MUXL5       ---     0.212           BLUT to Z              i5389
+Route         1   e 0.020                                  n29517
+MUXL5       ---     0.212             D0 to Z              i5171
+Route         1   e 0.788                                  n29299
+                  --------
+                   15.260  (30.3% logic, 69.7% route), 12 logic levels.
+
+Warning: 15.406 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|    15.406 ns|    12 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n47988                                  |       4|    1880|     45.90%
+                                        |        |        |
+n29_adj_2485                            |       2|    1258|     30.71%
+                                        |        |        |
+n79929                                  |      50|    1254|     30.62%
+                                        |        |        |
+n83854                                  |       9|    1244|     30.37%
+                                        |        |        |
+n29                                     |       6|     933|     22.78%
+                                        |        |        |
+n24250                                  |      31|     904|     22.07%
+                                        |        |        |
+n79285                                  |      22|     821|     20.04%
+                                        |        |        |
+n79306                                  |       2|     818|     19.97%
+                                        |        |        |
+n74300                                  |      12|     789|     19.26%
+                                        |        |        |
+n12_adj_2510                            |       1|     741|     18.09%
+                                        |        |        |
+n70757                                  |       1|     668|     16.31%
+                                        |        |        |
+n78581                                  |       2|     592|     14.45%
+                                        |        |        |
+n4_adj_2498                             |       1|     528|     12.89%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/n29         |       1|     513|     12.52%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/n33957      |       2|     513|     12.52%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/n79238      |       2|     513|     12.52%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/clk_c_enable|        |        |
+_3671                                   |      16|     512|     12.50%
+                                        |        |        |
+n49                                     |       1|     510|     12.45%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/n64221      |       1|     497|     12.13%
+                                        |        |        |
+n32300                                  |      18|     486|     11.87%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/n64220      |       1|     481|     11.74%
+                                        |        |        |
+address_memory[12]                      |       1|     470|     11.47%
+                                        |        |        |
+address_memory[13]                      |       1|     470|     11.47%
+                                        |        |        |
+address_memory[14]                      |       1|     470|     11.47%
+                                        |        |        |
+address_memory[15]                      |       1|     470|     11.47%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/n64222      |       1|     449|     10.96%
+                                        |        |        |
+\cell_a/heater12/pwm_driver/n64223      |       1|     449|     10.96%
+                                        |        |        |
+n64731                                  |       2|     418|     10.21%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 4096  Score: 32503967
+
+Constraints cover  614030 paths, 9034 nets, and 26616 connections (83.1% coverage)
+
+
+Peak memory: 210423808 bytes, TRCE: 24903680 bytes, DLYMAN: 2457600 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

@@ -7,18 +7,100 @@ entity cell_top is
         pwm_counter_width : positive := 16
     );
     port (
-        clk, reset, global_sync : in std_logic;
-        adc_sclk, adc_cs : out std_logic;
+        clk : in std_logic;
+        reset : in std_logic;
+        global_sync : in std_logic;
+        adc_sclk : out std_logic;
+        adc_cs : out std_logic;
         pwm_period : in unsigned(pwm_counter_width - 1 downto 0);
-        pwm_phase_delay : in unsigned(14 * (pwm_counter_width + 1) - 1 downto 0);
-        pwm_duty_request : in unsigned(14 * pwm_counter_width - 1 downto 0);
-        pwm : out std_logic_vector(13 downto 0);
-        temp_adc_sdo : in std_logic_vector(13 downto 0);
-        temp_adc_data : out std_logic_vector(447 downto 0);
-        current_adc_sdo : in std_logic_vector(13 downto 0);
-        current_adc_data : out std_logic_vector(447 downto 0);
-        rtd_adc_sdo : in std_logic_vector(1 downto 0);
-        rtd_adc_data : out std_logic_vector(63 downto 0)
+        temp_sdo1 : in std_logic;
+        current_sdo1 : in std_logic;
+        pwm1 : out std_logic;
+        temp_sense1 : out std_logic_vector(31 downto 0);
+        current_sense1 : out std_logic_vector(31 downto 0);
+        pwm_duty_request1 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo2 : in std_logic;
+        current_sdo2 : in std_logic;
+        pwm2 : out std_logic;
+        temp_sense2 : out std_logic_vector(31 downto 0);
+        current_sense2 : out std_logic_vector(31 downto 0);
+        pwm_duty_request2 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo3 : in std_logic;
+        current_sdo3 : in std_logic;
+        pwm3 : out std_logic;
+        temp_sense3 : out std_logic_vector(31 downto 0);
+        current_sense3 : out std_logic_vector(31 downto 0);
+        pwm_duty_request3 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo4 : in std_logic;
+        current_sdo4 : in std_logic;
+        pwm4 : out std_logic;
+        temp_sense4 : out std_logic_vector(31 downto 0);
+        current_sense4 : out std_logic_vector(31 downto 0);
+        pwm_duty_request4 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo5 : in std_logic;
+        current_sdo5 : in std_logic;
+        pwm5 : out std_logic;
+        temp_sense5 : out std_logic_vector(31 downto 0);
+        current_sense5 : out std_logic_vector(31 downto 0);
+        pwm_duty_request5 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo6 : in std_logic;
+        current_sdo6 : in std_logic;
+        pwm6 : out std_logic;
+        temp_sense6 : out std_logic_vector(31 downto 0);
+        current_sense6 : out std_logic_vector(31 downto 0);
+        pwm_duty_request6 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo7 : in std_logic;
+        current_sdo7 : in std_logic;
+        pwm7 : out std_logic;
+        temp_sense7 : out std_logic_vector(31 downto 0);
+        current_sense7 : out std_logic_vector(31 downto 0);
+        pwm_duty_request7 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo8 : in std_logic;
+        current_sdo8 : in std_logic;
+        pwm8 : out std_logic;
+        temp_sense8 : out std_logic_vector(31 downto 0);
+        current_sense8 : out std_logic_vector(31 downto 0);
+        pwm_duty_request8 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo9 : in std_logic;
+        current_sdo9 : in std_logic;
+        pwm9 : out std_logic;
+        temp_sense9 : out std_logic_vector(31 downto 0);
+        current_sense9 : out std_logic_vector(31 downto 0);
+        pwm_duty_request9 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo10 : in std_logic;
+        current_sdo10 : in std_logic;
+        pwm10 : out std_logic;
+        temp_sense10 : out std_logic_vector(31 downto 0);
+        current_sense10 : out std_logic_vector(31 downto 0);
+        pwm_duty_request10 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo11 : in std_logic;
+        current_sdo11 : in std_logic;
+        pwm11 : out std_logic;
+        temp_sense11 : out std_logic_vector(31 downto 0);
+        current_sense11 : out std_logic_vector(31 downto 0);
+        pwm_duty_request11 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo12 : in std_logic;
+        current_sdo12 : in std_logic;
+        pwm12 : out std_logic;
+        temp_sense12 : out std_logic_vector(31 downto 0);
+        current_sense12 : out std_logic_vector(31 downto 0);
+        pwm_duty_request12 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo13 : in std_logic;
+        current_sdo13 : in std_logic;
+        pwm13 : out std_logic;
+        temp_sense13 : out std_logic_vector(31 downto 0);
+        current_sense13 : out std_logic_vector(31 downto 0);
+        pwm_duty_request13 : in unsigned(pwm_counter_width - 1 downto 0);
+        temp_sdo14 : in std_logic;
+        current_sdo14 : in std_logic;
+        pwm14 : out std_logic;
+        temp_sense14 : out std_logic_vector(31 downto 0);
+        current_sense14 : out std_logic_vector(31 downto 0);
+        pwm_duty_request14 : in unsigned(pwm_counter_width - 1 downto 0);
+        rtd_sdo1 : in std_logic;
+        rtd_sense1 : out std_logic_vector(31 downto 0);
+        rtd_sdo2 : in std_logic;
+        rtd_sense2 : out std_logic_vector(31 downto 0)
     );
 end entity cell_top;
 
@@ -36,51 +118,248 @@ begin
             publish_sample => publish_sample
         );
 
-    -- Heater 0 occupies the least significant word of each PWM and sample bus.
-    heaters : for i in 0 to 13 generate
-        constant pwm_low : natural := i * pwm_counter_width;
-        constant pwm_high : natural := pwm_low + pwm_counter_width - 1;
-        constant phase_low : natural := i * (pwm_counter_width + 1);
-        constant phase_high : natural := phase_low + pwm_counter_width;
-    begin
-        heater_instance : entity work.heater
-            generic map (
-                pwm_counter_width => pwm_counter_width
-            )
-            port map (
-                clk              => clk,
-                reset            => reset,
-                global_sync      => global_sync,
-                capture_bit      => capture_bit,
-                publish_sample   => publish_sample,
-                pwm_period       => pwm_period,
-                pwm_phase_delay  => pwm_phase_delay(phase_high downto phase_low),
-                pwm_duty_request => pwm_duty_request(pwm_high downto pwm_low),
-                pwm              => pwm(i),
-                temp_adc_sdo     => temp_adc_sdo(i),
-                temp_adc_data    => temp_adc_data(32*i+31 downto 32*i),
-                current_adc_sdo  => current_adc_sdo(i),
-                current_adc_data => current_adc_data(32*i+31 downto 32*i)
-            );
-    end generate heaters;
-
-    rtd_adc_0 : entity work.adc_sample_capture
+    heater1 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
         port map (
-            clk         => clk,
-            reset       => reset,
-            capture_bit    => capture_bit,
-            publish_sample => publish_sample,
-            adc_sdo     => rtd_adc_sdo(0),
-            adc_data    => rtd_adc_data(31 downto 0)
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo1,
+            current_sdo      => current_sdo1,
+            pwm              => pwm1,
+            temp_sense       => temp_sense1,
+            current_sense    => current_sense1,
+            pwm_duty_request => pwm_duty_request1
         );
 
-    rtd_adc_1 : entity work.adc_sample_capture
+    heater2 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
         port map (
-            clk         => clk,
-            reset       => reset,
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo2,
+            current_sdo      => current_sdo2,
+            pwm              => pwm2,
+            temp_sense       => temp_sense2,
+            current_sense    => current_sense2,
+            pwm_duty_request => pwm_duty_request2
+        );
+
+    heater3 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo3,
+            current_sdo      => current_sdo3,
+            pwm              => pwm3,
+            temp_sense       => temp_sense3,
+            current_sense    => current_sense3,
+            pwm_duty_request => pwm_duty_request3
+        );
+
+    heater4 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo4,
+            current_sdo      => current_sdo4,
+            pwm              => pwm4,
+            temp_sense       => temp_sense4,
+            current_sense    => current_sense4,
+            pwm_duty_request => pwm_duty_request4
+        );
+
+    heater5 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo5,
+            current_sdo      => current_sdo5,
+            pwm              => pwm5,
+            temp_sense       => temp_sense5,
+            current_sense    => current_sense5,
+            pwm_duty_request => pwm_duty_request5
+        );
+
+    heater6 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo6,
+            current_sdo      => current_sdo6,
+            pwm              => pwm6,
+            temp_sense       => temp_sense6,
+            current_sense    => current_sense6,
+            pwm_duty_request => pwm_duty_request6
+        );
+
+    heater7 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo7,
+            current_sdo      => current_sdo7,
+            pwm              => pwm7,
+            temp_sense       => temp_sense7,
+            current_sense    => current_sense7,
+            pwm_duty_request => pwm_duty_request7
+        );
+
+    heater8 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo8,
+            current_sdo      => current_sdo8,
+            pwm              => pwm8,
+            temp_sense       => temp_sense8,
+            current_sense    => current_sense8,
+            pwm_duty_request => pwm_duty_request8
+        );
+
+    heater9 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo9,
+            current_sdo      => current_sdo9,
+            pwm              => pwm9,
+            temp_sense       => temp_sense9,
+            current_sense    => current_sense9,
+            pwm_duty_request => pwm_duty_request9
+        );
+
+    heater10 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo10,
+            current_sdo      => current_sdo10,
+            pwm              => pwm10,
+            temp_sense       => temp_sense10,
+            current_sense    => current_sense10,
+            pwm_duty_request => pwm_duty_request10
+        );
+
+    heater11 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo11,
+            current_sdo      => current_sdo11,
+            pwm              => pwm11,
+            temp_sense       => temp_sense11,
+            current_sense    => current_sense11,
+            pwm_duty_request => pwm_duty_request11
+        );
+
+    heater12 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo12,
+            current_sdo      => current_sdo12,
+            pwm              => pwm12,
+            temp_sense       => temp_sense12,
+            current_sense    => current_sense12,
+            pwm_duty_request => pwm_duty_request12
+        );
+
+    heater13 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo13,
+            current_sdo      => current_sdo13,
+            pwm              => pwm13,
+            temp_sense       => temp_sense13,
+            current_sense    => current_sense13,
+            pwm_duty_request => pwm_duty_request13
+        );
+
+    heater14 : entity work.heater
+        generic map (pwm_counter_width => pwm_counter_width)
+        port map (
+            clk              => clk,
+            reset            => reset,
+            capture_bit      => capture_bit,
+            publish_sample   => publish_sample,
+            pwm_period       => pwm_period,
+            temp_sdo         => temp_sdo14,
+            current_sdo      => current_sdo14,
+            pwm              => pwm14,
+            temp_sense       => temp_sense14,
+            current_sense    => current_sense14,
+            pwm_duty_request => pwm_duty_request14
+        );
+
+    rtd_adc1 : entity work.adc_sample_capture
+        port map (
+            clk            => clk,
+            reset          => reset,
             capture_bit    => capture_bit,
             publish_sample => publish_sample,
-            adc_sdo     => rtd_adc_sdo(1),
-            adc_data    => rtd_adc_data(63 downto 32)
+            adc_sdo        => rtd_sdo1,
+            adc_data       => rtd_sense1
         );
+
+    rtd_adc2 : entity work.adc_sample_capture
+        port map (
+            clk            => clk,
+            reset          => reset,
+            capture_bit    => capture_bit,
+            publish_sample => publish_sample,
+            adc_sdo        => rtd_sdo2,
+            adc_data       => rtd_sense2
+        );
+
 end architecture structural;

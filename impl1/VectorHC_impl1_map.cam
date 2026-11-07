@@ -1,0 +1,360 @@
+[ START MERGED ]
+reset_N_1934 reset_c
+cell_b/heater9/pwm_driver/n32233 cell_b/heater9/pwm_driver/counter_15__N_1932
+cell_b/heater8/pwm_driver/n32030 cell_b/heater8/pwm_driver/counter_15__N_1932
+cell_b/heater6/pwm_driver/n32078 cell_b/heater6/pwm_driver/counter_15__N_1932
+cell_b/heater7/pwm_driver/n32207 cell_b/heater7/pwm_driver/counter_15__N_1932
+cell_b/heater5/pwm_driver/n32093 cell_b/heater5/pwm_driver/counter_15__N_1932
+cell_b/heater4/pwm_driver/n32123 cell_b/heater4/pwm_driver/counter_15__N_1932
+cell_b/heater3/pwm_driver/n32152 cell_b/heater3/pwm_driver/counter_15__N_1932
+cell_b/heater2/pwm_driver/n32168 cell_b/heater2/pwm_driver/counter_15__N_1932
+cell_b/heater1/pwm_driver/n32212 cell_b/heater1/pwm_driver/counter_15__N_1932
+cell_b/heater14/pwm_driver/n32203 cell_b/heater14/pwm_driver/counter_15__N_1932
+cell_b/heater13/pwm_driver/n32211 cell_b/heater13/pwm_driver/counter_15__N_1932
+cell_b/heater12/pwm_driver/n32215 cell_b/heater12/pwm_driver/counter_15__N_1932
+cell_b/heater11/pwm_driver/n32221 cell_b/heater11/pwm_driver/counter_15__N_1932
+cell_b/heater10/pwm_driver/n32227 cell_b/heater10/pwm_driver/counter_15__N_1932
+cell_b/frame_control/n79370 state_0_adj_2417
+cell_c/heater9/pwm_driver/n32197 cell_c/heater9/pwm_driver/counter_15__N_1932
+cell_c/heater8/pwm_driver/n32199 cell_c/heater8/pwm_driver/counter_15__N_1932
+cell_c/heater7/pwm_driver/n32201 cell_c/heater7/pwm_driver/counter_15__N_1932
+cell_c/heater6/pwm_driver/n32209 cell_c/heater6/pwm_driver/counter_15__N_1932
+cell_c/heater5/pwm_driver/n32182 cell_c/heater5/pwm_driver/counter_15__N_1932
+cell_c/heater4/pwm_driver/n32240 cell_c/heater4/pwm_driver/counter_15__N_1932
+cell_c/heater2/pwm_driver/n32205 cell_c/heater2/pwm_driver/counter_15__N_1932
+cell_c/heater3/pwm_driver/n32062 cell_c/heater3/pwm_driver/counter_15__N_1932
+cell_c/heater1/pwm_driver/n32170 cell_c/heater1/pwm_driver/counter_15__N_1932
+cell_c/heater14/pwm_driver/n32176 cell_c/heater14/pwm_driver/counter_15__N_1932
+cell_c/heater13/pwm_driver/n32451 cell_c/heater13/pwm_driver/counter_15__N_1932
+cell_c/heater12/pwm_driver/n32466 cell_c/heater12/pwm_driver/counter_15__N_1932
+cell_c/heater11/pwm_driver/n32193 cell_c/heater11/pwm_driver/counter_15__N_1932
+cell_c/heater10/pwm_driver/n32195 cell_c/heater10/pwm_driver/counter_15__N_1932
+cell_c/frame_control/n79369 state_0_adj_2435
+cell_a/heater9/pwm_driver/n32032 cell_a/heater9/pwm_driver/counter_15__N_1932
+cell_a/heater8/pwm_driver/n32048 cell_a/heater8/pwm_driver/counter_15__N_1932
+cell_a/heater7/pwm_driver/n32111 cell_a/heater7/pwm_driver/counter_15__N_1932
+cell_a/heater6/pwm_driver/n32138 cell_a/heater6/pwm_driver/counter_15__N_1932
+cell_a/heater5/pwm_driver/n32273 cell_a/heater5/pwm_driver/counter_15__N_1932
+cell_a/heater4/pwm_driver/n32340 cell_a/heater4/pwm_driver/counter_15__N_1932
+cell_a/heater2/pwm_driver/n32236 cell_a/heater2/pwm_driver/counter_15__N_1932
+cell_a/heater3/pwm_driver/n32288 cell_a/heater3/pwm_driver/counter_15__N_1932
+cell_a/heater1/pwm_driver/n32238 cell_a/heater1/pwm_driver/counter_15__N_1932
+cell_a/heater14/pwm_driver/n32325 cell_a/heater14/pwm_driver/counter_15__N_1932
+cell_a/heater13/pwm_driver/n32015 cell_a/heater13/pwm_driver/counter_15__N_1932
+cell_a/heater12/pwm_driver/n31975 cell_a/heater12/pwm_driver/counter_15__N_1932
+cell_a/heater11/pwm_driver/n32257 cell_a/heater11/pwm_driver/counter_15__N_1932
+cell_a/heater10/pwm_driver/n31482 cell_a/heater10/pwm_driver/counter_15__N_1932
+cell_a/frame_control/n79371 state_0
+spi1/clk_c_enable_3664 spi1/n11855
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+n83855
+VCC_net
+spi1/add_2577_1/S0
+spi1/add_2577_1/CI
+spi1/add_2577_7/S1
+spi1/add_2577_7/CO
+cell_a/heater10/pwm_driver/counter_3446_add_4_1/S0
+cell_a/heater10/pwm_driver/counter_3446_add_4_1/CI
+cell_a/heater10/pwm_driver/counter_3446_add_4_17/S1
+cell_a/heater10/pwm_driver/counter_3446_add_4_17/CO
+cell_a/heater10/pwm_driver/add_2117_1/S0
+cell_a/heater10/pwm_driver/add_2117_1/CI
+cell_a/heater10/pwm_driver/add_2117_17/CO
+cell_a/heater11/pwm_driver/counter_3447_add_4_17/S1
+cell_a/heater11/pwm_driver/counter_3447_add_4_17/CO
+cell_a/heater11/pwm_driver/counter_3447_add_4_1/S0
+cell_a/heater11/pwm_driver/counter_3447_add_4_1/CI
+cell_a/heater11/pwm_driver/add_2122_1/S0
+cell_a/heater11/pwm_driver/add_2122_1/CI
+cell_a/heater11/pwm_driver/add_2122_17/CO
+cell_a/heater12/pwm_driver/counter_3448_add_4_1/S0
+cell_a/heater12/pwm_driver/counter_3448_add_4_1/CI
+cell_a/heater12/pwm_driver/counter_3448_add_4_17/S1
+cell_a/heater12/pwm_driver/counter_3448_add_4_17/CO
+cell_a/heater12/pwm_driver/add_2127_1/S0
+cell_a/heater12/pwm_driver/add_2127_1/CI
+cell_a/heater12/pwm_driver/add_2127_17/CO
+cell_a/heater13/pwm_driver/add_2132_1/S0
+cell_a/heater13/pwm_driver/add_2132_1/CI
+cell_a/heater13/pwm_driver/add_2132_17/CO
+cell_a/heater13/pwm_driver/counter_3449_add_4_1/S0
+cell_a/heater13/pwm_driver/counter_3449_add_4_1/CI
+cell_a/heater13/pwm_driver/counter_3449_add_4_17/S1
+cell_a/heater13/pwm_driver/counter_3449_add_4_17/CO
+cell_a/heater14/pwm_driver/add_2137_1/S0
+cell_a/heater14/pwm_driver/add_2137_1/CI
+cell_a/heater14/pwm_driver/add_2137_17/CO
+cell_a/heater14/pwm_driver/counter_3450_add_4_1/S0
+cell_a/heater14/pwm_driver/counter_3450_add_4_1/CI
+cell_a/heater14/pwm_driver/counter_3450_add_4_17/S1
+cell_a/heater14/pwm_driver/counter_3450_add_4_17/CO
+cell_a/heater1/pwm_driver/counter_3437_add_4_1/S0
+cell_a/heater1/pwm_driver/counter_3437_add_4_1/CI
+cell_a/heater1/pwm_driver/counter_3437_add_4_17/S1
+cell_a/heater1/pwm_driver/counter_3437_add_4_17/CO
+cell_a/heater1/pwm_driver/add_2072_1/S0
+cell_a/heater1/pwm_driver/add_2072_1/CI
+cell_a/heater1/pwm_driver/add_2072_17/CO
+cell_a/heater2/pwm_driver/add_2077_1/S0
+cell_a/heater2/pwm_driver/add_2077_1/CI
+cell_a/heater2/pwm_driver/add_2077_17/CO
+cell_a/heater2/pwm_driver/counter_3438_add_4_1/S0
+cell_a/heater2/pwm_driver/counter_3438_add_4_1/CI
+cell_a/heater2/pwm_driver/counter_3438_add_4_17/S1
+cell_a/heater2/pwm_driver/counter_3438_add_4_17/CO
+cell_a/heater3/pwm_driver/add_2082_1/S0
+cell_a/heater3/pwm_driver/add_2082_1/CI
+cell_a/heater3/pwm_driver/add_2082_17/CO
+cell_a/heater3/pwm_driver/counter_3439_add_4_17/S1
+cell_a/heater3/pwm_driver/counter_3439_add_4_17/CO
+cell_a/heater3/pwm_driver/counter_3439_add_4_1/S0
+cell_a/heater3/pwm_driver/counter_3439_add_4_1/CI
+cell_a/heater4/pwm_driver/add_2087_1/S0
+cell_a/heater4/pwm_driver/add_2087_1/CI
+cell_a/heater4/pwm_driver/add_2087_17/CO
+cell_a/heater4/pwm_driver/counter_3440_add_4_17/S1
+cell_a/heater4/pwm_driver/counter_3440_add_4_17/CO
+cell_a/heater4/pwm_driver/counter_3440_add_4_1/S0
+cell_a/heater4/pwm_driver/counter_3440_add_4_1/CI
+cell_a/heater5/pwm_driver/add_2092_17/CO
+cell_a/heater5/pwm_driver/counter_3441_add_4_1/S0
+cell_a/heater5/pwm_driver/counter_3441_add_4_1/CI
+cell_a/heater5/pwm_driver/counter_3441_add_4_17/S1
+cell_a/heater5/pwm_driver/counter_3441_add_4_17/CO
+cell_a/heater5/pwm_driver/add_2092_1/S0
+cell_a/heater5/pwm_driver/add_2092_1/CI
+cell_a/heater6/pwm_driver/counter_3442_add_4_1/S0
+cell_a/heater6/pwm_driver/counter_3442_add_4_1/CI
+cell_a/heater6/pwm_driver/counter_3442_add_4_17/S1
+cell_a/heater6/pwm_driver/counter_3442_add_4_17/CO
+cell_a/heater6/pwm_driver/add_2097_1/S0
+cell_a/heater6/pwm_driver/add_2097_1/CI
+cell_a/heater6/pwm_driver/add_2097_17/CO
+cell_a/heater7/pwm_driver/counter_3443_add_4_1/S0
+cell_a/heater7/pwm_driver/counter_3443_add_4_1/CI
+cell_a/heater7/pwm_driver/counter_3443_add_4_17/S1
+cell_a/heater7/pwm_driver/counter_3443_add_4_17/CO
+cell_a/heater7/pwm_driver/add_2102_1/S0
+cell_a/heater7/pwm_driver/add_2102_1/CI
+cell_a/heater7/pwm_driver/add_2102_17/CO
+cell_a/heater8/pwm_driver/add_2107_1/S0
+cell_a/heater8/pwm_driver/add_2107_1/CI
+cell_a/heater8/pwm_driver/add_2107_17/CO
+cell_a/heater8/pwm_driver/counter_3444_add_4_1/S0
+cell_a/heater8/pwm_driver/counter_3444_add_4_1/CI
+cell_a/heater8/pwm_driver/counter_3444_add_4_17/S1
+cell_a/heater8/pwm_driver/counter_3444_add_4_17/CO
+cell_a/heater9/pwm_driver/add_2112_1/S0
+cell_a/heater9/pwm_driver/add_2112_1/CI
+cell_a/heater9/pwm_driver/add_2112_17/CO
+cell_a/heater9/pwm_driver/counter_3445_add_4_1/S0
+cell_a/heater9/pwm_driver/counter_3445_add_4_1/CI
+cell_a/heater9/pwm_driver/counter_3445_add_4_17/S1
+cell_a/heater9/pwm_driver/counter_3445_add_4_17/CO
+cell_c/heater10/pwm_driver/add_2257_1/S0
+cell_c/heater10/pwm_driver/add_2257_1/CI
+cell_c/heater10/pwm_driver/add_2257_17/CO
+cell_c/heater10/pwm_driver/counter_3471_add_4_1/S0
+cell_c/heater10/pwm_driver/counter_3471_add_4_1/CI
+cell_c/heater10/pwm_driver/counter_3471_add_4_17/S1
+cell_c/heater10/pwm_driver/counter_3471_add_4_17/CO
+cell_c/heater11/pwm_driver/add_2262_1/S0
+cell_c/heater11/pwm_driver/add_2262_1/CI
+cell_c/heater11/pwm_driver/add_2262_17/CO
+cell_c/heater11/pwm_driver/counter_3472_add_4_1/S0
+cell_c/heater11/pwm_driver/counter_3472_add_4_1/CI
+cell_c/heater11/pwm_driver/counter_3472_add_4_17/S1
+cell_c/heater11/pwm_driver/counter_3472_add_4_17/CO
+cell_c/heater12/pwm_driver/add_2267_1/S0
+cell_c/heater12/pwm_driver/add_2267_1/CI
+cell_c/heater12/pwm_driver/add_2267_17/CO
+cell_c/heater12/pwm_driver/counter_3473_add_4_1/S0
+cell_c/heater12/pwm_driver/counter_3473_add_4_1/CI
+cell_c/heater12/pwm_driver/counter_3473_add_4_17/S1
+cell_c/heater12/pwm_driver/counter_3473_add_4_17/CO
+cell_c/heater13/pwm_driver/add_2272_17/CO
+cell_c/heater13/pwm_driver/counter_3474_add_4_1/S0
+cell_c/heater13/pwm_driver/counter_3474_add_4_1/CI
+cell_c/heater13/pwm_driver/counter_3474_add_4_17/S1
+cell_c/heater13/pwm_driver/counter_3474_add_4_17/CO
+cell_c/heater13/pwm_driver/add_2272_1/S0
+cell_c/heater13/pwm_driver/add_2272_1/CI
+cell_c/heater14/pwm_driver/counter_3476_add_4_1/S0
+cell_c/heater14/pwm_driver/counter_3476_add_4_1/CI
+cell_c/heater14/pwm_driver/counter_3476_add_4_17/S1
+cell_c/heater14/pwm_driver/counter_3476_add_4_17/CO
+cell_c/heater14/pwm_driver/add_2277_1/S0
+cell_c/heater14/pwm_driver/add_2277_1/CI
+cell_c/heater14/pwm_driver/add_2277_17/CO
+cell_c/heater1/pwm_driver/add_2212_1/S0
+cell_c/heater1/pwm_driver/add_2212_1/CI
+cell_c/heater1/pwm_driver/add_2212_17/CO
+cell_c/heater1/pwm_driver/counter_3477_add_4_1/S0
+cell_c/heater1/pwm_driver/counter_3477_add_4_1/CI
+cell_c/heater1/pwm_driver/counter_3477_add_4_17/S1
+cell_c/heater1/pwm_driver/counter_3477_add_4_17/CO
+cell_c/heater2/pwm_driver/counter_3466_add_4_17/S1
+cell_c/heater2/pwm_driver/counter_3466_add_4_17/CO
+cell_c/heater2/pwm_driver/add_2217_1/S0
+cell_c/heater2/pwm_driver/add_2217_1/CI
+cell_c/heater2/pwm_driver/add_2217_17/CO
+cell_c/heater2/pwm_driver/counter_3466_add_4_1/S0
+cell_c/heater2/pwm_driver/counter_3466_add_4_1/CI
+cell_c/heater3/pwm_driver/add_2222_1/S0
+cell_c/heater3/pwm_driver/add_2222_1/CI
+cell_c/heater3/pwm_driver/add_2222_17/CO
+cell_c/heater3/pwm_driver/counter_3457_add_4_1/S0
+cell_c/heater3/pwm_driver/counter_3457_add_4_1/CI
+cell_c/heater3/pwm_driver/counter_3457_add_4_17/S1
+cell_c/heater3/pwm_driver/counter_3457_add_4_17/CO
+cell_c/heater4/pwm_driver/counter_3436_add_4_1/S0
+cell_c/heater4/pwm_driver/counter_3436_add_4_1/CI
+cell_c/heater4/pwm_driver/counter_3436_add_4_17/S1
+cell_c/heater4/pwm_driver/counter_3436_add_4_17/CO
+cell_c/heater4/pwm_driver/add_2227_1/S0
+cell_c/heater4/pwm_driver/add_2227_1/CI
+cell_c/heater4/pwm_driver/add_2227_17/CO
+cell_c/heater5/pwm_driver/add_2232_1/S0
+cell_c/heater5/pwm_driver/add_2232_1/CI
+cell_c/heater5/pwm_driver/add_2232_17/CO
+cell_c/heater5/pwm_driver/counter_3475_add_4_1/S0
+cell_c/heater5/pwm_driver/counter_3475_add_4_1/CI
+cell_c/heater5/pwm_driver/counter_3475_add_4_17/S1
+cell_c/heater5/pwm_driver/counter_3475_add_4_17/CO
+cell_c/heater6/pwm_driver/counter_3464_add_4_1/S0
+cell_c/heater6/pwm_driver/counter_3464_add_4_1/CI
+cell_c/heater6/pwm_driver/counter_3464_add_4_17/S1
+cell_c/heater6/pwm_driver/counter_3464_add_4_17/CO
+cell_c/heater6/pwm_driver/add_2237_1/S0
+cell_c/heater6/pwm_driver/add_2237_1/CI
+cell_c/heater6/pwm_driver/add_2237_17/CO
+cell_c/heater7/pwm_driver/add_2242_1/S0
+cell_c/heater7/pwm_driver/add_2242_1/CI
+cell_c/heater7/pwm_driver/add_2242_17/CO
+cell_c/heater7/pwm_driver/counter_3468_add_4_1/S0
+cell_c/heater7/pwm_driver/counter_3468_add_4_1/CI
+cell_c/heater7/pwm_driver/counter_3468_add_4_17/S1
+cell_c/heater7/pwm_driver/counter_3468_add_4_17/CO
+cell_c/heater8/pwm_driver/add_2247_1/S0
+cell_c/heater8/pwm_driver/add_2247_1/CI
+cell_c/heater8/pwm_driver/add_2247_17/CO
+cell_c/heater8/pwm_driver/counter_3469_add_4_1/S0
+cell_c/heater8/pwm_driver/counter_3469_add_4_1/CI
+cell_c/heater8/pwm_driver/counter_3469_add_4_17/S1
+cell_c/heater8/pwm_driver/counter_3469_add_4_17/CO
+cell_c/heater9/pwm_driver/add_2252_1/S0
+cell_c/heater9/pwm_driver/add_2252_1/CI
+cell_c/heater9/pwm_driver/add_2252_17/CO
+cell_c/heater9/pwm_driver/counter_3470_add_4_1/S0
+cell_c/heater9/pwm_driver/counter_3470_add_4_1/CI
+cell_c/heater9/pwm_driver/counter_3470_add_4_17/S1
+cell_c/heater9/pwm_driver/counter_3470_add_4_17/CO
+cell_b/heater10/pwm_driver/counter_3460_add_4_1/S0
+cell_b/heater10/pwm_driver/counter_3460_add_4_1/CI
+cell_b/heater10/pwm_driver/counter_3460_add_4_17/S1
+cell_b/heater10/pwm_driver/counter_3460_add_4_17/CO
+cell_b/heater10/pwm_driver/add_2187_1/S0
+cell_b/heater10/pwm_driver/add_2187_1/CI
+cell_b/heater10/pwm_driver/add_2187_17/CO
+cell_b/heater11/pwm_driver/counter_3461_add_4_1/S0
+cell_b/heater11/pwm_driver/counter_3461_add_4_1/CI
+cell_b/heater11/pwm_driver/counter_3461_add_4_17/S1
+cell_b/heater11/pwm_driver/counter_3461_add_4_17/CO
+cell_b/heater11/pwm_driver/add_2192_1/S0
+cell_b/heater11/pwm_driver/add_2192_1/CI
+cell_b/heater11/pwm_driver/add_2192_17/CO
+cell_b/heater12/pwm_driver/counter_3462_add_4_1/S0
+cell_b/heater12/pwm_driver/counter_3462_add_4_1/CI
+cell_b/heater12/pwm_driver/counter_3462_add_4_17/S1
+cell_b/heater12/pwm_driver/counter_3462_add_4_17/CO
+cell_b/heater12/pwm_driver/add_2197_1/S0
+cell_b/heater12/pwm_driver/add_2197_1/CI
+cell_b/heater12/pwm_driver/add_2197_17/CO
+cell_b/heater13/pwm_driver/counter_3463_add_4_1/S0
+cell_b/heater13/pwm_driver/counter_3463_add_4_1/CI
+cell_b/heater13/pwm_driver/counter_3463_add_4_17/S1
+cell_b/heater13/pwm_driver/counter_3463_add_4_17/CO
+cell_b/heater13/pwm_driver/add_2202_1/S0
+cell_b/heater13/pwm_driver/add_2202_1/CI
+cell_b/heater13/pwm_driver/add_2202_17/CO
+cell_b/heater14/pwm_driver/add_2207_1/S0
+cell_b/heater14/pwm_driver/add_2207_1/CI
+cell_b/heater14/pwm_driver/add_2207_17/CO
+cell_b/heater14/pwm_driver/counter_3467_add_4_1/S0
+cell_b/heater14/pwm_driver/counter_3467_add_4_1/CI
+cell_b/heater14/pwm_driver/counter_3467_add_4_17/S1
+cell_b/heater14/pwm_driver/counter_3467_add_4_17/CO
+cell_b/heater1/pwm_driver/counter_3451_add_4_1/S0
+cell_b/heater1/pwm_driver/counter_3451_add_4_1/CI
+cell_b/heater1/pwm_driver/counter_3451_add_4_17/S1
+cell_b/heater1/pwm_driver/counter_3451_add_4_17/CO
+cell_b/heater1/pwm_driver/add_2142_1/S0
+cell_b/heater1/pwm_driver/add_2142_1/CI
+cell_b/heater1/pwm_driver/add_2142_17/CO
+cell_b/heater2/pwm_driver/add_2147_1/S0
+cell_b/heater2/pwm_driver/add_2147_1/CI
+cell_b/heater2/pwm_driver/add_2147_17/CO
+cell_b/heater2/pwm_driver/counter_3452_add_4_1/S0
+cell_b/heater2/pwm_driver/counter_3452_add_4_1/CI
+cell_b/heater2/pwm_driver/counter_3452_add_4_17/S1
+cell_b/heater2/pwm_driver/counter_3452_add_4_17/CO
+cell_b/heater3/pwm_driver/counter_3453_add_4_1/S0
+cell_b/heater3/pwm_driver/counter_3453_add_4_1/CI
+cell_b/heater3/pwm_driver/add_2152_1/S0
+cell_b/heater3/pwm_driver/add_2152_1/CI
+cell_b/heater3/pwm_driver/counter_3453_add_4_17/S1
+cell_b/heater3/pwm_driver/counter_3453_add_4_17/CO
+cell_b/heater3/pwm_driver/add_2152_17/CO
+cell_b/heater4/pwm_driver/add_2157_1/S0
+cell_b/heater4/pwm_driver/add_2157_1/CI
+cell_b/heater4/pwm_driver/add_2157_17/CO
+cell_b/heater4/pwm_driver/counter_3454_add_4_17/S1
+cell_b/heater4/pwm_driver/counter_3454_add_4_17/CO
+cell_b/heater4/pwm_driver/counter_3454_add_4_1/S0
+cell_b/heater4/pwm_driver/counter_3454_add_4_1/CI
+cell_b/heater5/pwm_driver/add_2162_1/S0
+cell_b/heater5/pwm_driver/add_2162_1/CI
+cell_b/heater5/pwm_driver/add_2162_17/CO
+cell_b/heater5/pwm_driver/counter_3455_add_4_1/S0
+cell_b/heater5/pwm_driver/counter_3455_add_4_1/CI
+cell_b/heater5/pwm_driver/counter_3455_add_4_17/S1
+cell_b/heater5/pwm_driver/counter_3455_add_4_17/CO
+cell_b/heater6/pwm_driver/counter_3456_add_4_1/S0
+cell_b/heater6/pwm_driver/counter_3456_add_4_1/CI
+cell_b/heater6/pwm_driver/counter_3456_add_4_17/S1
+cell_b/heater6/pwm_driver/counter_3456_add_4_17/CO
+cell_b/heater6/pwm_driver/add_2167_1/S0
+cell_b/heater6/pwm_driver/add_2167_1/CI
+cell_b/heater6/pwm_driver/add_2167_17/CO
+cell_b/heater7/pwm_driver/counter_3465_add_4_1/S0
+cell_b/heater7/pwm_driver/counter_3465_add_4_1/CI
+cell_b/heater7/pwm_driver/counter_3465_add_4_17/S1
+cell_b/heater7/pwm_driver/counter_3465_add_4_17/CO
+cell_b/heater7/pwm_driver/add_2172_1/S0
+cell_b/heater7/pwm_driver/add_2172_1/CI
+cell_b/heater7/pwm_driver/add_2172_17/CO
+cell_b/heater8/pwm_driver/counter_3458_add_4_1/S0
+cell_b/heater8/pwm_driver/counter_3458_add_4_1/CI
+cell_b/heater8/pwm_driver/counter_3458_add_4_17/S1
+cell_b/heater8/pwm_driver/counter_3458_add_4_17/CO
+cell_b/heater8/pwm_driver/add_2177_1/S0
+cell_b/heater8/pwm_driver/add_2177_1/CI
+cell_b/heater8/pwm_driver/add_2177_17/CO
+cell_b/heater9/pwm_driver/counter_3459_add_4_1/S0
+cell_b/heater9/pwm_driver/counter_3459_add_4_1/CI
+cell_b/heater9/pwm_driver/counter_3459_add_4_17/S1
+cell_b/heater9/pwm_driver/counter_3459_add_4_17/CO
+cell_b/heater9/pwm_driver/add_2182_1/S0
+cell_b/heater9/pwm_driver/add_2182_1/CI
+cell_b/heater9/pwm_driver/add_2182_17/CO
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.13.0.56.2 -- WARNING: Map write only section -- Sat Nov 07 14:36:15 2026
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=ENABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
+FREQUENCY PORT "clk" 100.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

@@ -1,0 +1,167 @@
+
+Lattice Place and Route Report for Design "VectorHC_impl1_map.ncd"
+Sat Nov 07 14:36:17 2026
+
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "D:/Git/Vector HC FPGA/promote.xml" -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 VectorHC_impl1_map.ncd VectorHC_impl1.dir/5_1.ncd VectorHC_impl1.prf
+Preference file: VectorHC_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file VectorHC_impl1_map.ncd.
+Design name: board_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA256
+Performance: 5
+Loading device for application par from file 'xo3c9400.nph' in environment: D:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)  145+4(JTAG)/384     39% used
+                 145+4(JTAG)/207     72% bonded
+
+   SLICE           2846/4700         60% used
+
+   GSR                1/1           100% used
+
+
+Number of Signals: 9772
+Number of Connections: 27090
+WARNING - par: The SN pin is not available for use as a general purpose I/O pin when the SLAVE_SPI_PORT attribute is enabled.  The SN pin should be tied high with an external pull-up if you are not using the Slave SPI port for configuration.
+
+Pin Constraint Summary:
+   0 out of 145 pins locked (0% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 2059)
+
+
+The following 8 signals are selected to use the secondary clock routing resources:
+    read_memory (driver: SLICE_2516, clk load #: 0, sr load #: 0, ce load #: 31)
+    cell_a/clk_c_enable_188 (driver: cell_a/frame_control/SLICE_3850, clk load #: 0, sr load #: 0, ce load #: 28)
+    cell_a/clk_c_enable_3702 (driver: cell_a/frame_control/SLICE_3848, clk load #: 0, sr load #: 0, ce load #: 28)
+    cell_a/clk_c_enable_526 (driver: cell_a/frame_control/SLICE_3851, clk load #: 0, sr load #: 0, ce load #: 28)
+    cell_a/clk_c_enable_519 (driver: cell_a/frame_control/SLICE_4159, clk load #: 0, sr load #: 0, ce load #: 28)
+    cell_a/clk_c_enable_1571 (driver: cell_a/frame_control/SLICE_3850, clk load #: 0, sr load #: 0, ce load #: 27)
+    cell_a/clk_c_enable_2436 (driver: cell_a/frame_control/SLICE_3849, clk load #: 0, sr load #: 0, ce load #: 27)
+    cell_a/clk_c_enable_786 (driver: cell_a/frame_control/SLICE_3849, clk load #: 0, sr load #: 0, ce load #: 27)
+
+Signal reset_c is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+................
+Finished Placer Phase 0.  REAL time: 26 secs 
+
+Starting Placer Phase 1.
+.....................
+Placer score = 4405163.
+Finished Placer Phase 1.  REAL time: 1 mins 8 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  4310789
+Finished Placer Phase 2.  REAL time: 1 mins 15 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "T9 (PB29A)", clk load = 2059
+  SECONDARY "read_memory" from Q0 on comp "SLICE_2516" on site "R9C24C", clk load = 0, ce load = 31, sr load = 0
+  SECONDARY "cell_a/clk_c_enable_188" from F0 on comp "cell_a/frame_control/SLICE_3850" on site "R23C24D", clk load = 0, ce load = 28, sr load = 0
+  SECONDARY "cell_a/clk_c_enable_3702" from F0 on comp "cell_a/frame_control/SLICE_3848" on site "R23C24C", clk load = 0, ce load = 28, sr load = 0
+  SECONDARY "cell_a/clk_c_enable_526" from F0 on comp "cell_a/frame_control/SLICE_3851" on site "R29C24B", clk load = 0, ce load = 28, sr load = 0
+  SECONDARY "cell_a/clk_c_enable_519" from F0 on comp "cell_a/frame_control/SLICE_4159" on site "R29C24C", clk load = 0, ce load = 28, sr load = 0
+  SECONDARY "cell_a/clk_c_enable_1571" from F1 on comp "cell_a/frame_control/SLICE_3850" on site "R23C24D", clk load = 0, ce load = 27, sr load = 0
+  SECONDARY "cell_a/clk_c_enable_2436" from F1 on comp "cell_a/frame_control/SLICE_3849" on site "R9C24B", clk load = 0, ce load = 27, sr load = 0
+  SECONDARY "cell_a/clk_c_enable_786" from F0 on comp "cell_a/frame_control/SLICE_3849" on site "R9C24B", clk load = 0, ce load = 27, sr load = 0
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 8 out of 8 (100%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   145 + 4(JTAG) out of 384 (38.8%) PIO sites used.
+   145 + 4(JTAG) out of 207 (72.0%) bonded PIO sites used.
+   Number of PIO comps: 145; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 40 / 51 ( 78%) | 2.5V       | -         |
+| 1        | 41 / 52 ( 78%) | 2.5V       | -         |
+| 2        | 46 / 52 ( 88%) | 2.5V       | -         |
+| 3        | 2 / 16 ( 12%)  | 2.5V       | -         |
+| 4        | 10 / 16 ( 62%) | 2.5V       | -         |
+| 5        | 6 / 20 ( 30%)  | 2.5V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 1 mins 6 secs 
+
+Dumping design to file VectorHC_impl1.dir/5_1.ncd.
+
+0 connections routed; 27090 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 1 mins 25 secs 
+
+Start NBR router at 14:37:43 11/07/26
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 14:37:44 11/07/26
+
+Start NBR section for initial routing at 14:37:44 11/07/26
+Level 1, iteration 1
+326(0.06%) conflicts; 22084(81.52%) untouched conns; 12578447 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.189ns/-12578.448ns; real time: 1 mins 54 secs 
+Level 2, iteration 1
+741(0.14%) conflicts; 18788(69.35%) untouched conns; 5684089 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.759ns/-5684.089ns; real time: 3 mins 9 secs 
+Level 3, iteration 1
+1666(0.32%) conflicts; 9293(34.30%) untouched conns; 6545771 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.513ns/-6545.772ns; real time: 3 mins 23 secs 
+Level 4, iteration 1
+4172(0.81%) conflicts; 0(0.00%) untouched conn; 6841759 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -3.519ns/-6841.760ns; real time: 3 mins 45 secs 
+
+Info: Initial congestion level at 75% usage is 48
+Info: Initial congestion area  at 75% usage is 640 (45.98%)
+
+*****************************************************************************
+WARNING: The design is too congested to route. Maximum run time (3 hours) is 
+automatically set.
+To turn this auto-exiting feature off, please set -exp nbrMaxRunTime=0.
+*****************************************************************************
+

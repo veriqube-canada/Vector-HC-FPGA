@@ -1,0 +1,15 @@
+#Start recording tcl command: 11/6/2026 15:03:48
+#Project Location: D:/Git/Vector HC FPGA; Project name: VectorHC
+prj_project open "D:/Git/Vector HC FPGA/VectorHC.ldf"
+prj_run Export -impl impl1 -task Jedecgen
+prj_src remove "D:/Git/Vector HC FPGA/EncoderTop.vhd"
+prj_run Export -impl impl1 -task Jedecgen
+prj_run Export -impl impl1 -task Jedecgen
+prj_run Synthesis -impl impl1
+prj_run Map -impl impl1
+prj_run Export -impl impl1 -task Jedecgen
+prj_run Export -impl impl1 -task Jedecgen
+prj_run Export -impl impl1 -task Jedecgen
+prj_project save
+prj_project close
+#Stop recording: 11/6/2026 16:44:39

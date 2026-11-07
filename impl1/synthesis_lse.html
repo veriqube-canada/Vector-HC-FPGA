@@ -1,0 +1,2119 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Nov 07 14:34:54 2026
+
+
+Command Line:  synthesis -f VectorHC_impl1_lattice.synproj -gui -msgset D:/Git/Vector HC FPGA/promote.xml 
+
+Synthesis options:
+The -a option is MachXO3L.
+The -s option is 5.
+The -t option is CABGA256.
+The -d option is LCMXO3L-9400C.
+Using package CABGA256.
+Using performance grade 5.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO3L
+
+### Device  : LCMXO3L-9400C
+
+### Package : CABGA256
+
+### Speed   : 5
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = board_top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p D:/lscc/diamond/3.13/ispfpga/xo3c00a/data (searchpath added)
+-p D:/Git/Vector HC FPGA/impl1 (searchpath added)
+-p D:/Git/Vector HC FPGA (searchpath added)
+VHDL library = work
+VHDL design file = D:/Git/Vector HC FPGA/adc_read.vhd
+VHDL design file = D:/Git/Vector HC FPGA/heater_pwm.vhd
+VHDL design file = D:/Git/Vector HC FPGA/heater.vhd
+VHDL design file = D:/Git/Vector HC FPGA/cell_top.vhd
+VHDL design file = D:/Git/Vector HC FPGA/spi_slave.vhd
+VHDL design file = D:/Git/Vector HC FPGA/board_top.vhd
+VHDL design file = D:/Git/Vector HC FPGA/pll.vhd
+VHDL design file = D:/Git/Vector HC FPGA/pll.vhd
+NGD file = VectorHC_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+-vh2008
+
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file D:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "D:/Git/Vector HC FPGA/impl1". VHDL-1504
+Analyzing VHDL file d:/git/vector hc fpga/adc_read.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/adc_read.vhd(4): analyzing entity adc_frame_control. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/adc_read.vhd(12): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: d:/git/vector hc fpga/adc_read.vhd(88): analyzing entity adc_sample_capture. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/adc_read.vhd(96): analyzing architecture rtl. VHDL-1010
+INFO - synthesis: d:/git/vector hc fpga/adc_read.vhd(118): analyzing entity adc_read. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/adc_read.vhd(127): analyzing architecture structural. VHDL-1010
+Analyzing VHDL file d:/git/vector hc fpga/heater_pwm.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/heater_pwm.vhd(5): analyzing entity heater_pwm. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/heater_pwm.vhd(17): analyzing architecture rtl. VHDL-1010
+Analyzing VHDL file d:/git/vector hc fpga/heater.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/heater.vhd(5): analyzing entity heater. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/heater.vhd(21): analyzing architecture structural. VHDL-1010
+Analyzing VHDL file d:/git/vector hc fpga/cell_top.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/cell_top.vhd(5): analyzing entity cell_top. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/cell_top.vhd(107): analyzing architecture structural. VHDL-1010
+Analyzing VHDL file d:/git/vector hc fpga/spi_slave.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/spi_slave.vhd(13): analyzing entity spi_slave. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/spi_slave.vhd(28): analyzing architecture beh. VHDL-1010
+Analyzing VHDL file d:/git/vector hc fpga/board_top.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/board_top.vhd(5): analyzing entity board_top. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/board_top.vhd(158): analyzing architecture structural. VHDL-1010
+Analyzing VHDL file d:/git/vector hc fpga/pll.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/pll.vhd(14): analyzing entity pll. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/pll.vhd(20): analyzing architecture structure. VHDL-1010
+Analyzing VHDL file d:/git/vector hc fpga/pll.vhd. VHDL-1481
+INFO - synthesis: d:/git/vector hc fpga/pll.vhd(14): analyzing entity pll. VHDL-1012
+INFO - synthesis: d:/git/vector hc fpga/pll.vhd(20): analyzing architecture structure. VHDL-1010
+unit board_top is not yet analyzed. VHDL-1485
+d:/git/vector hc fpga/board_top.vhd(5): executing board_top(structural)
+
+WARNING - synthesis: d:/git/vector hc fpga/board_top.vhd(156): replacing existing netlist board_top(structural). VHDL-1205
+Top module name (VHDL): board_top
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo3c9400.nph' in environment: D:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Top-level module name = board_top.
+INFO - synthesis: Extracted state machine for register '\spi1/spi_state' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 00 -> 0001
+
+ 01 -> 0010
+
+ 10 -> 0100
+
+ 11 -> 1000
+
+INFO - synthesis: Extracted state machine for register '\cell_a/frame_control/state' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+INFO - synthesis: Extracted state machine for register '\cell_b/frame_control/state' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+INFO - synthesis: Extracted state machine for register '\cell_c/frame_control/state' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+
+
+
+WARNING - synthesis: Bit 19 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/rtd_adc1/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/rtd_adc2/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_a/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_b/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater1/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater1/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater2/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater2/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater3/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater3/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater4/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater4/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater5/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater5/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater6/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater6/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater7/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater7/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater8/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater8/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater9/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater9/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater10/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater10/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater11/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater11/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater12/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater12/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater13/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater13/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater14/temperature_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \cell_c/heater14/current_adc/adc_data is stuck at Zero
+GSR instance connected to net \cell_a/heater1/pwm_driver/reset_N_1934.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in board_top_drc.log.
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file VectorHC_impl1.ngd.
+
+################### Begin Area Report (board_top)######################
+Number of register bits => 3814 of 10021 (38 % )
+CCU2D => 760
+FD1P3AX => 2373
+FD1P3AY => 730
+FD1P3IX => 694
+FD1P3JX => 1
+FD1S3AX => 9
+FD1S3AY => 3
+FD1S3IX => 4
+GSR => 1
+IB => 96
+L6MUX21 => 180
+LUT4 => 4217
+OB => 49
+PFUMX => 554
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 3814
+Clock Enable Nets
+Number of Clock Enables: 246
+Top 10 highest fanout Clock Enables:
+  Net : spi1/clk_c_enable_1607, loads : 32
+  Net : clk_c_enable_1673, loads : 32
+  Net : cell_b/heater2/pwm_driver/clk_c_enable_3706, loads : 16
+  Net : cell_b/heater1/pwm_driver/clk_c_enable_3662, loads : 16
+  Net : cell_b/heater14/pwm_driver/clk_c_enable_1236, loads : 16
+  Net : clk_c_enable_2277, loads : 16
+  Net : cell_b/heater13/pwm_driver/clk_c_enable_1220, loads : 16
+  Net : clk_c_enable_2247, loads : 16
+  Net : cell_b/heater12/pwm_driver/clk_c_enable_1216, loads : 16
+  Net : clk_c_enable_2217, loads : 16
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : spi1/address_memory_8, loads : 524
+  Net : spi1/address_memory_4, loads : 433
+  Net : spi1/address_memory_1, loads : 241
+  Net : spi1/address_memory_0, loads : 218
+  Net : spi1/address_memory_3, loads : 212
+  Net : spi1/address_memory_6, loads : 182
+  Net : spi1/address_memory_5, loads : 155
+  Net : spi1/address_memory_9, loads : 146
+  Net : n79929, loads : 50
+  Net : cell_b/frame_control/clk_c_enable_1527, loads : 49
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |  200.000 MHz|   64.910 MHz|    12 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 205.125  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 52.953  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

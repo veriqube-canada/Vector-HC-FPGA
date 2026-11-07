@@ -11,18 +11,19 @@ end entity adc_frame_control;
 
 architecture rtl of adc_frame_control is
     -- 100 MHz system clock, 3.125 MHz ADC clock.
+    constant period : positive := 31;
     constant half_period : positive := 16;
     constant quiet_period : positive := 32;
-    type adc_state is (idle, clock_low, clock_high, quiet);
+    type adc_state is (idle, clock_cycle, quiet);
     signal state : adc_state;
-    signal clock_counter : natural range 0 to quiet_period - 1;
+    signal clock_counter : natural range 0 to period;
     signal bit_counter : natural range 0 to 15;
     signal startup : std_logic;
 begin
     -- Rising edges 4 through 15 carry DB11 through DB0.
-    capture_bit <= '1' when state = clock_low and clock_counter = half_period - 1
+    capture_bit <= '1' when state = clock_cycle and clock_counter = half_period
                             and bit_counter >= 3 and bit_counter <= 14 else '0';
-    publish_sample <= '1' when state = clock_low and clock_counter = half_period - 1
+    publish_sample <= '1' when state = clock_cycle and clock_counter = period
                                and bit_counter = 15 and startup = '0' else '0';
 
     process (clk, reset)
@@ -40,41 +41,41 @@ begin
                     -- The first frame wakes the ADCs if they powered up in shutdown.
                     if startup = '1' or global_sync = '1' then
                         adc_cs <= '0';
-                        state <= clock_high;
+                        state <= clock_cycle;
                     end if;
 
-                when clock_high =>
-                    if clock_counter = half_period - 1 then
-                        clock_counter <= 0;
+                when clock_cycle =>
+                    if clock_counter = 0 then
                         adc_sclk <= '0';
-                        state <= clock_low;
-                    else
-                        clock_counter <= clock_counter + 1;
+                    end if;
+                    if clock_counter = half_period then
+                        adc_sclk <= '1';
                     end if;
 
-                when clock_low =>
-                    if clock_counter = half_period - 1 then
-                        clock_counter <= 0;
-                        adc_sclk <= '1';
-                        if bit_counter = 15 then
-                            bit_counter <= 0;
-                            adc_cs <= '1';
-                            startup <= '0';
-                            state <= quiet;
-                        else
-                            bit_counter <= bit_counter + 1;
-                            state <= clock_high;
-                        end if;
-                    else
+                    if clock_counter < period then
                         clock_counter <= clock_counter + 1;
+                    end if;
+                    if clock_counter = period then
+                        clock_counter <= 0;
+                    end if;
+
+                    if clock_counter = period and bit_counter < 15 then
+                        bit_counter <= bit_counter + 1;
+                    end if;
+                    if clock_counter = period and bit_counter = 15 then
+                        bit_counter <= 0;
+                        adc_cs <= '1';
+                        startup <= '0';
+                        state <= quiet;
                     end if;
 
                 when quiet =>
+                    if clock_counter < quiet_period - 1 then
+                        clock_counter <= clock_counter + 1;
+                    end if;
                     if clock_counter = quiet_period - 1 then
                         clock_counter <= 0;
                         state <= idle;
-                    else
-                        clock_counter <= clock_counter + 1;
                     end if;
             end case;
         end if;

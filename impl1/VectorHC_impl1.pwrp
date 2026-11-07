@@ -1,0 +1,55 @@
+
+Design and Device Details
+--------------------------
+Family: MachXO3L
+Device: LCMXO3L-9400C
+Package: CABGA256
+Performance Grade: 5
+Operating Conditions: Commercial
+Part Number: LCMXO3L-9400C_CABGA256
+Process Type: Worst
+
+Clock Frequency used by TWR
+---------------------------------
+Clock         |   Frequency (MHz)
+---------------------------------
+CLKOP_c       |   100
+---------------------------------
+Clock Frequency used by User Setting: 100 MHz
+
+Note: Use clock frequency from twr file, but use default clock frequency 
+      set in Thermal Analysis of Strategy for clocks which are not in twr file.
+
+Active Factor: 12.5%
+
+Used LUT: 0
+Total LUT: 9400
+% LUT Utilization: 0.00%
+
+Used IO: 6
+Total IO: 207
+% IO Utilization: 2.90%
+
+VCC=3.3V
+---------------------------------------------------------------------------------------------------------------------------------------------
+Board Selection     |   Heat Sink                |   Air Flow       |   Theta-JA (C/W)  |   Total Power (W)     |   Maximum Safe Ambient (C)
+---------------------------------------------------------------------------------------------------------------------------------------------
+JEDEC Board (2S2P)  |   No Heat Sink             |   0 LFM          |   30.6            |   0.232772            |   65.14
+JEDEC Board (2S2P)  |   Low Profile Heat Sink    |   200 LFM        |   19.00           |   0.223273            |   72.67
+JEDEC Board (2S2P)  |   Medium Profile Heat Sink |   200 LFM        |   18.30           |   0.222767            |   73.12
+JEDEC Board (2S2P)  |   High Profile Heat Sink   |   200 LFM        |   17.60           |   0.222231            |   73.58
+Small Board         |   No Heat Sink             |   0 LFM          |   16.73           |   0.221603            |   74.14
+Medium Board        |   No Heat Sink             |   0 LFM          |   14.86           |   0.220234            |   75.36
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+VCC=2.5V
+---------------------------------------------------------------------------------------------------------------------------------------------
+Board Selection     |   Heat Sink                |   Air Flow       |   Theta-JA (C/W)  |   Total Power (W)     |   Maximum Safe Ambient (C)
+---------------------------------------------------------------------------------------------------------------------------------------------
+JEDEC Board (2S2P)  |   No Heat Sink             |   0 LFM          |   30.6            |   0.172218            |   69.93
+JEDEC Board (2S2P)  |   Low Profile Heat Sink    |   200 LFM        |   19.00           |   0.167193            |   75.64
+JEDEC Board (2S2P)  |   Medium Profile Heat Sink |   200 LFM        |   18.30           |   0.166889            |   75.99
+JEDEC Board (2S2P)  |   High Profile Heat Sink   |   200 LFM        |   17.60           |   0.166610            |   76.33
+Small Board         |   No Heat Sink             |   0 LFM          |   16.73           |   0.166262            |   76.76
+Medium Board        |   No Heat Sink             |   0 LFM          |   14.86           |   0.165525            |   77.68
+---------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,2365 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+          Lattice Mapping Report File for Design Module 'board_top'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO3L -p LCMXO3L-9400C -t CABGA256 -s 5 -oc Commercial
+     VectorHC_impl1.ngd -o VectorHC_impl1_map.ncd -pr VectorHC_impl1.prf -mp
+     VectorHC_impl1.mrp -lpf D:/Git/Vector HC FPGA/impl1/VectorHC_impl1.lpf -lpf
+     D:/Git/Vector HC FPGA/VectorHC.lpf -c 0 -gui -msgset D:/Git/Vector HC
+     FPGA/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3L-9400CCABGA256
+Target Performance:   5
+Mapper:  xo3c00a,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  11/07/26  14:35:57
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:   3814 out of 10021 (38%)
+      PFU registers:         3814 out of  9400 (41%)
+      PIO registers:            0 out of   621 (0%)
+   Number of SLICEs:      2846 out of  4700 (61%)
+      SLICEs as Logic/ROM:   2846 out of  4700 (61%)
+      SLICEs as RAM:            0 out of  3525 (0%)
+      SLICEs as Carry:        760 out of  4700 (16%)
+   Number of LUT4s:        5689 out of  9400 (61%)
+      Number used as logic LUTs:        4169
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      1520
+      Number used as shift registers:     0
+   Number of PIO sites used: 145 + 4(JTAG) out of 207 (72%)
+   Number of block RAMs:  0 out of 48 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+     Net clk_c: 2059 loads, 2059 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  246
+     Net clk_c_enable_2232: 8 loads, 8 LSLICEs
+
+     Net clk_c_enable_2340: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2217: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2322: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2307: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2292: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2277: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2262: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2247: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2202: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2187: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2172: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2157: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2142: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2127: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2112: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2097: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2082: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2067: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2052: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2037: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2022: 8 loads, 8 LSLICEs
+     Net clk_c_enable_2007: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1992: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1977: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1962: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1946: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1931: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1915: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1900: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1883: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1868: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1847: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1832: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1808: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1793: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1778: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1763: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1748: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1733: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1718: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1703: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1688: 8 loads, 8 LSLICEs
+     Net clk_c_enable_1673: 16 loads, 16 LSLICEs
+     Net clk_c_enable_3692: 4 loads, 4 LSLICEs
+     Net clk_c_enable_1353: 1 loads, 1 LSLICEs
+     Net clk_c_enable_3660: 16 loads, 16 LSLICEs
+     Net read_memory: 31 loads, 31 LSLICEs
+     Net clk_c_enable_3696: 2 loads, 2 LSLICEs
+     Net clk_c_enable_1350: 1 loads, 1 LSLICEs
+     Net clk_c_enable_3694: 4 loads, 4 LSLICEs
+     Net clk_c_enable_1356: 1 loads, 1 LSLICEs
+     Net cell_b/clk_c_enable_1527: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_1516: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_2540: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_2529: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_2822: 25 loads, 25 LSLICEs
+
+     Net cell_b/clk_c_enable_2833: 25 loads, 25 LSLICEs
+     Net cell_b/heater9/pwm_driver/clk_c_enable_1186: 9 loads, 9 LSLICEs
+     Net cell_b/heater9/pwm_driver/clk_c_enable_524: 1 loads, 1 LSLICEs
+     Net cell_b/heater8/pwm_driver/clk_c_enable_1345: 9 loads, 9 LSLICEs
+     Net cell_b/heater8/pwm_driver/clk_c_enable_514: 1 loads, 1 LSLICEs
+     Net cell_b/clk_c_enable_2728: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_2739: 25 loads, 25 LSLICEs
+     Net cell_b/heater7/pwm_driver/clk_c_enable_1233: 9 loads, 9 LSLICEs
+     Net cell_b/heater7/pwm_driver/clk_c_enable_505: 1 loads, 1 LSLICEs
+     Net cell_b/heater6/pwm_driver/clk_c_enable_3700: 9 loads, 9 LSLICEs
+     Net cell_b/heater6/pwm_driver/clk_c_enable_499: 1 loads, 1 LSLICEs
+     Net cell_b/clk_c_enable_2623: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_2634: 25 loads, 25 LSLICEs
+     Net cell_b/heater5/pwm_driver/clk_c_enable_3701: 9 loads, 9 LSLICEs
+     Net cell_b/heater5/pwm_driver/clk_c_enable_496: 1 loads, 1 LSLICEs
+     Net cell_b/heater4/pwm_driver/clk_c_enable_421: 9 loads, 9 LSLICEs
+     Net cell_b/heater4/pwm_driver/clk_c_enable_489: 1 loads, 1 LSLICEs
+     Net cell_b/heater3/pwm_driver/clk_c_enable_1462: 9 loads, 9 LSLICEs
+     Net cell_b/heater3/pwm_driver/clk_c_enable_480: 1 loads, 1 LSLICEs
+     Net cell_b/heater2/pwm_driver/clk_c_enable_3706: 9 loads, 9 LSLICEs
+     Net cell_b/heater2/pwm_driver/clk_c_enable_472: 1 loads, 1 LSLICEs
+     Net cell_b/heater1/pwm_driver/clk_c_enable_464: 1 loads, 1 LSLICEs
+     Net cell_b/heater1/pwm_driver/clk_c_enable_3662: 9 loads, 9 LSLICEs
+     Net cell_b/clk_c_enable_3032: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_3033: 25 loads, 25 LSLICEs
+     Net cell_b/heater14/pwm_driver/clk_c_enable_567: 1 loads, 1 LSLICEs
+     Net cell_b/heater14/pwm_driver/clk_c_enable_1236: 9 loads, 9 LSLICEs
+     Net cell_b/publish_sample: 5 loads, 5 LSLICEs
+     Net cell_b/capture_bit: 5 loads, 5 LSLICEs
+     Net cell_b/heater13/pwm_driver/clk_c_enable_559: 1 loads, 1 LSLICEs
+     Net cell_b/heater13/pwm_driver/clk_c_enable_1220: 9 loads, 9 LSLICEs
+     Net cell_b/clk_c_enable_2927: 25 loads, 25 LSLICEs
+     Net cell_b/clk_c_enable_2938: 25 loads, 25 LSLICEs
+     Net cell_b/heater12/pwm_driver/clk_c_enable_548: 1 loads, 1 LSLICEs
+     Net cell_b/heater12/pwm_driver/clk_c_enable_1216: 9 loads, 9 LSLICEs
+     Net cell_b/heater11/pwm_driver/clk_c_enable_542: 1 loads, 1 LSLICEs
+     Net cell_b/heater11/pwm_driver/clk_c_enable_1200: 9 loads, 9 LSLICEs
+     Net cell_b/heater10/pwm_driver/clk_c_enable_1192: 9 loads, 9 LSLICEs
+     Net cell_b/heater10/pwm_driver/clk_c_enable_532: 1 loads, 1 LSLICEs
+     Net cell_b/frame_control/clk_c_enable_3695: 5 loads, 5 LSLICEs
+     Net cell_b/frame_control/clk_c_enable_366: 1 loads, 1 LSLICEs
+     Net cell_b/frame_control/clk_c_enable_498: 1 loads, 1 LSLICEs
+     Net cell_c/clk_c_enable_1483: 26 loads, 26 LSLICEs
+     Net cell_c/clk_c_enable_1472: 26 loads, 26 LSLICEs
+     Net cell_c/clk_c_enable_3136: 25 loads, 25 LSLICEs
+     Net cell_c/clk_c_enable_3125: 25 loads, 25 LSLICEs
+     Net cell_c/clk_c_enable_3418: 26 loads, 26 LSLICEs
+     Net cell_c/clk_c_enable_3429: 26 loads, 26 LSLICEs
+     Net cell_c/heater9/pwm_driver/clk_c_enable_610: 1 loads, 1 LSLICEs
+     Net cell_c/heater9/pwm_driver/clk_c_enable_1250: 9 loads, 9 LSLICEs
+     Net cell_c/heater8/pwm_driver/clk_c_enable_1248: 9 loads, 9 LSLICEs
+     Net cell_c/heater8/pwm_driver/clk_c_enable_606: 1 loads, 1 LSLICEs
+     Net cell_c/clk_c_enable_3324: 25 loads, 25 LSLICEs
+     Net cell_c/clk_c_enable_3335: 25 loads, 25 LSLICEs
+     Net cell_c/heater7/pwm_driver/clk_c_enable_1237: 9 loads, 9 LSLICEs
+     Net cell_c/heater7/pwm_driver/clk_c_enable_605: 1 loads, 1 LSLICEs
+
+     Net cell_c/heater6/pwm_driver/clk_c_enable_599: 1 loads, 1 LSLICEs
+     Net cell_c/heater6/pwm_driver/clk_c_enable_1232: 9 loads, 9 LSLICEs
+     Net cell_c/clk_c_enable_3219: 25 loads, 25 LSLICEs
+     Net cell_c/clk_c_enable_3230: 25 loads, 25 LSLICEs
+     Net cell_c/heater5/pwm_driver/clk_c_enable_997: 9 loads, 9 LSLICEs
+     Net cell_c/heater5/pwm_driver/clk_c_enable_596: 1 loads, 1 LSLICEs
+     Net cell_c/heater4/pwm_driver/clk_c_enable_1164: 9 loads, 9 LSLICEs
+     Net cell_c/heater4/pwm_driver/clk_c_enable_592: 1 loads, 1 LSLICEs
+     Net cell_c/heater3/pwm_driver/clk_c_enable_3699: 9 loads, 9 LSLICEs
+     Net cell_c/heater3/pwm_driver/clk_c_enable_589: 1 loads, 1 LSLICEs
+     Net cell_c/heater2/pwm_driver/clk_c_enable_1234: 9 loads, 9 LSLICEs
+     Net cell_c/heater2/pwm_driver/clk_c_enable_582: 1 loads, 1 LSLICEs
+     Net cell_c/heater1/pwm_driver/clk_c_enable_1044: 9 loads, 9 LSLICEs
+     Net cell_c/heater1/pwm_driver/clk_c_enable_575: 1 loads, 1 LSLICEs
+     Net cell_c/clk_c_enable_3628: 25 loads, 25 LSLICEs
+     Net cell_c/clk_c_enable_3629: 25 loads, 25 LSLICEs
+     Net cell_c/heater14/pwm_driver/clk_c_enable_1012: 9 loads, 9 LSLICEs
+     Net cell_c/heater14/pwm_driver/clk_c_enable_3674: 1 loads, 1 LSLICEs
+     Net cell_c/publish_sample: 5 loads, 5 LSLICEs
+     Net cell_c/capture_bit: 5 loads, 5 LSLICEs
+     Net cell_c/heater13/pwm_driver/clk_c_enable_3705: 9 loads, 9 LSLICEs
+     Net cell_c/heater13/pwm_driver/clk_c_enable_624: 1 loads, 1 LSLICEs
+     Net cell_c/clk_c_enable_3523: 25 loads, 25 LSLICEs
+     Net cell_c/clk_c_enable_3534: 25 loads, 25 LSLICEs
+     Net cell_c/heater12/pwm_driver/clk_c_enable_1254: 9 loads, 9 LSLICEs
+     Net cell_c/heater12/pwm_driver/clk_c_enable_620: 1 loads, 1 LSLICEs
+     Net cell_c/heater11/pwm_driver/clk_c_enable_1253: 9 loads, 9 LSLICEs
+     Net cell_c/heater11/pwm_driver/clk_c_enable_617: 1 loads, 1 LSLICEs
+     Net cell_c/heater10/pwm_driver/clk_c_enable_1251: 9 loads, 9 LSLICEs
+     Net cell_c/heater10/pwm_driver/clk_c_enable_613: 1 loads, 1 LSLICEs
+     Net cell_c/frame_control/clk_c_enable_375: 1 loads, 1 LSLICEs
+     Net cell_c/frame_control/clk_c_enable_541: 1 loads, 1 LSLICEs
+     Net cell_c/frame_control/clk_c_enable_3693: 5 loads, 5 LSLICEs
+     Net cell_a/clk_c_enable_188: 28 loads, 28 LSLICEs
+     Net cell_a/clk_c_enable_3702: 28 loads, 28 LSLICEs
+     Net cell_a/clk_c_enable_2342: 26 loads, 26 LSLICEs
+     Net cell_a/clk_c_enable_1571: 27 loads, 27 LSLICEs
+     Net cell_a/clk_c_enable_2436: 27 loads, 27 LSLICEs
+     Net cell_a/clk_c_enable_526: 28 loads, 28 LSLICEs
+     Net cell_a/clk_c_enable_519: 28 loads, 28 LSLICEs
+     Net cell_a/clk_c_enable_786: 27 loads, 27 LSLICEs
+     Net cell_a/heater9/pwm_driver/clk_c_enable_1344: 9 loads, 9 LSLICEs
+     Net cell_a/heater9/pwm_driver/clk_c_enable_414: 1 loads, 1 LSLICEs
+     Net cell_a/clk_c_enable_833: 26 loads, 26 LSLICEs
+     Net cell_a/heater8/pwm_driver/clk_c_enable_411: 1 loads, 1 LSLICEs
+     Net cell_a/heater8/pwm_driver/clk_c_enable_3698: 9 loads, 9 LSLICEs
+     Net cell_a/clk_c_enable_1255: 27 loads, 27 LSLICEs
+     Net cell_a/heater7/pwm_driver/clk_c_enable_3703: 9 loads, 9 LSLICEs
+     Net cell_a/heater7/pwm_driver/clk_c_enable_406: 1 loads, 1 LSLICEs
+     Net cell_a/clk_c_enable_1262: 26 loads, 26 LSLICEs
+     Net cell_a/heater6/pwm_driver/clk_c_enable_400: 1 loads, 1 LSLICEs
+     Net cell_a/heater6/pwm_driver/clk_c_enable_3691: 9 loads, 9 LSLICEs
+     Net cell_a/heater5/pwm_driver/clk_c_enable_3665: 9 loads, 9 LSLICEs
+     Net cell_a/heater5/pwm_driver/clk_c_enable_395: 1 loads, 1 LSLICEs
+     Net cell_a/clk_c_enable_1378: 26 loads, 26 LSLICEs
+     Net cell_a/clk_c_enable_1371: 27 loads, 27 LSLICEs
+
+     Net cell_a/heater4/pwm_driver/clk_c_enable_3668: 9 loads, 9 LSLICEs
+     Net cell_a/heater4/pwm_driver/clk_c_enable_391: 1 loads, 1 LSLICEs
+     Net cell_a/heater3/pwm_driver/clk_c_enable_3673: 9 loads, 9 LSLICEs
+     Net cell_a/heater3/pwm_driver/clk_c_enable_385: 1 loads, 1 LSLICEs
+     Net cell_a/heater2/pwm_driver/clk_c_enable_1184: 9 loads, 9 LSLICEs
+     Net cell_a/heater2/pwm_driver/clk_c_enable_381: 1 loads, 1 LSLICEs
+     Net cell_a/heater1/pwm_driver/clk_c_enable_1183: 9 loads, 9 LSLICEs
+     Net cell_a/heater1/pwm_driver/clk_c_enable_376: 1 loads, 1 LSLICEs
+     Net cell_a/clk_c_enable_2437: 26 loads, 26 LSLICEs
+     Net cell_a/heater14/pwm_driver/clk_c_enable_456: 1 loads, 1 LSLICEs
+     Net cell_a/heater14/pwm_driver/clk_c_enable_3667: 9 loads, 9 LSLICEs
+     Net cell_a/publish_sample: 5 loads, 5 LSLICEs
+     Net cell_a/capture_bit: 5 loads, 5 LSLICEs
+     Net cell_a/heater13/pwm_driver/clk_c_enable_3670: 9 loads, 9 LSLICEs
+     Net cell_a/heater13/pwm_driver/clk_c_enable_448: 1 loads, 1 LSLICEs
+     Net cell_a/heater12/pwm_driver/clk_c_enable_439: 1 loads, 1 LSLICEs
+     Net cell_a/heater12/pwm_driver/clk_c_enable_3671: 9 loads, 9 LSLICEs
+     Net cell_a/heater11/pwm_driver/clk_c_enable_430: 1 loads, 1 LSLICEs
+     Net cell_a/heater11/pwm_driver/clk_c_enable_3672: 9 loads, 9 LSLICEs
+     Net cell_a/heater10/pwm_driver/clk_c_enable_1863: 9 loads, 9 LSLICEs
+     Net cell_a/heater10/pwm_driver/clk_c_enable_419: 1 loads, 1 LSLICEs
+     Net cell_a/frame_control/clk_c_enable_360: 1 loads, 1 LSLICEs
+     Net cell_a/frame_control/clk_c_enable_481: 1 loads, 1 LSLICEs
+     Net cell_a/frame_control/clk_c_enable_3697: 3 loads, 3 LSLICEs
+     Net spi1/clk_c_enable_1642: 8 loads, 8 LSLICEs
+     Net spi1/clk_c_enable_1607: 16 loads, 16 LSLICEs
+     Net spi1/clk_c_enable_170: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_627: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_628: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_648: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_741: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1159: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1161: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1163: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1165: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1166: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1167: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1168: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1169: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1170: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1174: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1351: 1 loads, 1 LSLICEs
+     Net spi1/n11855: 4 loads, 4 LSLICEs
+     Net spi1/clk_c_enable_1463: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1608: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3690: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1622: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1621: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1616: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1615: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1614: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1613: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1612: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1611: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1610: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1609: 1 loads, 1 LSLICEs
+
+     Net spi1/clk_c_enable_1623: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1617: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1618: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1619: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_1620: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3663: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3675: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3689: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3688: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3687: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3686: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3685: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3684: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3676: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3677: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3678: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3679: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3680: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3681: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3682: 1 loads, 1 LSLICEs
+     Net spi1/clk_c_enable_3683: 1 loads, 1 LSLICEs
+   Number of LSRs:  51
+     Net state_0: 1 loads, 1 LSLICEs
+     Net state_0_adj_2417: 1 loads, 1 LSLICEs
+     Net n32300: 18 loads, 18 LSLICEs
+     Net n32309: 2 loads, 2 LSLICEs
+     Net state_0_adj_2435: 1 loads, 1 LSLICEs
+     Net cell_b/heater9/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater8/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater7/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater6/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater5/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater4/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater3/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater2/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater1/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater14/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater13/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater12/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater11/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_b/heater10/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater9/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater8/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater7/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater6/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater5/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater4/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater3/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater2/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater1/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater14/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater14/pwm_driver/counting_up_N_1929: 1 loads, 1 LSLICEs
+     Net cell_c/heater13/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater12/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater11/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_c/heater10/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+
+     Net cell_a/heater9/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater8/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater7/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater6/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater5/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater4/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater3/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater2/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater1/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater14/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater13/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater12/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater11/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net cell_a/heater10/pwm_driver/counter_15__N_1932: 9 loads, 9 LSLICEs
+     Net spi1/n46425: 1 loads, 1 LSLICEs
+     Net spi1/n45834: 1 loads, 1 LSLICEs
+     Net spi1/n15: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net address_memory_8: 525 loads
+     Net address_memory_4: 434 loads
+     Net address_memory_1: 242 loads
+     Net address_memory_0: 219 loads
+     Net address_memory_3: 213 loads
+     Net address_memory_6: 183 loads
+     Net address_memory_5: 156 loads
+     Net address_memory_9: 147 loads
+     Net n79929: 50 loads
+     Net spi1/spi_mosi_buf_1: 49 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm7         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm6         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm8         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm5         | OUTPUT    | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| cell_c_pwm4         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm3         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm2         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm1         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_adc_cs       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_adc_sclk     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm14        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm13        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm12        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm11        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm10        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm9         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm8         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm7         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm6         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm5         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm4         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm3         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm2         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_pwm1         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_adc_cs       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_adc_sclk     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm14        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm13        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm12        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm11        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm10        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm9         | OUTPUT    | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| cell_a_pwm8         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm7         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm6         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm5         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm4         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm3         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm2         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_pwm1         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_adc_cs       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_adc_sclk     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spi_miso            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm9         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm10        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm11        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm12        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm13        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_pwm14        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| reset               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| global_sync         | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spi_sck             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spi_mosi            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spi_scs             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo1    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo1 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo2    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo2 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo3    | INPUT     | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo3 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo4    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo4 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo5    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo5 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo6    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo6 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo7    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo7 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo8    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo8 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo9    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo9 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo10   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo10| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo11   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo11| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo12   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo12| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo13   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo13| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_temp_sdo14   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_current_sdo14| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_rtd_sdo1     | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_a_rtd_sdo2     | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo1    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo1 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo2    | INPUT     | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo2 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo3    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo3 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo4    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo4 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo5    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo5 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo6    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo6 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo7    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo7 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo8    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo8 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo9    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo9 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo10   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo10| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo11   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo11| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo12   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo12| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo13   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo13| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_temp_sdo14   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_current_sdo14| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_rtd_sdo1     | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_b_rtd_sdo2     | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo1    | INPUT     | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo1 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo2    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo2 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo3    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo3 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo4    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo4 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo5    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo5 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo6    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo6 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo7    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo7 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo8    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo8 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo9    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo9 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo10   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo10| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo11   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo11| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo12   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo12| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo13   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo13| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_temp_sdo14   | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_current_sdo14| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cell_c_rtd_sdo1     | INPUT     | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| cell_c_rtd_sdo2     | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i55731 undriven or does not drive anything - clipped.
+Signal reset_N_1934 was merged into signal reset_c
+Signal spi1/clk_c_enable_3664 was merged into signal spi1/n11855
+Signal cell_a/frame_control/n79371 was merged into signal state_0
+Signal cell_a/heater10/pwm_driver/n31482 was merged into signal
+     cell_a/heater10/pwm_driver/counter_15__N_1932
+Signal cell_a/heater11/pwm_driver/n32257 was merged into signal
+     cell_a/heater11/pwm_driver/counter_15__N_1932
+Signal cell_a/heater12/pwm_driver/n31975 was merged into signal
+     cell_a/heater12/pwm_driver/counter_15__N_1932
+Signal cell_a/heater13/pwm_driver/n32015 was merged into signal
+     cell_a/heater13/pwm_driver/counter_15__N_1932
+Signal cell_a/heater14/pwm_driver/n32325 was merged into signal
+     cell_a/heater14/pwm_driver/counter_15__N_1932
+Signal cell_a/heater1/pwm_driver/n32238 was merged into signal
+     cell_a/heater1/pwm_driver/counter_15__N_1932
+Signal cell_a/heater2/pwm_driver/n32236 was merged into signal
+     cell_a/heater2/pwm_driver/counter_15__N_1932
+Signal cell_a/heater3/pwm_driver/n32288 was merged into signal
+     cell_a/heater3/pwm_driver/counter_15__N_1932
+Signal cell_a/heater4/pwm_driver/n32340 was merged into signal
+     cell_a/heater4/pwm_driver/counter_15__N_1932
+Signal cell_a/heater5/pwm_driver/n32273 was merged into signal
+     cell_a/heater5/pwm_driver/counter_15__N_1932
+Signal cell_a/heater6/pwm_driver/n32138 was merged into signal
+     cell_a/heater6/pwm_driver/counter_15__N_1932
+Signal cell_a/heater7/pwm_driver/n32111 was merged into signal
+     cell_a/heater7/pwm_driver/counter_15__N_1932
+Signal cell_a/heater8/pwm_driver/n32048 was merged into signal
+     cell_a/heater8/pwm_driver/counter_15__N_1932
+Signal cell_a/heater9/pwm_driver/n32032 was merged into signal
+     cell_a/heater9/pwm_driver/counter_15__N_1932
+Signal cell_c/frame_control/n79369 was merged into signal state_0_adj_2435
+Signal cell_c/heater10/pwm_driver/n32195 was merged into signal
+     cell_c/heater10/pwm_driver/counter_15__N_1932
+Signal cell_c/heater11/pwm_driver/n32193 was merged into signal
+     cell_c/heater11/pwm_driver/counter_15__N_1932
+Signal cell_c/heater12/pwm_driver/n32466 was merged into signal
+     cell_c/heater12/pwm_driver/counter_15__N_1932
+Signal cell_c/heater13/pwm_driver/n32451 was merged into signal
+     cell_c/heater13/pwm_driver/counter_15__N_1932
+Signal cell_c/heater14/pwm_driver/n32176 was merged into signal
+     cell_c/heater14/pwm_driver/counter_15__N_1932
+Signal cell_c/heater1/pwm_driver/n32170 was merged into signal
+     cell_c/heater1/pwm_driver/counter_15__N_1932
+Signal cell_c/heater2/pwm_driver/n32205 was merged into signal
+     cell_c/heater2/pwm_driver/counter_15__N_1932
+Signal cell_c/heater3/pwm_driver/n32062 was merged into signal
+     cell_c/heater3/pwm_driver/counter_15__N_1932
+
+Signal cell_c/heater4/pwm_driver/n32240 was merged into signal
+     cell_c/heater4/pwm_driver/counter_15__N_1932
+Signal cell_c/heater5/pwm_driver/n32182 was merged into signal
+     cell_c/heater5/pwm_driver/counter_15__N_1932
+Signal cell_c/heater6/pwm_driver/n32209 was merged into signal
+     cell_c/heater6/pwm_driver/counter_15__N_1932
+Signal cell_c/heater7/pwm_driver/n32201 was merged into signal
+     cell_c/heater7/pwm_driver/counter_15__N_1932
+Signal cell_c/heater8/pwm_driver/n32199 was merged into signal
+     cell_c/heater8/pwm_driver/counter_15__N_1932
+Signal cell_c/heater9/pwm_driver/n32197 was merged into signal
+     cell_c/heater9/pwm_driver/counter_15__N_1932
+Signal cell_b/frame_control/n79370 was merged into signal state_0_adj_2417
+Signal cell_b/heater10/pwm_driver/n32227 was merged into signal
+     cell_b/heater10/pwm_driver/counter_15__N_1932
+Signal cell_b/heater11/pwm_driver/n32221 was merged into signal
+     cell_b/heater11/pwm_driver/counter_15__N_1932
+Signal cell_b/heater12/pwm_driver/n32215 was merged into signal
+     cell_b/heater12/pwm_driver/counter_15__N_1932
+Signal cell_b/heater13/pwm_driver/n32211 was merged into signal
+     cell_b/heater13/pwm_driver/counter_15__N_1932
+Signal cell_b/heater14/pwm_driver/n32203 was merged into signal
+     cell_b/heater14/pwm_driver/counter_15__N_1932
+Signal cell_b/heater1/pwm_driver/n32212 was merged into signal
+     cell_b/heater1/pwm_driver/counter_15__N_1932
+Signal cell_b/heater2/pwm_driver/n32168 was merged into signal
+     cell_b/heater2/pwm_driver/counter_15__N_1932
+Signal cell_b/heater3/pwm_driver/n32152 was merged into signal
+     cell_b/heater3/pwm_driver/counter_15__N_1932
+Signal cell_b/heater4/pwm_driver/n32123 was merged into signal
+     cell_b/heater4/pwm_driver/counter_15__N_1932
+Signal cell_b/heater5/pwm_driver/n32093 was merged into signal
+     cell_b/heater5/pwm_driver/counter_15__N_1932
+Signal cell_b/heater6/pwm_driver/n32078 was merged into signal
+     cell_b/heater6/pwm_driver/counter_15__N_1932
+Signal cell_b/heater7/pwm_driver/n32207 was merged into signal
+     cell_b/heater7/pwm_driver/counter_15__N_1932
+Signal cell_b/heater8/pwm_driver/n32030 was merged into signal
+     cell_b/heater8/pwm_driver/counter_15__N_1932
+Signal cell_b/heater9/pwm_driver/n32233 was merged into signal
+     cell_b/heater9/pwm_driver/counter_15__N_1932
+Signal GND_net undriven or does not drive anything - clipped.
+Signal n83855 undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal spi1/add_2577_1/S0 undriven or does not drive anything - clipped.
+Signal spi1/add_2577_1/CI undriven or does not drive anything - clipped.
+Signal spi1/add_2577_7/S1 undriven or does not drive anything - clipped.
+Signal spi1/add_2577_7/CO undriven or does not drive anything - clipped.
+Signal cell_a/heater10/pwm_driver/counter_3446_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater10/pwm_driver/counter_3446_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater10/pwm_driver/counter_3446_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater10/pwm_driver/counter_3446_add_4_17/CO undriven or does not
+     drive anything - clipped.
+
+Signal cell_a/heater10/pwm_driver/add_2117_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater10/pwm_driver/add_2117_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater10/pwm_driver/add_2117_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater11/pwm_driver/counter_3447_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater11/pwm_driver/counter_3447_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater11/pwm_driver/counter_3447_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater11/pwm_driver/counter_3447_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater11/pwm_driver/add_2122_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater11/pwm_driver/add_2122_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater11/pwm_driver/add_2122_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater12/pwm_driver/counter_3448_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater12/pwm_driver/counter_3448_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater12/pwm_driver/counter_3448_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater12/pwm_driver/counter_3448_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater12/pwm_driver/add_2127_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater12/pwm_driver/add_2127_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater12/pwm_driver/add_2127_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater13/pwm_driver/add_2132_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater13/pwm_driver/add_2132_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater13/pwm_driver/add_2132_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater13/pwm_driver/counter_3449_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater13/pwm_driver/counter_3449_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater13/pwm_driver/counter_3449_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater13/pwm_driver/counter_3449_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater14/pwm_driver/add_2137_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater14/pwm_driver/add_2137_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater14/pwm_driver/add_2137_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater14/pwm_driver/counter_3450_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+
+Signal cell_a/heater14/pwm_driver/counter_3450_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater14/pwm_driver/counter_3450_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater14/pwm_driver/counter_3450_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater1/pwm_driver/counter_3437_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater1/pwm_driver/counter_3437_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater1/pwm_driver/counter_3437_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater1/pwm_driver/counter_3437_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater1/pwm_driver/add_2072_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater1/pwm_driver/add_2072_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater1/pwm_driver/add_2072_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater2/pwm_driver/add_2077_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater2/pwm_driver/add_2077_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater2/pwm_driver/add_2077_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater2/pwm_driver/counter_3438_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater2/pwm_driver/counter_3438_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater2/pwm_driver/counter_3438_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater2/pwm_driver/counter_3438_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater3/pwm_driver/add_2082_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater3/pwm_driver/add_2082_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater3/pwm_driver/add_2082_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater3/pwm_driver/counter_3439_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater3/pwm_driver/counter_3439_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater3/pwm_driver/counter_3439_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater3/pwm_driver/counter_3439_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater4/pwm_driver/add_2087_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater4/pwm_driver/add_2087_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater4/pwm_driver/add_2087_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater4/pwm_driver/counter_3440_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+
+Signal cell_a/heater4/pwm_driver/counter_3440_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater4/pwm_driver/counter_3440_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater4/pwm_driver/counter_3440_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater5/pwm_driver/add_2092_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater5/pwm_driver/counter_3441_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater5/pwm_driver/counter_3441_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater5/pwm_driver/counter_3441_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater5/pwm_driver/counter_3441_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater5/pwm_driver/add_2092_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater5/pwm_driver/add_2092_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater6/pwm_driver/counter_3442_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater6/pwm_driver/counter_3442_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater6/pwm_driver/counter_3442_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater6/pwm_driver/counter_3442_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater6/pwm_driver/add_2097_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater6/pwm_driver/add_2097_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater6/pwm_driver/add_2097_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater7/pwm_driver/counter_3443_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater7/pwm_driver/counter_3443_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater7/pwm_driver/counter_3443_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater7/pwm_driver/counter_3443_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater7/pwm_driver/add_2102_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater7/pwm_driver/add_2102_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater7/pwm_driver/add_2102_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater8/pwm_driver/add_2107_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater8/pwm_driver/add_2107_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater8/pwm_driver/add_2107_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater8/pwm_driver/counter_3444_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+
+Signal cell_a/heater8/pwm_driver/counter_3444_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater8/pwm_driver/counter_3444_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater8/pwm_driver/counter_3444_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater9/pwm_driver/add_2112_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater9/pwm_driver/add_2112_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater9/pwm_driver/add_2112_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_a/heater9/pwm_driver/counter_3445_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater9/pwm_driver/counter_3445_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater9/pwm_driver/counter_3445_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_a/heater9/pwm_driver/counter_3445_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater10/pwm_driver/add_2257_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater10/pwm_driver/add_2257_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater10/pwm_driver/add_2257_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater10/pwm_driver/counter_3471_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater10/pwm_driver/counter_3471_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater10/pwm_driver/counter_3471_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater10/pwm_driver/counter_3471_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater11/pwm_driver/add_2262_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater11/pwm_driver/add_2262_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater11/pwm_driver/add_2262_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater11/pwm_driver/counter_3472_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater11/pwm_driver/counter_3472_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater11/pwm_driver/counter_3472_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater11/pwm_driver/counter_3472_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater12/pwm_driver/add_2267_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater12/pwm_driver/add_2267_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater12/pwm_driver/add_2267_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater12/pwm_driver/counter_3473_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+
+Signal cell_c/heater12/pwm_driver/counter_3473_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater12/pwm_driver/counter_3473_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater12/pwm_driver/counter_3473_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater13/pwm_driver/add_2272_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater13/pwm_driver/counter_3474_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater13/pwm_driver/counter_3474_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater13/pwm_driver/counter_3474_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater13/pwm_driver/counter_3474_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater13/pwm_driver/add_2272_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater13/pwm_driver/add_2272_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater14/pwm_driver/counter_3476_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater14/pwm_driver/counter_3476_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater14/pwm_driver/counter_3476_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater14/pwm_driver/counter_3476_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater14/pwm_driver/add_2277_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater14/pwm_driver/add_2277_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater14/pwm_driver/add_2277_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater1/pwm_driver/add_2212_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater1/pwm_driver/add_2212_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater1/pwm_driver/add_2212_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater1/pwm_driver/counter_3477_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater1/pwm_driver/counter_3477_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater1/pwm_driver/counter_3477_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater1/pwm_driver/counter_3477_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater2/pwm_driver/counter_3466_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater2/pwm_driver/counter_3466_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater2/pwm_driver/add_2217_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater2/pwm_driver/add_2217_1/CI undriven or does not drive
+     anything - clipped.
+
+Signal cell_c/heater2/pwm_driver/add_2217_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater2/pwm_driver/counter_3466_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater2/pwm_driver/counter_3466_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater3/pwm_driver/add_2222_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater3/pwm_driver/add_2222_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater3/pwm_driver/add_2222_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater3/pwm_driver/counter_3457_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater3/pwm_driver/counter_3457_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater3/pwm_driver/counter_3457_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater3/pwm_driver/counter_3457_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater4/pwm_driver/counter_3436_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater4/pwm_driver/counter_3436_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater4/pwm_driver/counter_3436_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater4/pwm_driver/counter_3436_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater4/pwm_driver/add_2227_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater4/pwm_driver/add_2227_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater4/pwm_driver/add_2227_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater5/pwm_driver/add_2232_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater5/pwm_driver/add_2232_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater5/pwm_driver/add_2232_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater5/pwm_driver/counter_3475_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater5/pwm_driver/counter_3475_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater5/pwm_driver/counter_3475_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater5/pwm_driver/counter_3475_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater6/pwm_driver/counter_3464_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater6/pwm_driver/counter_3464_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater6/pwm_driver/counter_3464_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater6/pwm_driver/counter_3464_add_4_17/CO undriven or does not
+     drive anything - clipped.
+
+Signal cell_c/heater6/pwm_driver/add_2237_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater6/pwm_driver/add_2237_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater6/pwm_driver/add_2237_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater7/pwm_driver/add_2242_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater7/pwm_driver/add_2242_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater7/pwm_driver/add_2242_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater7/pwm_driver/counter_3468_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater7/pwm_driver/counter_3468_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater7/pwm_driver/counter_3468_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater7/pwm_driver/counter_3468_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater8/pwm_driver/add_2247_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater8/pwm_driver/add_2247_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater8/pwm_driver/add_2247_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater8/pwm_driver/counter_3469_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater8/pwm_driver/counter_3469_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater8/pwm_driver/counter_3469_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater8/pwm_driver/counter_3469_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater9/pwm_driver/add_2252_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater9/pwm_driver/add_2252_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater9/pwm_driver/add_2252_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_c/heater9/pwm_driver/counter_3470_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater9/pwm_driver/counter_3470_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater9/pwm_driver/counter_3470_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_c/heater9/pwm_driver/counter_3470_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater10/pwm_driver/counter_3460_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater10/pwm_driver/counter_3460_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater10/pwm_driver/counter_3460_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater10/pwm_driver/counter_3460_add_4_17/CO undriven or does not
+     drive anything - clipped.
+
+Signal cell_b/heater10/pwm_driver/add_2187_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater10/pwm_driver/add_2187_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater10/pwm_driver/add_2187_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater11/pwm_driver/counter_3461_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater11/pwm_driver/counter_3461_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater11/pwm_driver/counter_3461_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater11/pwm_driver/counter_3461_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater11/pwm_driver/add_2192_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater11/pwm_driver/add_2192_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater11/pwm_driver/add_2192_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater12/pwm_driver/counter_3462_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater12/pwm_driver/counter_3462_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater12/pwm_driver/counter_3462_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater12/pwm_driver/counter_3462_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater12/pwm_driver/add_2197_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater12/pwm_driver/add_2197_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater12/pwm_driver/add_2197_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater13/pwm_driver/counter_3463_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater13/pwm_driver/counter_3463_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater13/pwm_driver/counter_3463_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater13/pwm_driver/counter_3463_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater13/pwm_driver/add_2202_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater13/pwm_driver/add_2202_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater13/pwm_driver/add_2202_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater14/pwm_driver/add_2207_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater14/pwm_driver/add_2207_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater14/pwm_driver/add_2207_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater14/pwm_driver/counter_3467_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+
+Signal cell_b/heater14/pwm_driver/counter_3467_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater14/pwm_driver/counter_3467_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater14/pwm_driver/counter_3467_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater1/pwm_driver/counter_3451_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater1/pwm_driver/counter_3451_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater1/pwm_driver/counter_3451_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater1/pwm_driver/counter_3451_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater1/pwm_driver/add_2142_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater1/pwm_driver/add_2142_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater1/pwm_driver/add_2142_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater2/pwm_driver/add_2147_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater2/pwm_driver/add_2147_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater2/pwm_driver/add_2147_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater2/pwm_driver/counter_3452_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater2/pwm_driver/counter_3452_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater2/pwm_driver/counter_3452_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater2/pwm_driver/counter_3452_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater3/pwm_driver/counter_3453_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater3/pwm_driver/counter_3453_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater3/pwm_driver/add_2152_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater3/pwm_driver/add_2152_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater3/pwm_driver/counter_3453_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater3/pwm_driver/counter_3453_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater3/pwm_driver/add_2152_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater4/pwm_driver/add_2157_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater4/pwm_driver/add_2157_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater4/pwm_driver/add_2157_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater4/pwm_driver/counter_3454_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+
+Signal cell_b/heater4/pwm_driver/counter_3454_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater4/pwm_driver/counter_3454_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater4/pwm_driver/counter_3454_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater5/pwm_driver/add_2162_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater5/pwm_driver/add_2162_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater5/pwm_driver/add_2162_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater5/pwm_driver/counter_3455_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater5/pwm_driver/counter_3455_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater5/pwm_driver/counter_3455_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater5/pwm_driver/counter_3455_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater6/pwm_driver/counter_3456_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater6/pwm_driver/counter_3456_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater6/pwm_driver/counter_3456_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater6/pwm_driver/counter_3456_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater6/pwm_driver/add_2167_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater6/pwm_driver/add_2167_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater6/pwm_driver/add_2167_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater7/pwm_driver/counter_3465_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater7/pwm_driver/counter_3465_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater7/pwm_driver/counter_3465_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater7/pwm_driver/counter_3465_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater7/pwm_driver/add_2172_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater7/pwm_driver/add_2172_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater7/pwm_driver/add_2172_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater8/pwm_driver/counter_3458_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater8/pwm_driver/counter_3458_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater8/pwm_driver/counter_3458_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater8/pwm_driver/counter_3458_add_4_17/CO undriven or does not
+     drive anything - clipped.
+
+Signal cell_b/heater8/pwm_driver/add_2177_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater8/pwm_driver/add_2177_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater8/pwm_driver/add_2177_17/CO undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater9/pwm_driver/counter_3459_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater9/pwm_driver/counter_3459_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater9/pwm_driver/counter_3459_add_4_17/S1 undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater9/pwm_driver/counter_3459_add_4_17/CO undriven or does not
+     drive anything - clipped.
+Signal cell_b/heater9/pwm_driver/add_2182_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater9/pwm_driver/add_2182_1/CI undriven or does not drive
+     anything - clipped.
+Signal cell_b/heater9/pwm_driver/add_2182_17/CO undriven or does not drive
+     anything - clipped.
+Block spi1/reset_I_0_1_lut was optimized away.
+Block spi1/i3482_1_lut was optimized away.
+Block cell_a/frame_control/i7033_1_lut_rep_932 was optimized away.
+Block cell_a/heater10/pwm_driver/i7088_1_lut was optimized away.
+Block cell_a/heater11/pwm_driver/i2_1_lut was optimized away.
+Block cell_a/heater12/pwm_driver/i9579_1_lut was optimized away.
+Block cell_a/heater13/pwm_driver/i2_1_lut was optimized away.
+Block cell_a/heater14/pwm_driver/i22264_1_lut was optimized away.
+Block cell_a/heater1/pwm_driver/i21604_1_lut was optimized away.
+Block cell_a/heater2/pwm_driver/i21606_1_lut was optimized away.
+Block cell_a/heater3/pwm_driver/i22122_1_lut was optimized away.
+Block cell_a/heater4/pwm_driver/i1_1_lut was optimized away.
+Block cell_a/heater5/pwm_driver/i2_1_lut was optimized away.
+Block cell_a/heater6/pwm_driver/i7079_1_lut was optimized away.
+Block cell_a/heater7/pwm_driver/i2_1_lut was optimized away.
+Block cell_a/heater8/pwm_driver/i21724_1_lut was optimized away.
+Block cell_a/heater9/pwm_driver/i2_1_lut was optimized away.
+Block cell_c/frame_control/i7057_1_lut_rep_930 was optimized away.
+Block cell_c/heater10/pwm_driver/i21632_1_lut was optimized away.
+Block cell_c/heater11/pwm_driver/i2_1_lut was optimized away.
+Block cell_c/heater12/pwm_driver/i7164_1_lut was optimized away.
+Block cell_c/heater13/pwm_driver/i22567_1_lut was optimized away.
+Block cell_c/heater14/pwm_driver/i21443_1_lut was optimized away.
+Block cell_c/heater1/pwm_driver/i21454_1_lut was optimized away.
+Block cell_c/heater2/pwm_driver/i21622_1_lut was optimized away.
+Block cell_c/heater3/pwm_driver/i21726_1_lut was optimized away.
+Block cell_c/heater4/pwm_driver/i21600_1_lut was optimized away.
+Block cell_c/heater5/pwm_driver/i2_1_lut was optimized away.
+Block cell_c/heater6/pwm_driver/i21618_1_lut was optimized away.
+Block cell_c/heater7/pwm_driver/i2_1_lut was optimized away.
+Block cell_c/heater8/pwm_driver/i21628_1_lut was optimized away.
+Block cell_c/heater9/pwm_driver/i2_1_lut was optimized away.
+Block cell_b/frame_control/i7045_1_lut_rep_931 was optimized away.
+Block cell_b/heater10/pwm_driver/i21610_1_lut was optimized away.
+Block cell_b/heater11/pwm_driver/i21612_1_lut was optimized away.
+Block cell_b/heater12/pwm_driver/i21614_1_lut was optimized away.
+
+Block cell_b/heater13/pwm_driver/i21616_1_lut was optimized away.
+Block cell_b/heater14/pwm_driver/i21624_1_lut was optimized away.
+Block cell_b/heater1/pwm_driver/i22027_1_lut was optimized away.
+Block cell_b/heater2/pwm_driver/i22023_1_lut was optimized away.
+Block cell_b/heater3/pwm_driver/i21950_1_lut was optimized away.
+Block cell_b/heater4/pwm_driver/i21912_1_lut was optimized away.
+Block cell_b/heater5/pwm_driver/i21828_1_lut was optimized away.
+Block cell_b/heater6/pwm_driver/i21789_1_lut was optimized away.
+Block cell_b/heater7/pwm_driver/i21620_1_lut was optimized away.
+Block cell_b/heater8/pwm_driver/i21660_1_lut was optimized away.
+Block cell_b/heater9/pwm_driver/i21608_1_lut was optimized away.
+Block i1 was optimized away.
+Block m0_lut was optimized away.
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'reset_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'reset_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 63 
+
+     Type and instance name of component: 
+   Register : spi1/memory_in_i0_i0
+   Register : spi1/data_word_buf_i0_i21
+   Register : spi1/data_word_buf_i0_i27
+   Register : spi1/data_word_buf_i0_i28
+   Register : spi1/data_word_buf_i0_i29
+   Register : spi1/data_word_buf_i0_i30
+   Register : spi1/data_word_buf_i0_i16
+   Register : spi1/data_word_buf_i0_i31
+   Register : spi1/data_word_buf_i0_i25
+   Register : spi1/data_word_buf_i0_i20
+   Register : spi1/data_word_buf_i0_i26
+   Register : spi1/data_word_buf_i0_i24
+   Register : spi1/data_word_buf_i0_i19
+   Register : spi1/data_word_buf_i0_i22
+   Register : spi1/data_word_buf_i0_i18
+   Register : spi1/data_word_buf_i0_i17
+
+   Register : spi1/memory_in_i0_i31
+   Register : spi1/memory_in_i0_i30
+   Register : spi1/memory_in_i0_i29
+   Register : spi1/memory_in_i0_i28
+   Register : spi1/memory_in_i0_i27
+   Register : spi1/memory_in_i0_i26
+   Register : spi1/memory_in_i0_i25
+   Register : spi1/memory_in_i0_i24
+   Register : spi1/memory_in_i0_i23
+   Register : spi1/memory_in_i0_i22
+   Register : spi1/memory_in_i0_i21
+   Register : spi1/memory_in_i0_i20
+   Register : spi1/memory_in_i0_i19
+   Register : spi1/memory_in_i0_i18
+   Register : spi1/memory_in_i0_i17
+   Register : spi1/memory_in_i0_i16
+   Register : spi1/memory_in_i0_i15
+   Register : spi1/memory_in_i0_i14
+   Register : spi1/memory_in_i0_i13
+   Register : spi1/memory_in_i0_i12
+   Register : spi1/memory_in_i0_i11
+   Register : spi1/memory_in_i0_i10
+   Register : spi1/memory_in_i0_i9
+   Register : spi1/memory_in_i0_i8
+   Register : spi1/memory_in_i0_i7
+   Register : spi1/memory_in_i0_i6
+   Register : spi1/memory_in_i0_i5
+   Register : spi1/memory_in_i0_i4
+   Register : spi1/memory_in_i0_i3
+   Register : spi1/memory_in_i0_i2
+   Register : spi1/memory_in_i0_i1
+   Register : spi1/data_word_buf_i0_i23
+   Register : spi1/data_word_buf_i0_i15
+   Register : spi1/data_word_buf_i0_i14
+   Register : spi1/data_word_buf_i0_i13
+   Register : spi1/data_word_buf_i0_i12
+   Register : spi1/data_word_buf_i0_i11
+   Register : spi1/data_word_buf_i0_i10
+   Register : spi1/data_word_buf_i0_i9
+   Register : spi1/data_word_buf_i0_i8
+   Register : spi1/data_word_buf_i0_i7
+   Register : spi1/data_word_buf_i0_i6
+   Register : spi1/data_word_buf_i0_i5
+   Register : spi1/data_word_buf_i0_i4
+   Register : spi1/data_word_buf_i0_i3
+   Register : spi1/data_word_buf_i0_i2
+   Register : spi1/data_word_buf_i0_i1
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'reset_c' via the GSR
+     component.
+
+
+     Type and number of components of the type: 
+   Register = 699 
+
+     Type and instance name of component: 
+   Register : memory_out_i0_i9
+   Register : memory_out_i0_i7
+   Register : memory_out_i0_i15
+   Register : memory_out_i0_i13
+   Register : memory_out_i0_i12
+   Register : memory_out_i0_i4
+   Register : memory_out_i0_i11
+   Register : memory_out_i0_i3
+   Register : memory_out_i0_i18
+   Register : memory_out_i0_i22
+   Register : memory_out_i0_i29
+   Register : memory_out_i0_i30
+   Register : memory_out_i0_i23
+   Register : memory_out_i0_i31
+   Register : memory_out_i0_i25
+   Register : memory_out_i0_i19
+   Register : memory_out_i0_i26
+   Register : memory_out_i0_i27
+   Register : memory_out_i0_i28
+   Register : memory_out_i0_i20
+   Register : cell_b/heater9/pwm_driver/counter_3459__i2
+   Register : cell_b/heater9/pwm_driver/counter_3459__i10
+   Register : cell_b/heater9/pwm_driver/counter_3459__i14
+   Register : cell_b/heater9/pwm_driver/counter_3459__i11
+   Register : cell_b/heater9/pwm_driver/counter_3459__i12
+   Register : cell_b/heater9/pwm_driver/counter_3459__i1
+   Register : cell_b/heater9/pwm_driver/counter_3459__i15
+   Register : cell_b/heater9/pwm_driver/counter_3459__i3
+   Register : cell_b/heater9/pwm_driver/counter_3459__i13
+   Register : cell_b/heater9/pwm_driver/counter_3459__i4
+   Register : cell_b/heater9/pwm_driver/counter_3459__i5
+   Register : cell_b/heater9/pwm_driver/counter_3459__i6
+   Register : cell_b/heater9/pwm_driver/counter_3459__i7
+   Register : cell_b/heater9/pwm_driver/counter_3459__i9
+   Register : cell_b/heater9/pwm_driver/counter_3459__i8
+   Register : cell_b/heater9/pwm_driver/counter_3459__i0
+   Register : cell_b/heater8/pwm_driver/counter_3458__i10
+   Register : cell_b/heater8/pwm_driver/counter_3458__i11
+   Register : cell_b/heater8/pwm_driver/counter_3458__i6
+   Register : cell_b/heater8/pwm_driver/counter_3458__i13
+   Register : cell_b/heater8/pwm_driver/counter_3458__i7
+   Register : cell_b/heater8/pwm_driver/counter_3458__i8
+   Register : cell_b/heater8/pwm_driver/counter_3458__i12
+   Register : cell_b/heater8/pwm_driver/counter_3458__i14
+   Register : cell_b/heater8/pwm_driver/counter_3458__i9
+   Register : cell_b/heater8/pwm_driver/counter_3458__i15
+   Register : cell_b/heater8/pwm_driver/counter_3458__i5
+   Register : cell_b/heater8/pwm_driver/counter_3458__i1
+   Register : cell_b/heater8/pwm_driver/counter_3458__i4
+   Register : cell_b/heater8/pwm_driver/counter_3458__i3
+   Register : cell_b/heater8/pwm_driver/counter_3458__i2
+   Register : cell_b/heater8/pwm_driver/counter_3458__i0
+
+   Register : cell_b/heater7/pwm_driver/counter_3465__i2
+   Register : cell_b/heater7/pwm_driver/counter_3465__i15
+   Register : cell_b/heater7/pwm_driver/counter_3465__i9
+   Register : cell_b/heater7/pwm_driver/counter_3465__i8
+   Register : cell_b/heater7/pwm_driver/counter_3465__i14
+   Register : cell_b/heater7/pwm_driver/counter_3465__i7
+   Register : cell_b/heater7/pwm_driver/counter_3465__i13
+   Register : cell_b/heater7/pwm_driver/counter_3465__i3
+   Register : cell_b/heater7/pwm_driver/counter_3465__i4
+   Register : cell_b/heater7/pwm_driver/counter_3465__i1
+   Register : cell_b/heater7/pwm_driver/counter_3465__i5
+   Register : cell_b/heater7/pwm_driver/counter_3465__i12
+   Register : cell_b/heater7/pwm_driver/counter_3465__i6
+   Register : cell_b/heater7/pwm_driver/counter_3465__i11
+   Register : cell_b/heater7/pwm_driver/counter_3465__i10
+   Register : cell_b/heater7/pwm_driver/counter_3465__i0
+   Register : cell_b/heater6/pwm_driver/counter_3456__i1
+   Register : cell_b/heater6/pwm_driver/counter_3456__i2
+   Register : cell_b/heater6/pwm_driver/counter_3456__i3
+   Register : cell_b/heater6/pwm_driver/counter_3456__i4
+   Register : cell_b/heater6/pwm_driver/counter_3456__i5
+   Register : cell_b/heater6/pwm_driver/counter_3456__i6
+   Register : cell_b/heater6/pwm_driver/counter_3456__i7
+   Register : cell_b/heater6/pwm_driver/counter_3456__i8
+   Register : cell_b/heater6/pwm_driver/counter_3456__i9
+   Register : cell_b/heater6/pwm_driver/counter_3456__i10
+   Register : cell_b/heater6/pwm_driver/counter_3456__i11
+   Register : cell_b/heater6/pwm_driver/counter_3456__i12
+   Register : cell_b/heater6/pwm_driver/counter_3456__i13
+   Register : cell_b/heater6/pwm_driver/counter_3456__i14
+   Register : cell_b/heater6/pwm_driver/counter_3456__i15
+   Register : cell_b/heater6/pwm_driver/counter_3456__i0
+   Register : cell_b/heater5/pwm_driver/counter_3455__i1
+   Register : cell_b/heater5/pwm_driver/counter_3455__i2
+   Register : cell_b/heater5/pwm_driver/counter_3455__i3
+   Register : cell_b/heater5/pwm_driver/counter_3455__i4
+   Register : cell_b/heater5/pwm_driver/counter_3455__i5
+   Register : cell_b/heater5/pwm_driver/counter_3455__i6
+   Register : cell_b/heater5/pwm_driver/counter_3455__i7
+   Register : cell_b/heater5/pwm_driver/counter_3455__i8
+   Register : cell_b/heater5/pwm_driver/counter_3455__i9
+   Register : cell_b/heater5/pwm_driver/counter_3455__i10
+   Register : cell_b/heater5/pwm_driver/counter_3455__i11
+   Register : cell_b/heater5/pwm_driver/counter_3455__i12
+   Register : cell_b/heater5/pwm_driver/counter_3455__i13
+   Register : cell_b/heater5/pwm_driver/counter_3455__i14
+   Register : cell_b/heater5/pwm_driver/counter_3455__i15
+   Register : cell_b/heater5/pwm_driver/counter_3455__i0
+   Register : cell_b/heater4/pwm_driver/counter_3454__i1
+   Register : cell_b/heater4/pwm_driver/counter_3454__i8
+   Register : cell_b/heater4/pwm_driver/counter_3454__i2
+   Register : cell_b/heater4/pwm_driver/counter_3454__i9
+   Register : cell_b/heater4/pwm_driver/counter_3454__i10
+   Register : cell_b/heater4/pwm_driver/counter_3454__i3
+   Register : cell_b/heater4/pwm_driver/counter_3454__i11
+   Register : cell_b/heater4/pwm_driver/counter_3454__i0
+
+   Register : cell_b/heater4/pwm_driver/counter_3454__i12
+   Register : cell_b/heater4/pwm_driver/counter_3454__i4
+   Register : cell_b/heater4/pwm_driver/counter_3454__i13
+   Register : cell_b/heater4/pwm_driver/counter_3454__i14
+   Register : cell_b/heater4/pwm_driver/counter_3454__i5
+   Register : cell_b/heater4/pwm_driver/counter_3454__i15
+   Register : cell_b/heater4/pwm_driver/counter_3454__i6
+   Register : cell_b/heater4/pwm_driver/counter_3454__i7
+   Register : cell_b/heater3/pwm_driver/counter_3453__i1
+   Register : cell_b/heater3/pwm_driver/counter_3453__i2
+   Register : cell_b/heater3/pwm_driver/counter_3453__i3
+   Register : cell_b/heater3/pwm_driver/counter_3453__i4
+   Register : cell_b/heater3/pwm_driver/counter_3453__i5
+   Register : cell_b/heater3/pwm_driver/counter_3453__i6
+   Register : cell_b/heater3/pwm_driver/counter_3453__i7
+   Register : cell_b/heater3/pwm_driver/counter_3453__i8
+   Register : cell_b/heater3/pwm_driver/counter_3453__i9
+   Register : cell_b/heater3/pwm_driver/counter_3453__i10
+   Register : cell_b/heater3/pwm_driver/counter_3453__i11
+   Register : cell_b/heater3/pwm_driver/counter_3453__i12
+   Register : cell_b/heater3/pwm_driver/counter_3453__i13
+   Register : cell_b/heater3/pwm_driver/counter_3453__i14
+   Register : cell_b/heater3/pwm_driver/counter_3453__i15
+   Register : cell_b/heater3/pwm_driver/counter_3453__i0
+   Register : cell_b/heater2/pwm_driver/counter_3452__i3
+   Register : cell_b/heater2/pwm_driver/counter_3452__i4
+   Register : cell_b/heater2/pwm_driver/counter_3452__i5
+   Register : cell_b/heater2/pwm_driver/counter_3452__i6
+   Register : cell_b/heater2/pwm_driver/counter_3452__i7
+   Register : cell_b/heater2/pwm_driver/counter_3452__i8
+   Register : cell_b/heater2/pwm_driver/counter_3452__i9
+   Register : cell_b/heater2/pwm_driver/counter_3452__i10
+   Register : cell_b/heater2/pwm_driver/counter_3452__i11
+   Register : cell_b/heater2/pwm_driver/counter_3452__i12
+   Register : cell_b/heater2/pwm_driver/counter_3452__i13
+   Register : cell_b/heater2/pwm_driver/counter_3452__i14
+   Register : cell_b/heater2/pwm_driver/counter_3452__i15
+   Register : cell_b/heater2/pwm_driver/counter_3452__i0
+   Register : cell_b/heater2/pwm_driver/counter_3452__i1
+   Register : cell_b/heater2/pwm_driver/counter_3452__i2
+   Register : cell_b/heater1/pwm_driver/counter_3451__i1
+   Register : cell_b/heater1/pwm_driver/counter_3451__i2
+   Register : cell_b/heater1/pwm_driver/counter_3451__i3
+   Register : cell_b/heater1/pwm_driver/counter_3451__i4
+   Register : cell_b/heater1/pwm_driver/counter_3451__i5
+   Register : cell_b/heater1/pwm_driver/counter_3451__i6
+   Register : cell_b/heater1/pwm_driver/counter_3451__i7
+   Register : cell_b/heater1/pwm_driver/counter_3451__i8
+   Register : cell_b/heater1/pwm_driver/counter_3451__i9
+   Register : cell_b/heater1/pwm_driver/counter_3451__i10
+   Register : cell_b/heater1/pwm_driver/counter_3451__i11
+   Register : cell_b/heater1/pwm_driver/counter_3451__i12
+   Register : cell_b/heater1/pwm_driver/counter_3451__i13
+   Register : cell_b/heater1/pwm_driver/counter_3451__i14
+   Register : cell_b/heater1/pwm_driver/counter_3451__i15
+   Register : cell_b/heater1/pwm_driver/counter_3451__i0
+
+   Register : cell_b/heater14/pwm_driver/counter_3467__i12
+   Register : cell_b/heater14/pwm_driver/counter_3467__i13
+   Register : cell_b/heater14/pwm_driver/counter_3467__i8
+   Register : cell_b/heater14/pwm_driver/counter_3467__i15
+   Register : cell_b/heater14/pwm_driver/counter_3467__i9
+   Register : cell_b/heater14/pwm_driver/counter_3467__i10
+   Register : cell_b/heater14/pwm_driver/counter_3467__i14
+   Register : cell_b/heater14/pwm_driver/counter_3467__i11
+   Register : cell_b/heater14/pwm_driver/counter_3467__i7
+   Register : cell_b/heater14/pwm_driver/counter_3467__i3
+   Register : cell_b/heater14/pwm_driver/counter_3467__i2
+   Register : cell_b/heater14/pwm_driver/counter_3467__i1
+   Register : cell_b/heater14/pwm_driver/counter_3467__i6
+   Register : cell_b/heater14/pwm_driver/counter_3467__i5
+   Register : cell_b/heater14/pwm_driver/counter_3467__i4
+   Register : cell_b/heater14/pwm_driver/counter_3467__i0
+   Register : cell_b/heater13/pwm_driver/counter_3463__i13
+   Register : cell_b/heater13/pwm_driver/counter_3463__i7
+   Register : cell_b/heater13/pwm_driver/counter_3463__i6
+   Register : cell_b/heater13/pwm_driver/counter_3463__i12
+   Register : cell_b/heater13/pwm_driver/counter_3463__i5
+   Register : cell_b/heater13/pwm_driver/counter_3463__i11
+   Register : cell_b/heater13/pwm_driver/counter_3463__i10
+   Register : cell_b/heater13/pwm_driver/counter_3463__i4
+   Register : cell_b/heater13/pwm_driver/counter_3463__i9
+   Register : cell_b/heater13/pwm_driver/counter_3463__i15
+   Register : cell_b/heater13/pwm_driver/counter_3463__i8
+   Register : cell_b/heater13/pwm_driver/counter_3463__i14
+   Register : cell_b/heater13/pwm_driver/counter_3463__i3
+   Register : cell_b/heater13/pwm_driver/counter_3463__i2
+   Register : cell_b/heater13/pwm_driver/counter_3463__i1
+   Register : cell_b/heater13/pwm_driver/counter_3463__i0
+   Register : cell_b/heater12/pwm_driver/counter_3462__i12
+   Register : cell_b/heater12/pwm_driver/counter_3462__i6
+   Register : cell_b/heater12/pwm_driver/counter_3462__i5
+   Register : cell_b/heater12/pwm_driver/counter_3462__i11
+   Register : cell_b/heater12/pwm_driver/counter_3462__i4
+   Register : cell_b/heater12/pwm_driver/counter_3462__i10
+   Register : cell_b/heater12/pwm_driver/counter_3462__i15
+   Register : cell_b/heater12/pwm_driver/counter_3462__i9
+   Register : cell_b/heater12/pwm_driver/counter_3462__i3
+   Register : cell_b/heater12/pwm_driver/counter_3462__i8
+   Register : cell_b/heater12/pwm_driver/counter_3462__i14
+   Register : cell_b/heater12/pwm_driver/counter_3462__i7
+   Register : cell_b/heater12/pwm_driver/counter_3462__i13
+   Register : cell_b/heater12/pwm_driver/counter_3462__i2
+   Register : cell_b/heater12/pwm_driver/counter_3462__i1
+   Register : cell_b/heater12/pwm_driver/counter_3462__i0
+   Register : cell_b/heater11/pwm_driver/counter_3461__i15
+   Register : cell_b/heater11/pwm_driver/counter_3461__i11
+   Register : cell_b/heater11/pwm_driver/counter_3461__i5
+   Register : cell_b/heater11/pwm_driver/counter_3461__i4
+   Register : cell_b/heater11/pwm_driver/counter_3461__i10
+   Register : cell_b/heater11/pwm_driver/counter_3461__i3
+   Register : cell_b/heater11/pwm_driver/counter_3461__i9
+   Register : cell_b/heater11/pwm_driver/counter_3461__i14
+
+   Register : cell_b/heater11/pwm_driver/counter_3461__i8
+   Register : cell_b/heater11/pwm_driver/counter_3461__i2
+   Register : cell_b/heater11/pwm_driver/counter_3461__i7
+   Register : cell_b/heater11/pwm_driver/counter_3461__i13
+   Register : cell_b/heater11/pwm_driver/counter_3461__i6
+   Register : cell_b/heater11/pwm_driver/counter_3461__i12
+   Register : cell_b/heater11/pwm_driver/counter_3461__i1
+   Register : cell_b/heater11/pwm_driver/counter_3461__i0
+   Register : cell_b/heater10/pwm_driver/counter_3460__i15
+   Register : cell_b/heater10/pwm_driver/counter_3460__i14
+   Register : cell_b/heater10/pwm_driver/counter_3460__i10
+   Register : cell_b/heater10/pwm_driver/counter_3460__i4
+   Register : cell_b/heater10/pwm_driver/counter_3460__i3
+   Register : cell_b/heater10/pwm_driver/counter_3460__i9
+   Register : cell_b/heater10/pwm_driver/counter_3460__i2
+   Register : cell_b/heater10/pwm_driver/counter_3460__i8
+   Register : cell_b/heater10/pwm_driver/counter_3460__i13
+   Register : cell_b/heater10/pwm_driver/counter_3460__i7
+   Register : cell_b/heater10/pwm_driver/counter_3460__i1
+   Register : cell_b/heater10/pwm_driver/counter_3460__i6
+   Register : cell_b/heater10/pwm_driver/counter_3460__i12
+   Register : cell_b/heater10/pwm_driver/counter_3460__i5
+   Register : cell_b/heater10/pwm_driver/counter_3460__i11
+   Register : cell_b/heater10/pwm_driver/counter_3460__i0
+   Register : cell_b/frame_control/state_i1
+   Register : cell_c/heater9/pwm_driver/counter_3470__i7
+   Register : cell_c/heater9/pwm_driver/counter_3470__i15
+   Register : cell_c/heater9/pwm_driver/counter_3470__i11
+   Register : cell_c/heater9/pwm_driver/counter_3470__i12
+   Register : cell_c/heater9/pwm_driver/counter_3470__i13
+   Register : cell_c/heater9/pwm_driver/counter_3470__i14
+   Register : cell_c/heater9/pwm_driver/counter_3470__i1
+   Register : cell_c/heater9/pwm_driver/counter_3470__i2
+   Register : cell_c/heater9/pwm_driver/counter_3470__i4
+   Register : cell_c/heater9/pwm_driver/counter_3470__i8
+   Register : cell_c/heater9/pwm_driver/counter_3470__i3
+   Register : cell_c/heater9/pwm_driver/counter_3470__i5
+   Register : cell_c/heater9/pwm_driver/counter_3470__i9
+   Register : cell_c/heater9/pwm_driver/counter_3470__i6
+   Register : cell_c/heater9/pwm_driver/counter_3470__i10
+   Register : cell_c/heater9/pwm_driver/counter_3470__i0
+   Register : cell_c/heater8/pwm_driver/counter_3469__i6
+   Register : cell_c/heater8/pwm_driver/counter_3469__i14
+   Register : cell_c/heater8/pwm_driver/counter_3469__i15
+   Register : cell_c/heater8/pwm_driver/counter_3469__i10
+   Register : cell_c/heater8/pwm_driver/counter_3469__i11
+   Register : cell_c/heater8/pwm_driver/counter_3469__i12
+   Register : cell_c/heater8/pwm_driver/counter_3469__i13
+   Register : cell_c/heater8/pwm_driver/counter_3469__i1
+   Register : cell_c/heater8/pwm_driver/counter_3469__i3
+   Register : cell_c/heater8/pwm_driver/counter_3469__i7
+   Register : cell_c/heater8/pwm_driver/counter_3469__i2
+   Register : cell_c/heater8/pwm_driver/counter_3469__i4
+   Register : cell_c/heater8/pwm_driver/counter_3469__i8
+   Register : cell_c/heater8/pwm_driver/counter_3469__i5
+   Register : cell_c/heater8/pwm_driver/counter_3469__i9
+
+   Register : cell_c/heater8/pwm_driver/counter_3469__i0
+   Register : cell_c/heater7/pwm_driver/counter_3468__i5
+   Register : cell_c/heater7/pwm_driver/counter_3468__i12
+   Register : cell_c/heater7/pwm_driver/counter_3468__i2
+   Register : cell_c/heater7/pwm_driver/counter_3468__i6
+   Register : cell_c/heater7/pwm_driver/counter_3468__i1
+   Register : cell_c/heater7/pwm_driver/counter_3468__i3
+   Register : cell_c/heater7/pwm_driver/counter_3468__i7
+   Register : cell_c/heater7/pwm_driver/counter_3468__i4
+   Register : cell_c/heater7/pwm_driver/counter_3468__i8
+   Register : cell_c/heater7/pwm_driver/counter_3468__i11
+   Register : cell_c/heater7/pwm_driver/counter_3468__i10
+   Register : cell_c/heater7/pwm_driver/counter_3468__i15
+   Register : cell_c/heater7/pwm_driver/counter_3468__i9
+   Register : cell_c/heater7/pwm_driver/counter_3468__i14
+   Register : cell_c/heater7/pwm_driver/counter_3468__i13
+   Register : cell_c/heater7/pwm_driver/counter_3468__i0
+   Register : cell_c/heater6/pwm_driver/counter_3464__i14
+   Register : cell_c/heater6/pwm_driver/counter_3464__i8
+   Register : cell_c/heater6/pwm_driver/counter_3464__i7
+   Register : cell_c/heater6/pwm_driver/counter_3464__i13
+   Register : cell_c/heater6/pwm_driver/counter_3464__i6
+   Register : cell_c/heater6/pwm_driver/counter_3464__i12
+   Register : cell_c/heater6/pwm_driver/counter_3464__i11
+   Register : cell_c/heater6/pwm_driver/counter_3464__i5
+   Register : cell_c/heater6/pwm_driver/counter_3464__i10
+   Register : cell_c/heater6/pwm_driver/counter_3464__i9
+   Register : cell_c/heater6/pwm_driver/counter_3464__i15
+   Register : cell_c/heater6/pwm_driver/counter_3464__i4
+   Register : cell_c/heater6/pwm_driver/counter_3464__i3
+   Register : cell_c/heater6/pwm_driver/counter_3464__i2
+   Register : cell_c/heater6/pwm_driver/counter_3464__i1
+   Register : cell_c/heater6/pwm_driver/counter_3464__i0
+   Register : cell_c/heater5/pwm_driver/counter_3475__i0
+   Register : cell_c/heater5/pwm_driver/counter_3475__i15
+   Register : cell_c/heater5/pwm_driver/counter_3475__i11
+   Register : cell_c/heater5/pwm_driver/counter_3475__i5
+   Register : cell_c/heater5/pwm_driver/counter_3475__i4
+   Register : cell_c/heater5/pwm_driver/counter_3475__i10
+   Register : cell_c/heater5/pwm_driver/counter_3475__i3
+   Register : cell_c/heater5/pwm_driver/counter_3475__i9
+   Register : cell_c/heater5/pwm_driver/counter_3475__i14
+   Register : cell_c/heater5/pwm_driver/counter_3475__i8
+   Register : cell_c/heater5/pwm_driver/counter_3475__i2
+   Register : cell_c/heater5/pwm_driver/counter_3475__i7
+   Register : cell_c/heater5/pwm_driver/counter_3475__i13
+   Register : cell_c/heater5/pwm_driver/counter_3475__i6
+   Register : cell_c/heater5/pwm_driver/counter_3475__i12
+   Register : cell_c/heater5/pwm_driver/counter_3475__i1
+   Register : cell_c/heater4/pwm_driver/counter_3436__i11
+   Register : cell_c/heater4/pwm_driver/counter_3436__i5
+   Register : cell_c/heater4/pwm_driver/counter_3436__i4
+   Register : cell_c/heater4/pwm_driver/counter_3436__i10
+   Register : cell_c/heater4/pwm_driver/counter_3436__i3
+   Register : cell_c/heater4/pwm_driver/counter_3436__i9
+   Register : cell_c/heater4/pwm_driver/counter_3436__i14
+
+   Register : cell_c/heater4/pwm_driver/counter_3436__i8
+   Register : cell_c/heater4/pwm_driver/counter_3436__i2
+   Register : cell_c/heater4/pwm_driver/counter_3436__i7
+   Register : cell_c/heater4/pwm_driver/counter_3436__i13
+   Register : cell_c/heater4/pwm_driver/counter_3436__i6
+   Register : cell_c/heater4/pwm_driver/counter_3436__i12
+   Register : cell_c/heater4/pwm_driver/counter_3436__i15
+   Register : cell_c/heater4/pwm_driver/counter_3436__i1
+   Register : cell_c/heater4/pwm_driver/counter_3436__i0
+   Register : cell_c/heater3/pwm_driver/counter_3457__i1
+   Register : cell_c/heater3/pwm_driver/counter_3457__i2
+   Register : cell_c/heater3/pwm_driver/counter_3457__i3
+   Register : cell_c/heater3/pwm_driver/counter_3457__i4
+   Register : cell_c/heater3/pwm_driver/counter_3457__i5
+   Register : cell_c/heater3/pwm_driver/counter_3457__i6
+   Register : cell_c/heater3/pwm_driver/counter_3457__i7
+   Register : cell_c/heater3/pwm_driver/counter_3457__i8
+   Register : cell_c/heater3/pwm_driver/counter_3457__i9
+   Register : cell_c/heater3/pwm_driver/counter_3457__i10
+   Register : cell_c/heater3/pwm_driver/counter_3457__i11
+   Register : cell_c/heater3/pwm_driver/counter_3457__i12
+   Register : cell_c/heater3/pwm_driver/counter_3457__i13
+   Register : cell_c/heater3/pwm_driver/counter_3457__i14
+   Register : cell_c/heater3/pwm_driver/counter_3457__i15
+   Register : cell_c/heater3/pwm_driver/counter_3457__i0
+   Register : cell_c/heater2/pwm_driver/counter_3466__i3
+   Register : cell_c/heater2/pwm_driver/counter_3466__i11
+   Register : cell_c/heater2/pwm_driver/counter_3466__i12
+   Register : cell_c/heater2/pwm_driver/counter_3466__i7
+   Register : cell_c/heater2/pwm_driver/counter_3466__i14
+   Register : cell_c/heater2/pwm_driver/counter_3466__i8
+   Register : cell_c/heater2/pwm_driver/counter_3466__i9
+   Register : cell_c/heater2/pwm_driver/counter_3466__i13
+   Register : cell_c/heater2/pwm_driver/counter_3466__i15
+   Register : cell_c/heater2/pwm_driver/counter_3466__i10
+   Register : cell_c/heater2/pwm_driver/counter_3466__i4
+   Register : cell_c/heater2/pwm_driver/counter_3466__i1
+   Register : cell_c/heater2/pwm_driver/counter_3466__i5
+   Register : cell_c/heater2/pwm_driver/counter_3466__i2
+   Register : cell_c/heater2/pwm_driver/counter_3466__i6
+   Register : cell_c/heater2/pwm_driver/counter_3466__i0
+   Register : cell_c/heater1/pwm_driver/counter_3477__i0
+   Register : cell_c/heater1/pwm_driver/counter_3477__i13
+   Register : cell_c/heater1/pwm_driver/counter_3477__i7
+   Register : cell_c/heater1/pwm_driver/counter_3477__i6
+   Register : cell_c/heater1/pwm_driver/counter_3477__i12
+   Register : cell_c/heater1/pwm_driver/counter_3477__i5
+   Register : cell_c/heater1/pwm_driver/counter_3477__i11
+   Register : cell_c/heater1/pwm_driver/counter_3477__i10
+   Register : cell_c/heater1/pwm_driver/counter_3477__i4
+   Register : cell_c/heater1/pwm_driver/counter_3477__i9
+   Register : cell_c/heater1/pwm_driver/counter_3477__i1
+   Register : cell_c/heater1/pwm_driver/counter_3477__i2
+   Register : cell_c/heater1/pwm_driver/counter_3477__i3
+   Register : cell_c/heater1/pwm_driver/counter_3477__i15
+   Register : cell_c/heater1/pwm_driver/counter_3477__i8
+
+   Register : cell_c/heater1/pwm_driver/counter_3477__i14
+   Register : cell_c/heater14/pwm_driver/counter_3476__i13
+   Register : cell_c/heater14/pwm_driver/counter_3476__i0
+   Register : cell_c/heater14/pwm_driver/counter_3476__i7
+   Register : cell_c/heater14/pwm_driver/counter_3476__i8
+   Register : cell_c/heater14/pwm_driver/counter_3476__i3
+   Register : cell_c/heater14/pwm_driver/counter_3476__i10
+   Register : cell_c/heater14/pwm_driver/counter_3476__i4
+   Register : cell_c/heater14/pwm_driver/counter_3476__i5
+   Register : cell_c/heater14/pwm_driver/counter_3476__i14
+   Register : cell_c/heater14/pwm_driver/counter_3476__i9
+   Register : cell_c/heater14/pwm_driver/counter_3476__i11
+   Register : cell_c/heater14/pwm_driver/counter_3476__i6
+   Register : cell_c/heater14/pwm_driver/counter_3476__i15
+   Register : cell_c/heater14/pwm_driver/counter_3476__i12
+   Register : cell_c/heater14/pwm_driver/counter_3476__i2
+   Register : cell_c/heater14/pwm_driver/counter_3476__i1
+   Register : cell_c/heater14/pwm_driver/counting_up_36
+   Register : cell_c/heater13/pwm_driver/counter_3474__i11
+   Register : cell_c/heater13/pwm_driver/counter_3474__i15
+   Register : cell_c/heater13/pwm_driver/counter_3474__i5
+   Register : cell_c/heater13/pwm_driver/counter_3474__i6
+   Register : cell_c/heater13/pwm_driver/counter_3474__i1
+   Register : cell_c/heater13/pwm_driver/counter_3474__i8
+   Register : cell_c/heater13/pwm_driver/counter_3474__i2
+   Register : cell_c/heater13/pwm_driver/counter_3474__i3
+   Register : cell_c/heater13/pwm_driver/counter_3474__i12
+   Register : cell_c/heater13/pwm_driver/counter_3474__i7
+   Register : cell_c/heater13/pwm_driver/counter_3474__i9
+   Register : cell_c/heater13/pwm_driver/counter_3474__i4
+   Register : cell_c/heater13/pwm_driver/counter_3474__i13
+   Register : cell_c/heater13/pwm_driver/counter_3474__i10
+   Register : cell_c/heater13/pwm_driver/counter_3474__i14
+   Register : cell_c/heater13/pwm_driver/counter_3474__i0
+   Register : cell_c/heater12/pwm_driver/counter_3473__i10
+   Register : cell_c/heater12/pwm_driver/counter_3473__i14
+   Register : cell_c/heater12/pwm_driver/counter_3473__i15
+   Register : cell_c/heater12/pwm_driver/counter_3473__i4
+   Register : cell_c/heater12/pwm_driver/counter_3473__i5
+   Register : cell_c/heater12/pwm_driver/counter_3473__i7
+   Register : cell_c/heater12/pwm_driver/counter_3473__i1
+   Register : cell_c/heater12/pwm_driver/counter_3473__i2
+   Register : cell_c/heater12/pwm_driver/counter_3473__i11
+   Register : cell_c/heater12/pwm_driver/counter_3473__i6
+   Register : cell_c/heater12/pwm_driver/counter_3473__i8
+   Register : cell_c/heater12/pwm_driver/counter_3473__i3
+   Register : cell_c/heater12/pwm_driver/counter_3473__i12
+   Register : cell_c/heater12/pwm_driver/counter_3473__i9
+   Register : cell_c/heater12/pwm_driver/counter_3473__i13
+   Register : cell_c/heater12/pwm_driver/counter_3473__i0
+   Register : cell_c/heater11/pwm_driver/counter_3472__i9
+   Register : cell_c/heater11/pwm_driver/counter_3472__i15
+   Register : cell_c/heater11/pwm_driver/counter_3472__i14
+   Register : cell_c/heater11/pwm_driver/counter_3472__i13
+   Register : cell_c/heater11/pwm_driver/counter_3472__i3
+   Register : cell_c/heater11/pwm_driver/counter_3472__i4
+
+   Register : cell_c/heater11/pwm_driver/counter_3472__i6
+   Register : cell_c/heater11/pwm_driver/counter_3472__i1
+   Register : cell_c/heater11/pwm_driver/counter_3472__i10
+   Register : cell_c/heater11/pwm_driver/counter_3472__i5
+   Register : cell_c/heater11/pwm_driver/counter_3472__i7
+   Register : cell_c/heater11/pwm_driver/counter_3472__i2
+   Register : cell_c/heater11/pwm_driver/counter_3472__i11
+   Register : cell_c/heater11/pwm_driver/counter_3472__i8
+   Register : cell_c/heater11/pwm_driver/counter_3472__i12
+   Register : cell_c/heater11/pwm_driver/counter_3472__i0
+   Register : cell_c/heater10/pwm_driver/counter_3471__i12
+   Register : cell_c/heater10/pwm_driver/counter_3471__i13
+   Register : cell_c/heater10/pwm_driver/counter_3471__i14
+   Register : cell_c/heater10/pwm_driver/counter_3471__i15
+   Register : cell_c/heater10/pwm_driver/counter_3471__i11
+   Register : cell_c/heater10/pwm_driver/counter_3471__i7
+   Register : cell_c/heater10/pwm_driver/counter_3471__i1
+   Register : cell_c/heater10/pwm_driver/counter_3471__i6
+   Register : cell_c/heater10/pwm_driver/counter_3471__i5
+   Register : cell_c/heater10/pwm_driver/counter_3471__i10
+   Register : cell_c/heater10/pwm_driver/counter_3471__i4
+   Register : cell_c/heater10/pwm_driver/counter_3471__i3
+   Register : cell_c/heater10/pwm_driver/counter_3471__i9
+   Register : cell_c/heater10/pwm_driver/counter_3471__i2
+   Register : cell_c/heater10/pwm_driver/counter_3471__i8
+   Register : cell_c/heater10/pwm_driver/counter_3471__i0
+   Register : cell_c/frame_control/state_i1
+   Register : cell_a/heater9/pwm_driver/counter_3445__i15
+   Register : cell_a/heater9/pwm_driver/counter_3445__i1
+   Register : cell_a/heater9/pwm_driver/counter_3445__i9
+   Register : cell_a/heater9/pwm_driver/counter_3445__i10
+   Register : cell_a/heater9/pwm_driver/counter_3445__i5
+   Register : cell_a/heater9/pwm_driver/counter_3445__i12
+   Register : cell_a/heater9/pwm_driver/counter_3445__i6
+   Register : cell_a/heater9/pwm_driver/counter_3445__i7
+   Register : cell_a/heater9/pwm_driver/counter_3445__i11
+   Register : cell_a/heater9/pwm_driver/counter_3445__i13
+   Register : cell_a/heater9/pwm_driver/counter_3445__i8
+   Register : cell_a/heater9/pwm_driver/counter_3445__i14
+   Register : cell_a/heater9/pwm_driver/counter_3445__i2
+   Register : cell_a/heater9/pwm_driver/counter_3445__i3
+   Register : cell_a/heater9/pwm_driver/counter_3445__i4
+   Register : cell_a/heater9/pwm_driver/counter_3445__i0
+   Register : cell_a/heater8/pwm_driver/counter_3444__i1
+   Register : cell_a/heater8/pwm_driver/counter_3444__i2
+   Register : cell_a/heater8/pwm_driver/counter_3444__i3
+   Register : cell_a/heater8/pwm_driver/counter_3444__i4
+   Register : cell_a/heater8/pwm_driver/counter_3444__i5
+   Register : cell_a/heater8/pwm_driver/counter_3444__i6
+   Register : cell_a/heater8/pwm_driver/counter_3444__i7
+   Register : cell_a/heater8/pwm_driver/counter_3444__i8
+   Register : cell_a/heater8/pwm_driver/counter_3444__i9
+   Register : cell_a/heater8/pwm_driver/counter_3444__i10
+   Register : cell_a/heater8/pwm_driver/counter_3444__i11
+   Register : cell_a/heater8/pwm_driver/counter_3444__i12
+   Register : cell_a/heater8/pwm_driver/counter_3444__i13
+
+   Register : cell_a/heater8/pwm_driver/counter_3444__i14
+   Register : cell_a/heater8/pwm_driver/counter_3444__i15
+   Register : cell_a/heater8/pwm_driver/counter_3444__i0
+   Register : cell_a/heater7/pwm_driver/counter_3443__i1
+   Register : cell_a/heater7/pwm_driver/counter_3443__i2
+   Register : cell_a/heater7/pwm_driver/counter_3443__i3
+   Register : cell_a/heater7/pwm_driver/counter_3443__i4
+   Register : cell_a/heater7/pwm_driver/counter_3443__i5
+   Register : cell_a/heater7/pwm_driver/counter_3443__i6
+   Register : cell_a/heater7/pwm_driver/counter_3443__i7
+   Register : cell_a/heater7/pwm_driver/counter_3443__i8
+   Register : cell_a/heater7/pwm_driver/counter_3443__i9
+   Register : cell_a/heater7/pwm_driver/counter_3443__i10
+   Register : cell_a/heater7/pwm_driver/counter_3443__i11
+   Register : cell_a/heater7/pwm_driver/counter_3443__i12
+   Register : cell_a/heater7/pwm_driver/counter_3443__i13
+   Register : cell_a/heater7/pwm_driver/counter_3443__i14
+   Register : cell_a/heater7/pwm_driver/counter_3443__i15
+   Register : cell_a/heater7/pwm_driver/counter_3443__i0
+   Register : cell_a/heater6/pwm_driver/counter_3442__i1
+   Register : cell_a/heater6/pwm_driver/counter_3442__i2
+   Register : cell_a/heater6/pwm_driver/counter_3442__i3
+   Register : cell_a/heater6/pwm_driver/counter_3442__i4
+   Register : cell_a/heater6/pwm_driver/counter_3442__i5
+   Register : cell_a/heater6/pwm_driver/counter_3442__i6
+   Register : cell_a/heater6/pwm_driver/counter_3442__i7
+   Register : cell_a/heater6/pwm_driver/counter_3442__i8
+   Register : cell_a/heater6/pwm_driver/counter_3442__i9
+   Register : cell_a/heater6/pwm_driver/counter_3442__i10
+   Register : cell_a/heater6/pwm_driver/counter_3442__i11
+   Register : cell_a/heater6/pwm_driver/counter_3442__i12
+   Register : cell_a/heater6/pwm_driver/counter_3442__i13
+   Register : cell_a/heater6/pwm_driver/counter_3442__i0
+   Register : cell_a/heater6/pwm_driver/counter_3442__i14
+   Register : cell_a/heater6/pwm_driver/counter_3442__i15
+   Register : cell_a/heater5/pwm_driver/counter_3441__i9
+   Register : cell_a/heater5/pwm_driver/counter_3441__i1
+   Register : cell_a/heater5/pwm_driver/counter_3441__i5
+   Register : cell_a/heater5/pwm_driver/counter_3441__i4
+   Register : cell_a/heater5/pwm_driver/counter_3441__i3
+   Register : cell_a/heater5/pwm_driver/counter_3441__i2
+   Register : cell_a/heater5/pwm_driver/counter_3441__i15
+   Register : cell_a/heater5/pwm_driver/counter_3441__i14
+   Register : cell_a/heater5/pwm_driver/counter_3441__i12
+   Register : cell_a/heater5/pwm_driver/counter_3441__i8
+   Register : cell_a/heater5/pwm_driver/counter_3441__i13
+   Register : cell_a/heater5/pwm_driver/counter_3441__i11
+   Register : cell_a/heater5/pwm_driver/counter_3441__i7
+   Register : cell_a/heater5/pwm_driver/counter_3441__i10
+   Register : cell_a/heater5/pwm_driver/counter_3441__i6
+   Register : cell_a/heater5/pwm_driver/counter_3441__i0
+   Register : cell_a/heater4/pwm_driver/counter_3440__i5
+   Register : cell_a/heater4/pwm_driver/counter_3440__i1
+   Register : cell_a/heater4/pwm_driver/counter_3440__i11
+   Register : cell_a/heater4/pwm_driver/counter_3440__i10
+   Register : cell_a/heater4/pwm_driver/counter_3440__i15
+
+   Register : cell_a/heater4/pwm_driver/counter_3440__i8
+   Register : cell_a/heater4/pwm_driver/counter_3440__i14
+   Register : cell_a/heater4/pwm_driver/counter_3440__i13
+   Register : cell_a/heater4/pwm_driver/counter_3440__i4
+   Register : cell_a/heater4/pwm_driver/counter_3440__i9
+   Register : cell_a/heater4/pwm_driver/counter_3440__i7
+   Register : cell_a/heater4/pwm_driver/counter_3440__i12
+   Register : cell_a/heater4/pwm_driver/counter_3440__i3
+   Register : cell_a/heater4/pwm_driver/counter_3440__i6
+   Register : cell_a/heater4/pwm_driver/counter_3440__i2
+   Register : cell_a/heater4/pwm_driver/counter_3440__i0
+   Register : cell_a/heater3/pwm_driver/counter_3439__i1
+   Register : cell_a/heater3/pwm_driver/counter_3439__i10
+   Register : cell_a/heater3/pwm_driver/counter_3439__i4
+   Register : cell_a/heater3/pwm_driver/counter_3439__i5
+   Register : cell_a/heater3/pwm_driver/counter_3439__i3
+   Register : cell_a/heater3/pwm_driver/counter_3439__i2
+   Register : cell_a/heater3/pwm_driver/counter_3439__i15
+   Register : cell_a/heater3/pwm_driver/counter_3439__i13
+   Register : cell_a/heater3/pwm_driver/counter_3439__i9
+   Register : cell_a/heater3/pwm_driver/counter_3439__i14
+   Register : cell_a/heater3/pwm_driver/counter_3439__i12
+   Register : cell_a/heater3/pwm_driver/counter_3439__i8
+   Register : cell_a/heater3/pwm_driver/counter_3439__i11
+   Register : cell_a/heater3/pwm_driver/counter_3439__i7
+   Register : cell_a/heater3/pwm_driver/counter_3439__i6
+   Register : cell_a/heater3/pwm_driver/counter_3439__i0
+   Register : cell_a/heater2/pwm_driver/counter_3438__i6
+   Register : cell_a/heater2/pwm_driver/counter_3438__i9
+   Register : cell_a/heater2/pwm_driver/counter_3438__i8
+   Register : cell_a/heater2/pwm_driver/counter_3438__i12
+   Register : cell_a/heater2/pwm_driver/counter_3438__i1
+   Register : cell_a/heater2/pwm_driver/counter_3438__i13
+   Register : cell_a/heater2/pwm_driver/counter_3438__i10
+   Register : cell_a/heater2/pwm_driver/counter_3438__i2
+   Register : cell_a/heater2/pwm_driver/counter_3438__i7
+   Register : cell_a/heater2/pwm_driver/counter_3438__i14
+   Register : cell_a/heater2/pwm_driver/counter_3438__i4
+   Register : cell_a/heater2/pwm_driver/counter_3438__i3
+   Register : cell_a/heater2/pwm_driver/counter_3438__i11
+   Register : cell_a/heater2/pwm_driver/counter_3438__i15
+   Register : cell_a/heater2/pwm_driver/counter_3438__i5
+   Register : cell_a/heater2/pwm_driver/counter_3438__i0
+   Register : cell_a/heater1/pwm_driver/counter_3437__i9
+   Register : cell_a/heater1/pwm_driver/counter_3437__i6
+   Register : cell_a/heater1/pwm_driver/counter_3437__i11
+   Register : cell_a/heater1/pwm_driver/counter_3437__i14
+   Register : cell_a/heater1/pwm_driver/counter_3437__i1
+   Register : cell_a/heater1/pwm_driver/counter_3437__i15
+   Register : cell_a/heater1/pwm_driver/counter_3437__i12
+   Register : cell_a/heater1/pwm_driver/counter_3437__i7
+   Register : cell_a/heater1/pwm_driver/counter_3437__i10
+   Register : cell_a/heater1/pwm_driver/counter_3437__i5
+   Register : cell_a/heater1/pwm_driver/counter_3437__i3
+   Register : cell_a/heater1/pwm_driver/counter_3437__i2
+   Register : cell_a/heater1/pwm_driver/counter_3437__i13
+
+   Register : cell_a/heater1/pwm_driver/counter_3437__i8
+   Register : cell_a/heater1/pwm_driver/counter_3437__i4
+   Register : cell_a/heater1/pwm_driver/counter_3437__i0
+   Register : cell_a/heater14/pwm_driver/counter_3450__i1
+   Register : cell_a/heater14/pwm_driver/counter_3450__i5
+   Register : cell_a/heater14/pwm_driver/counter_3450__i11
+   Register : cell_a/heater14/pwm_driver/counter_3450__i12
+   Register : cell_a/heater14/pwm_driver/counter_3450__i6
+   Register : cell_a/heater14/pwm_driver/counter_3450__i13
+   Register : cell_a/heater14/pwm_driver/counter_3450__i7
+   Register : cell_a/heater14/pwm_driver/counter_3450__i2
+   Register : cell_a/heater14/pwm_driver/counter_3450__i8
+   Register : cell_a/heater14/pwm_driver/counter_3450__i14
+   Register : cell_a/heater14/pwm_driver/counter_3450__i9
+   Register : cell_a/heater14/pwm_driver/counter_3450__i3
+   Register : cell_a/heater14/pwm_driver/counter_3450__i10
+   Register : cell_a/heater14/pwm_driver/counter_3450__i4
+   Register : cell_a/heater14/pwm_driver/counter_3450__i15
+   Register : cell_a/heater14/pwm_driver/counter_3450__i0
+   Register : cell_a/heater13/pwm_driver/counter_3449__i15
+   Register : cell_a/heater13/pwm_driver/counter_3449__i1
+   Register : cell_a/heater13/pwm_driver/counter_3449__i2
+   Register : cell_a/heater13/pwm_driver/counter_3449__i3
+   Register : cell_a/heater13/pwm_driver/counter_3449__i4
+   Register : cell_a/heater13/pwm_driver/counter_3449__i5
+   Register : cell_a/heater13/pwm_driver/counter_3449__i6
+   Register : cell_a/heater13/pwm_driver/counter_3449__i7
+   Register : cell_a/heater13/pwm_driver/counter_3449__i8
+   Register : cell_a/heater13/pwm_driver/counter_3449__i9
+   Register : cell_a/heater13/pwm_driver/counter_3449__i10
+   Register : cell_a/heater13/pwm_driver/counter_3449__i11
+   Register : cell_a/heater13/pwm_driver/counter_3449__i12
+   Register : cell_a/heater13/pwm_driver/counter_3449__i13
+   Register : cell_a/heater13/pwm_driver/counter_3449__i0
+   Register : cell_a/heater13/pwm_driver/counter_3449__i14
+   Register : cell_a/heater12/pwm_driver/counter_3448__i2
+   Register : cell_a/heater12/pwm_driver/counter_3448__i3
+   Register : cell_a/heater12/pwm_driver/counter_3448__i4
+   Register : cell_a/heater12/pwm_driver/counter_3448__i5
+   Register : cell_a/heater12/pwm_driver/counter_3448__i6
+   Register : cell_a/heater12/pwm_driver/counter_3448__i7
+   Register : cell_a/heater12/pwm_driver/counter_3448__i1
+   Register : cell_a/heater12/pwm_driver/counter_3448__i8
+   Register : cell_a/heater12/pwm_driver/counter_3448__i9
+   Register : cell_a/heater12/pwm_driver/counter_3448__i10
+   Register : cell_a/heater12/pwm_driver/counter_3448__i11
+   Register : cell_a/heater12/pwm_driver/counter_3448__i12
+   Register : cell_a/heater12/pwm_driver/counter_3448__i13
+   Register : cell_a/heater12/pwm_driver/counter_3448__i14
+   Register : cell_a/heater12/pwm_driver/counter_3448__i15
+   Register : cell_a/heater12/pwm_driver/counter_3448__i0
+   Register : cell_a/heater11/pwm_driver/counter_3447__i4
+   Register : cell_a/heater11/pwm_driver/counter_3447__i3
+   Register : cell_a/heater11/pwm_driver/counter_3447__i2
+   Register : cell_a/heater11/pwm_driver/counter_3447__i1
+   Register : cell_a/heater11/pwm_driver/counter_3447__i5
+
+   Register : cell_a/heater11/pwm_driver/counter_3447__i9
+   Register : cell_a/heater11/pwm_driver/counter_3447__i14
+   Register : cell_a/heater11/pwm_driver/counter_3447__i15
+   Register : cell_a/heater11/pwm_driver/counter_3447__i10
+   Register : cell_a/heater11/pwm_driver/counter_3447__i11
+   Register : cell_a/heater11/pwm_driver/counter_3447__i6
+   Register : cell_a/heater11/pwm_driver/counter_3447__i12
+   Register : cell_a/heater11/pwm_driver/counter_3447__i13
+   Register : cell_a/heater11/pwm_driver/counter_3447__i7
+   Register : cell_a/heater11/pwm_driver/counter_3447__i8
+   Register : cell_a/heater11/pwm_driver/counter_3447__i0
+   Register : cell_a/heater10/pwm_driver/counter_3446__i0
+   Register : cell_a/heater10/pwm_driver/counter_3446__i15
+   Register : cell_a/heater10/pwm_driver/counter_3446__i14
+   Register : cell_a/heater10/pwm_driver/counter_3446__i13
+   Register : cell_a/heater10/pwm_driver/counter_3446__i12
+   Register : cell_a/heater10/pwm_driver/counter_3446__i11
+   Register : cell_a/heater10/pwm_driver/counter_3446__i10
+   Register : cell_a/heater10/pwm_driver/counter_3446__i9
+   Register : cell_a/heater10/pwm_driver/counter_3446__i8
+   Register : cell_a/heater10/pwm_driver/counter_3446__i7
+   Register : cell_a/heater10/pwm_driver/counter_3446__i6
+   Register : cell_a/heater10/pwm_driver/counter_3446__i5
+   Register : cell_a/heater10/pwm_driver/counter_3446__i4
+   Register : cell_a/heater10/pwm_driver/counter_3446__i3
+   Register : cell_a/heater10/pwm_driver/counter_3446__i2
+   Register : cell_a/heater10/pwm_driver/counter_3446__i1
+   Register : cell_a/frame_control/state_i1
+   Register : spi1/bit_counter_i5
+   Register : spi1/read_memory_147
+   Register : spi1/spi_state_FSM_i3
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 17 secs  
+   Total REAL Time: 18 secs  
+   Peak Memory Usage: 117 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

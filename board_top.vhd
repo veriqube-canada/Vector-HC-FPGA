@@ -7,17 +7,151 @@ entity board_top is
         pwm_counter_width : positive range 1 to 31 := 16
     );
     port (
-        clk, reset, global_sync : in std_logic;
-        spi_sck, spi_mosi, spi_scs : in std_logic;
+        clk : in std_logic;
+        reset : in std_logic;
+        global_sync : in std_logic;
+        spi_sck : in std_logic;
+        spi_mosi : in std_logic;
+        spi_scs : in std_logic;
         spi_miso : out std_logic;
-        pwm : out std_logic_vector(41 downto 0);
-        adc_sclk, adc_cs : out std_logic_vector(2 downto 0);
-        temp_adc_sdo : in std_logic_vector(41 downto 0);
-        temp_adc_data : out std_logic_vector(1343 downto 0);
-        current_adc_sdo : in std_logic_vector(41 downto 0);
-        current_adc_data : out std_logic_vector(1343 downto 0);
-        rtd_adc_sdo : in std_logic_vector(5 downto 0);
-        rtd_adc_data : out std_logic_vector(191 downto 0)
+        cell_a_adc_sclk : out std_logic;
+        cell_a_adc_cs : out std_logic;
+        cell_a_temp_sdo1 : in std_logic;
+        cell_a_current_sdo1 : in std_logic;
+        cell_a_pwm1 : out std_logic;
+        cell_a_temp_sdo2 : in std_logic;
+        cell_a_current_sdo2 : in std_logic;
+        cell_a_pwm2 : out std_logic;
+        cell_a_temp_sdo3 : in std_logic;
+        cell_a_current_sdo3 : in std_logic;
+        cell_a_pwm3 : out std_logic;
+        cell_a_temp_sdo4 : in std_logic;
+        cell_a_current_sdo4 : in std_logic;
+        cell_a_pwm4 : out std_logic;
+        cell_a_temp_sdo5 : in std_logic;
+        cell_a_current_sdo5 : in std_logic;
+        cell_a_pwm5 : out std_logic;
+        cell_a_temp_sdo6 : in std_logic;
+        cell_a_current_sdo6 : in std_logic;
+        cell_a_pwm6 : out std_logic;
+        cell_a_temp_sdo7 : in std_logic;
+        cell_a_current_sdo7 : in std_logic;
+        cell_a_pwm7 : out std_logic;
+        cell_a_temp_sdo8 : in std_logic;
+        cell_a_current_sdo8 : in std_logic;
+        cell_a_pwm8 : out std_logic;
+        cell_a_temp_sdo9 : in std_logic;
+        cell_a_current_sdo9 : in std_logic;
+        cell_a_pwm9 : out std_logic;
+        cell_a_temp_sdo10 : in std_logic;
+        cell_a_current_sdo10 : in std_logic;
+        cell_a_pwm10 : out std_logic;
+        cell_a_temp_sdo11 : in std_logic;
+        cell_a_current_sdo11 : in std_logic;
+        cell_a_pwm11 : out std_logic;
+        cell_a_temp_sdo12 : in std_logic;
+        cell_a_current_sdo12 : in std_logic;
+        cell_a_pwm12 : out std_logic;
+        cell_a_temp_sdo13 : in std_logic;
+        cell_a_current_sdo13 : in std_logic;
+        cell_a_pwm13 : out std_logic;
+        cell_a_temp_sdo14 : in std_logic;
+        cell_a_current_sdo14 : in std_logic;
+        cell_a_pwm14 : out std_logic;
+        cell_a_rtd_sdo1 : in std_logic;
+        cell_a_rtd_sdo2 : in std_logic;
+        cell_b_adc_sclk : out std_logic;
+        cell_b_adc_cs : out std_logic;
+        cell_b_temp_sdo1 : in std_logic;
+        cell_b_current_sdo1 : in std_logic;
+        cell_b_pwm1 : out std_logic;
+        cell_b_temp_sdo2 : in std_logic;
+        cell_b_current_sdo2 : in std_logic;
+        cell_b_pwm2 : out std_logic;
+        cell_b_temp_sdo3 : in std_logic;
+        cell_b_current_sdo3 : in std_logic;
+        cell_b_pwm3 : out std_logic;
+        cell_b_temp_sdo4 : in std_logic;
+        cell_b_current_sdo4 : in std_logic;
+        cell_b_pwm4 : out std_logic;
+        cell_b_temp_sdo5 : in std_logic;
+        cell_b_current_sdo5 : in std_logic;
+        cell_b_pwm5 : out std_logic;
+        cell_b_temp_sdo6 : in std_logic;
+        cell_b_current_sdo6 : in std_logic;
+        cell_b_pwm6 : out std_logic;
+        cell_b_temp_sdo7 : in std_logic;
+        cell_b_current_sdo7 : in std_logic;
+        cell_b_pwm7 : out std_logic;
+        cell_b_temp_sdo8 : in std_logic;
+        cell_b_current_sdo8 : in std_logic;
+        cell_b_pwm8 : out std_logic;
+        cell_b_temp_sdo9 : in std_logic;
+        cell_b_current_sdo9 : in std_logic;
+        cell_b_pwm9 : out std_logic;
+        cell_b_temp_sdo10 : in std_logic;
+        cell_b_current_sdo10 : in std_logic;
+        cell_b_pwm10 : out std_logic;
+        cell_b_temp_sdo11 : in std_logic;
+        cell_b_current_sdo11 : in std_logic;
+        cell_b_pwm11 : out std_logic;
+        cell_b_temp_sdo12 : in std_logic;
+        cell_b_current_sdo12 : in std_logic;
+        cell_b_pwm12 : out std_logic;
+        cell_b_temp_sdo13 : in std_logic;
+        cell_b_current_sdo13 : in std_logic;
+        cell_b_pwm13 : out std_logic;
+        cell_b_temp_sdo14 : in std_logic;
+        cell_b_current_sdo14 : in std_logic;
+        cell_b_pwm14 : out std_logic;
+        cell_b_rtd_sdo1 : in std_logic;
+        cell_b_rtd_sdo2 : in std_logic;
+        cell_c_adc_sclk : out std_logic;
+        cell_c_adc_cs : out std_logic;
+        cell_c_temp_sdo1 : in std_logic;
+        cell_c_current_sdo1 : in std_logic;
+        cell_c_pwm1 : out std_logic;
+        cell_c_temp_sdo2 : in std_logic;
+        cell_c_current_sdo2 : in std_logic;
+        cell_c_pwm2 : out std_logic;
+        cell_c_temp_sdo3 : in std_logic;
+        cell_c_current_sdo3 : in std_logic;
+        cell_c_pwm3 : out std_logic;
+        cell_c_temp_sdo4 : in std_logic;
+        cell_c_current_sdo4 : in std_logic;
+        cell_c_pwm4 : out std_logic;
+        cell_c_temp_sdo5 : in std_logic;
+        cell_c_current_sdo5 : in std_logic;
+        cell_c_pwm5 : out std_logic;
+        cell_c_temp_sdo6 : in std_logic;
+        cell_c_current_sdo6 : in std_logic;
+        cell_c_pwm6 : out std_logic;
+        cell_c_temp_sdo7 : in std_logic;
+        cell_c_current_sdo7 : in std_logic;
+        cell_c_pwm7 : out std_logic;
+        cell_c_temp_sdo8 : in std_logic;
+        cell_c_current_sdo8 : in std_logic;
+        cell_c_pwm8 : out std_logic;
+        cell_c_temp_sdo9 : in std_logic;
+        cell_c_current_sdo9 : in std_logic;
+        cell_c_pwm9 : out std_logic;
+        cell_c_temp_sdo10 : in std_logic;
+        cell_c_current_sdo10 : in std_logic;
+        cell_c_pwm10 : out std_logic;
+        cell_c_temp_sdo11 : in std_logic;
+        cell_c_current_sdo11 : in std_logic;
+        cell_c_pwm11 : out std_logic;
+        cell_c_temp_sdo12 : in std_logic;
+        cell_c_current_sdo12 : in std_logic;
+        cell_c_pwm12 : out std_logic;
+        cell_c_temp_sdo13 : in std_logic;
+        cell_c_current_sdo13 : in std_logic;
+        cell_c_pwm13 : out std_logic;
+        cell_c_temp_sdo14 : in std_logic;
+        cell_c_current_sdo14 : in std_logic;
+        cell_c_pwm14 : out std_logic;
+        cell_c_rtd_sdo1 : in std_logic;
+        cell_c_rtd_sdo2 : in std_logic
     );
 end entity board_top;
 
@@ -27,17 +161,146 @@ architecture structural of board_top is
     signal memory_in, memory_out : std_logic_vector(31 downto 0);
     signal address_memory : std_logic_vector(15 downto 0);
     signal read_memory, write_memory : std_logic;
-    signal temperature_samples : std_logic_vector(temp_adc_data'range);
-    signal current_samples : std_logic_vector(current_adc_data'range);
-    signal rtd_samples : std_logic_vector(rtd_adc_data'range);
     signal pwm_period : unsigned(pwm_counter_width - 1 downto 0);
-    signal pwm_phase_delay : unsigned(42 * (pwm_counter_width + 1) - 1 downto 0);
-    signal pwm_duty_request : unsigned(42 * pwm_counter_width - 1 downto 0);
-begin
-    temp_adc_data <= temperature_samples;
-    current_adc_data <= current_samples;
-    rtd_adc_data <= rtd_samples;
 
+    -- Cell A
+    signal cell_a_temp_sense1 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense1 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request1 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense2 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense2 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request2 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense3 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense3 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request3 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense4 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense4 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request4 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense5 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense5 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request5 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense6 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense6 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request6 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense7 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense7 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request7 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense8 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense8 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request8 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense9 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense9 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request9 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense10 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense10 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request10 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense11 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense11 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request11 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense12 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense12 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request12 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense13 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense13 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request13 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_temp_sense14 : std_logic_vector(31 downto 0);
+    signal cell_a_current_sense14 : std_logic_vector(31 downto 0);
+    signal cell_a_pwm_duty_request14 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_a_rtd_sense1 : std_logic_vector(31 downto 0);
+    signal cell_a_rtd_sense2 : std_logic_vector(31 downto 0);
+
+    -- Cell B
+    signal cell_b_temp_sense1 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense1 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request1 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense2 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense2 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request2 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense3 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense3 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request3 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense4 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense4 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request4 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense5 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense5 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request5 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense6 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense6 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request6 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense7 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense7 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request7 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense8 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense8 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request8 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense9 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense9 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request9 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense10 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense10 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request10 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense11 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense11 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request11 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense12 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense12 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request12 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense13 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense13 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request13 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_temp_sense14 : std_logic_vector(31 downto 0);
+    signal cell_b_current_sense14 : std_logic_vector(31 downto 0);
+    signal cell_b_pwm_duty_request14 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_b_rtd_sense1 : std_logic_vector(31 downto 0);
+    signal cell_b_rtd_sense2 : std_logic_vector(31 downto 0);
+
+    -- Cell C
+    signal cell_c_temp_sense1 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense1 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request1 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense2 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense2 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request2 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense3 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense3 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request3 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense4 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense4 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request4 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense5 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense5 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request5 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense6 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense6 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request6 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense7 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense7 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request7 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense8 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense8 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request8 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense9 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense9 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request9 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense10 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense10 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request10 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense11 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense11 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request11 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense12 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense12 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request12 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense13 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense13 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request13 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_temp_sense14 : std_logic_vector(31 downto 0);
+    signal cell_c_current_sense14 : std_logic_vector(31 downto 0);
+    signal cell_c_pwm_duty_request14 : unsigned(pwm_counter_width - 1 downto 0);
+    signal cell_c_rtd_sense1 : std_logic_vector(31 downto 0);
+    signal cell_c_rtd_sense2 : std_logic_vector(31 downto 0);
+begin
     spi1 : entity work.spi_slave
         port map (
             clk            => clk,
@@ -53,8 +316,9 @@ begin
             spi_miso       => spi_miso
         );
 
-    -- Service registers use 0x00xx. Zero-based cell c starts at 256 * (c + 1).
-    -- Heater h starts at cell base + 8 * h.
+    -- Service registers use 0x00xx. Cells A, B, and C start at 0x0100, 0x0200, and 0x0300.
+    -- Heater h starts at cell base + 8 * (h - 1), using schematic numbering.
+    -- Heater offset +2 is reserved. PWM duty remains at +3.
     -- RTDs are at cell base + 0x78 and + 0x79.
     process (clk, reset)
     begin
@@ -63,8 +327,48 @@ begin
             dummy_register <= (others => '0');
             mcu_settings1 <= x"11111111";
             pwm_period <= (others => '0');
-            pwm_phase_delay <= (others => '0');
-            pwm_duty_request <= (others => '1');
+            cell_a_pwm_duty_request1 <= (others => '1');
+            cell_a_pwm_duty_request2 <= (others => '1');
+            cell_a_pwm_duty_request3 <= (others => '1');
+            cell_a_pwm_duty_request4 <= (others => '1');
+            cell_a_pwm_duty_request5 <= (others => '1');
+            cell_a_pwm_duty_request6 <= (others => '1');
+            cell_a_pwm_duty_request7 <= (others => '1');
+            cell_a_pwm_duty_request8 <= (others => '1');
+            cell_a_pwm_duty_request9 <= (others => '1');
+            cell_a_pwm_duty_request10 <= (others => '1');
+            cell_a_pwm_duty_request11 <= (others => '1');
+            cell_a_pwm_duty_request12 <= (others => '1');
+            cell_a_pwm_duty_request13 <= (others => '1');
+            cell_a_pwm_duty_request14 <= (others => '1');
+            cell_b_pwm_duty_request1 <= (others => '1');
+            cell_b_pwm_duty_request2 <= (others => '1');
+            cell_b_pwm_duty_request3 <= (others => '1');
+            cell_b_pwm_duty_request4 <= (others => '1');
+            cell_b_pwm_duty_request5 <= (others => '1');
+            cell_b_pwm_duty_request6 <= (others => '1');
+            cell_b_pwm_duty_request7 <= (others => '1');
+            cell_b_pwm_duty_request8 <= (others => '1');
+            cell_b_pwm_duty_request9 <= (others => '1');
+            cell_b_pwm_duty_request10 <= (others => '1');
+            cell_b_pwm_duty_request11 <= (others => '1');
+            cell_b_pwm_duty_request12 <= (others => '1');
+            cell_b_pwm_duty_request13 <= (others => '1');
+            cell_b_pwm_duty_request14 <= (others => '1');
+            cell_c_pwm_duty_request1 <= (others => '1');
+            cell_c_pwm_duty_request2 <= (others => '1');
+            cell_c_pwm_duty_request3 <= (others => '1');
+            cell_c_pwm_duty_request4 <= (others => '1');
+            cell_c_pwm_duty_request5 <= (others => '1');
+            cell_c_pwm_duty_request6 <= (others => '1');
+            cell_c_pwm_duty_request7 <= (others => '1');
+            cell_c_pwm_duty_request8 <= (others => '1');
+            cell_c_pwm_duty_request9 <= (others => '1');
+            cell_c_pwm_duty_request10 <= (others => '1');
+            cell_c_pwm_duty_request11 <= (others => '1');
+            cell_c_pwm_duty_request12 <= (others => '1');
+            cell_c_pwm_duty_request13 <= (others => '1');
+            cell_c_pwm_duty_request14 <= (others => '1');
         elsif rising_edge(clk) then
             if read_memory = '1' then
                 memory_out <= x"01234567";
@@ -73,185 +377,143 @@ begin
                 if address_memory = x"0002" then memory_out <= version; end if;
                 if address_memory = x"0004" then memory_out <= std_logic_vector(resize(pwm_period, 32)); end if;
 
-                -- Cell 0
-                if address_memory = x"0100" then memory_out <= temperature_samples(31 downto 0); end if;
-                if address_memory = x"0101" then memory_out <= current_samples(31 downto 0); end if;
-                if address_memory = x"0102" then memory_out <= std_logic_vector(resize(pwm_phase_delay(1 * (pwm_counter_width + 1) - 1 downto 0 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0103" then memory_out <= std_logic_vector(resize(pwm_duty_request(1 * pwm_counter_width - 1 downto 0 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0108" then memory_out <= temperature_samples(63 downto 32); end if;
-                if address_memory = x"0109" then memory_out <= current_samples(63 downto 32); end if;
-                if address_memory = x"010A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(2 * (pwm_counter_width + 1) - 1 downto 1 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"010B" then memory_out <= std_logic_vector(resize(pwm_duty_request(2 * pwm_counter_width - 1 downto 1 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0110" then memory_out <= temperature_samples(95 downto 64); end if;
-                if address_memory = x"0111" then memory_out <= current_samples(95 downto 64); end if;
-                if address_memory = x"0112" then memory_out <= std_logic_vector(resize(pwm_phase_delay(3 * (pwm_counter_width + 1) - 1 downto 2 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0113" then memory_out <= std_logic_vector(resize(pwm_duty_request(3 * pwm_counter_width - 1 downto 2 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0118" then memory_out <= temperature_samples(127 downto 96); end if;
-                if address_memory = x"0119" then memory_out <= current_samples(127 downto 96); end if;
-                if address_memory = x"011A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(4 * (pwm_counter_width + 1) - 1 downto 3 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"011B" then memory_out <= std_logic_vector(resize(pwm_duty_request(4 * pwm_counter_width - 1 downto 3 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0120" then memory_out <= temperature_samples(159 downto 128); end if;
-                if address_memory = x"0121" then memory_out <= current_samples(159 downto 128); end if;
-                if address_memory = x"0122" then memory_out <= std_logic_vector(resize(pwm_phase_delay(5 * (pwm_counter_width + 1) - 1 downto 4 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0123" then memory_out <= std_logic_vector(resize(pwm_duty_request(5 * pwm_counter_width - 1 downto 4 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0128" then memory_out <= temperature_samples(191 downto 160); end if;
-                if address_memory = x"0129" then memory_out <= current_samples(191 downto 160); end if;
-                if address_memory = x"012A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(6 * (pwm_counter_width + 1) - 1 downto 5 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"012B" then memory_out <= std_logic_vector(resize(pwm_duty_request(6 * pwm_counter_width - 1 downto 5 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0130" then memory_out <= temperature_samples(223 downto 192); end if;
-                if address_memory = x"0131" then memory_out <= current_samples(223 downto 192); end if;
-                if address_memory = x"0132" then memory_out <= std_logic_vector(resize(pwm_phase_delay(7 * (pwm_counter_width + 1) - 1 downto 6 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0133" then memory_out <= std_logic_vector(resize(pwm_duty_request(7 * pwm_counter_width - 1 downto 6 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0138" then memory_out <= temperature_samples(255 downto 224); end if;
-                if address_memory = x"0139" then memory_out <= current_samples(255 downto 224); end if;
-                if address_memory = x"013A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(8 * (pwm_counter_width + 1) - 1 downto 7 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"013B" then memory_out <= std_logic_vector(resize(pwm_duty_request(8 * pwm_counter_width - 1 downto 7 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0140" then memory_out <= temperature_samples(287 downto 256); end if;
-                if address_memory = x"0141" then memory_out <= current_samples(287 downto 256); end if;
-                if address_memory = x"0142" then memory_out <= std_logic_vector(resize(pwm_phase_delay(9 * (pwm_counter_width + 1) - 1 downto 8 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0143" then memory_out <= std_logic_vector(resize(pwm_duty_request(9 * pwm_counter_width - 1 downto 8 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0148" then memory_out <= temperature_samples(319 downto 288); end if;
-                if address_memory = x"0149" then memory_out <= current_samples(319 downto 288); end if;
-                if address_memory = x"014A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(10 * (pwm_counter_width + 1) - 1 downto 9 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"014B" then memory_out <= std_logic_vector(resize(pwm_duty_request(10 * pwm_counter_width - 1 downto 9 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0150" then memory_out <= temperature_samples(351 downto 320); end if;
-                if address_memory = x"0151" then memory_out <= current_samples(351 downto 320); end if;
-                if address_memory = x"0152" then memory_out <= std_logic_vector(resize(pwm_phase_delay(11 * (pwm_counter_width + 1) - 1 downto 10 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0153" then memory_out <= std_logic_vector(resize(pwm_duty_request(11 * pwm_counter_width - 1 downto 10 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0158" then memory_out <= temperature_samples(383 downto 352); end if;
-                if address_memory = x"0159" then memory_out <= current_samples(383 downto 352); end if;
-                if address_memory = x"015A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(12 * (pwm_counter_width + 1) - 1 downto 11 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"015B" then memory_out <= std_logic_vector(resize(pwm_duty_request(12 * pwm_counter_width - 1 downto 11 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0160" then memory_out <= temperature_samples(415 downto 384); end if;
-                if address_memory = x"0161" then memory_out <= current_samples(415 downto 384); end if;
-                if address_memory = x"0162" then memory_out <= std_logic_vector(resize(pwm_phase_delay(13 * (pwm_counter_width + 1) - 1 downto 12 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0163" then memory_out <= std_logic_vector(resize(pwm_duty_request(13 * pwm_counter_width - 1 downto 12 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0168" then memory_out <= temperature_samples(447 downto 416); end if;
-                if address_memory = x"0169" then memory_out <= current_samples(447 downto 416); end if;
-                if address_memory = x"016A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(14 * (pwm_counter_width + 1) - 1 downto 13 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"016B" then memory_out <= std_logic_vector(resize(pwm_duty_request(14 * pwm_counter_width - 1 downto 13 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0178" then memory_out <= rtd_samples(31 downto 0); end if;
-                if address_memory = x"0179" then memory_out <= rtd_samples(63 downto 32); end if;
+                -- Cell A
+                if address_memory = x"0100" then memory_out <= cell_a_temp_sense1; end if;
+                if address_memory = x"0101" then memory_out <= cell_a_current_sense1; end if;
+                if address_memory = x"0103" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request1, 32)); end if;
+                if address_memory = x"0108" then memory_out <= cell_a_temp_sense2; end if;
+                if address_memory = x"0109" then memory_out <= cell_a_current_sense2; end if;
+                if address_memory = x"010B" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request2, 32)); end if;
+                if address_memory = x"0110" then memory_out <= cell_a_temp_sense3; end if;
+                if address_memory = x"0111" then memory_out <= cell_a_current_sense3; end if;
+                if address_memory = x"0113" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request3, 32)); end if;
+                if address_memory = x"0118" then memory_out <= cell_a_temp_sense4; end if;
+                if address_memory = x"0119" then memory_out <= cell_a_current_sense4; end if;
+                if address_memory = x"011B" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request4, 32)); end if;
+                if address_memory = x"0120" then memory_out <= cell_a_temp_sense5; end if;
+                if address_memory = x"0121" then memory_out <= cell_a_current_sense5; end if;
+                if address_memory = x"0123" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request5, 32)); end if;
+                if address_memory = x"0128" then memory_out <= cell_a_temp_sense6; end if;
+                if address_memory = x"0129" then memory_out <= cell_a_current_sense6; end if;
+                if address_memory = x"012B" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request6, 32)); end if;
+                if address_memory = x"0130" then memory_out <= cell_a_temp_sense7; end if;
+                if address_memory = x"0131" then memory_out <= cell_a_current_sense7; end if;
+                if address_memory = x"0133" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request7, 32)); end if;
+                if address_memory = x"0138" then memory_out <= cell_a_temp_sense8; end if;
+                if address_memory = x"0139" then memory_out <= cell_a_current_sense8; end if;
+                if address_memory = x"013B" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request8, 32)); end if;
+                if address_memory = x"0140" then memory_out <= cell_a_temp_sense9; end if;
+                if address_memory = x"0141" then memory_out <= cell_a_current_sense9; end if;
+                if address_memory = x"0143" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request9, 32)); end if;
+                if address_memory = x"0148" then memory_out <= cell_a_temp_sense10; end if;
+                if address_memory = x"0149" then memory_out <= cell_a_current_sense10; end if;
+                if address_memory = x"014B" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request10, 32)); end if;
+                if address_memory = x"0150" then memory_out <= cell_a_temp_sense11; end if;
+                if address_memory = x"0151" then memory_out <= cell_a_current_sense11; end if;
+                if address_memory = x"0153" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request11, 32)); end if;
+                if address_memory = x"0158" then memory_out <= cell_a_temp_sense12; end if;
+                if address_memory = x"0159" then memory_out <= cell_a_current_sense12; end if;
+                if address_memory = x"015B" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request12, 32)); end if;
+                if address_memory = x"0160" then memory_out <= cell_a_temp_sense13; end if;
+                if address_memory = x"0161" then memory_out <= cell_a_current_sense13; end if;
+                if address_memory = x"0163" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request13, 32)); end if;
+                if address_memory = x"0168" then memory_out <= cell_a_temp_sense14; end if;
+                if address_memory = x"0169" then memory_out <= cell_a_current_sense14; end if;
+                if address_memory = x"016B" then memory_out <= std_logic_vector(resize(cell_a_pwm_duty_request14, 32)); end if;
+                if address_memory = x"0178" then memory_out <= cell_a_rtd_sense1; end if;
+                if address_memory = x"0179" then memory_out <= cell_a_rtd_sense2; end if;
 
-                -- Cell 1
-                if address_memory = x"0200" then memory_out <= temperature_samples(479 downto 448); end if;
-                if address_memory = x"0201" then memory_out <= current_samples(479 downto 448); end if;
-                if address_memory = x"0202" then memory_out <= std_logic_vector(resize(pwm_phase_delay(15 * (pwm_counter_width + 1) - 1 downto 14 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0203" then memory_out <= std_logic_vector(resize(pwm_duty_request(15 * pwm_counter_width - 1 downto 14 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0208" then memory_out <= temperature_samples(511 downto 480); end if;
-                if address_memory = x"0209" then memory_out <= current_samples(511 downto 480); end if;
-                if address_memory = x"020A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(16 * (pwm_counter_width + 1) - 1 downto 15 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"020B" then memory_out <= std_logic_vector(resize(pwm_duty_request(16 * pwm_counter_width - 1 downto 15 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0210" then memory_out <= temperature_samples(543 downto 512); end if;
-                if address_memory = x"0211" then memory_out <= current_samples(543 downto 512); end if;
-                if address_memory = x"0212" then memory_out <= std_logic_vector(resize(pwm_phase_delay(17 * (pwm_counter_width + 1) - 1 downto 16 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0213" then memory_out <= std_logic_vector(resize(pwm_duty_request(17 * pwm_counter_width - 1 downto 16 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0218" then memory_out <= temperature_samples(575 downto 544); end if;
-                if address_memory = x"0219" then memory_out <= current_samples(575 downto 544); end if;
-                if address_memory = x"021A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(18 * (pwm_counter_width + 1) - 1 downto 17 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"021B" then memory_out <= std_logic_vector(resize(pwm_duty_request(18 * pwm_counter_width - 1 downto 17 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0220" then memory_out <= temperature_samples(607 downto 576); end if;
-                if address_memory = x"0221" then memory_out <= current_samples(607 downto 576); end if;
-                if address_memory = x"0222" then memory_out <= std_logic_vector(resize(pwm_phase_delay(19 * (pwm_counter_width + 1) - 1 downto 18 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0223" then memory_out <= std_logic_vector(resize(pwm_duty_request(19 * pwm_counter_width - 1 downto 18 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0228" then memory_out <= temperature_samples(639 downto 608); end if;
-                if address_memory = x"0229" then memory_out <= current_samples(639 downto 608); end if;
-                if address_memory = x"022A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(20 * (pwm_counter_width + 1) - 1 downto 19 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"022B" then memory_out <= std_logic_vector(resize(pwm_duty_request(20 * pwm_counter_width - 1 downto 19 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0230" then memory_out <= temperature_samples(671 downto 640); end if;
-                if address_memory = x"0231" then memory_out <= current_samples(671 downto 640); end if;
-                if address_memory = x"0232" then memory_out <= std_logic_vector(resize(pwm_phase_delay(21 * (pwm_counter_width + 1) - 1 downto 20 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0233" then memory_out <= std_logic_vector(resize(pwm_duty_request(21 * pwm_counter_width - 1 downto 20 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0238" then memory_out <= temperature_samples(703 downto 672); end if;
-                if address_memory = x"0239" then memory_out <= current_samples(703 downto 672); end if;
-                if address_memory = x"023A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(22 * (pwm_counter_width + 1) - 1 downto 21 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"023B" then memory_out <= std_logic_vector(resize(pwm_duty_request(22 * pwm_counter_width - 1 downto 21 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0240" then memory_out <= temperature_samples(735 downto 704); end if;
-                if address_memory = x"0241" then memory_out <= current_samples(735 downto 704); end if;
-                if address_memory = x"0242" then memory_out <= std_logic_vector(resize(pwm_phase_delay(23 * (pwm_counter_width + 1) - 1 downto 22 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0243" then memory_out <= std_logic_vector(resize(pwm_duty_request(23 * pwm_counter_width - 1 downto 22 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0248" then memory_out <= temperature_samples(767 downto 736); end if;
-                if address_memory = x"0249" then memory_out <= current_samples(767 downto 736); end if;
-                if address_memory = x"024A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(24 * (pwm_counter_width + 1) - 1 downto 23 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"024B" then memory_out <= std_logic_vector(resize(pwm_duty_request(24 * pwm_counter_width - 1 downto 23 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0250" then memory_out <= temperature_samples(799 downto 768); end if;
-                if address_memory = x"0251" then memory_out <= current_samples(799 downto 768); end if;
-                if address_memory = x"0252" then memory_out <= std_logic_vector(resize(pwm_phase_delay(25 * (pwm_counter_width + 1) - 1 downto 24 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0253" then memory_out <= std_logic_vector(resize(pwm_duty_request(25 * pwm_counter_width - 1 downto 24 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0258" then memory_out <= temperature_samples(831 downto 800); end if;
-                if address_memory = x"0259" then memory_out <= current_samples(831 downto 800); end if;
-                if address_memory = x"025A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(26 * (pwm_counter_width + 1) - 1 downto 25 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"025B" then memory_out <= std_logic_vector(resize(pwm_duty_request(26 * pwm_counter_width - 1 downto 25 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0260" then memory_out <= temperature_samples(863 downto 832); end if;
-                if address_memory = x"0261" then memory_out <= current_samples(863 downto 832); end if;
-                if address_memory = x"0262" then memory_out <= std_logic_vector(resize(pwm_phase_delay(27 * (pwm_counter_width + 1) - 1 downto 26 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0263" then memory_out <= std_logic_vector(resize(pwm_duty_request(27 * pwm_counter_width - 1 downto 26 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0268" then memory_out <= temperature_samples(895 downto 864); end if;
-                if address_memory = x"0269" then memory_out <= current_samples(895 downto 864); end if;
-                if address_memory = x"026A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(28 * (pwm_counter_width + 1) - 1 downto 27 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"026B" then memory_out <= std_logic_vector(resize(pwm_duty_request(28 * pwm_counter_width - 1 downto 27 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0278" then memory_out <= rtd_samples(95 downto 64); end if;
-                if address_memory = x"0279" then memory_out <= rtd_samples(127 downto 96); end if;
+                -- Cell B
+                if address_memory = x"0200" then memory_out <= cell_b_temp_sense1; end if;
+                if address_memory = x"0201" then memory_out <= cell_b_current_sense1; end if;
+                if address_memory = x"0203" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request1, 32)); end if;
+                if address_memory = x"0208" then memory_out <= cell_b_temp_sense2; end if;
+                if address_memory = x"0209" then memory_out <= cell_b_current_sense2; end if;
+                if address_memory = x"020B" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request2, 32)); end if;
+                if address_memory = x"0210" then memory_out <= cell_b_temp_sense3; end if;
+                if address_memory = x"0211" then memory_out <= cell_b_current_sense3; end if;
+                if address_memory = x"0213" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request3, 32)); end if;
+                if address_memory = x"0218" then memory_out <= cell_b_temp_sense4; end if;
+                if address_memory = x"0219" then memory_out <= cell_b_current_sense4; end if;
+                if address_memory = x"021B" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request4, 32)); end if;
+                if address_memory = x"0220" then memory_out <= cell_b_temp_sense5; end if;
+                if address_memory = x"0221" then memory_out <= cell_b_current_sense5; end if;
+                if address_memory = x"0223" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request5, 32)); end if;
+                if address_memory = x"0228" then memory_out <= cell_b_temp_sense6; end if;
+                if address_memory = x"0229" then memory_out <= cell_b_current_sense6; end if;
+                if address_memory = x"022B" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request6, 32)); end if;
+                if address_memory = x"0230" then memory_out <= cell_b_temp_sense7; end if;
+                if address_memory = x"0231" then memory_out <= cell_b_current_sense7; end if;
+                if address_memory = x"0233" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request7, 32)); end if;
+                if address_memory = x"0238" then memory_out <= cell_b_temp_sense8; end if;
+                if address_memory = x"0239" then memory_out <= cell_b_current_sense8; end if;
+                if address_memory = x"023B" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request8, 32)); end if;
+                if address_memory = x"0240" then memory_out <= cell_b_temp_sense9; end if;
+                if address_memory = x"0241" then memory_out <= cell_b_current_sense9; end if;
+                if address_memory = x"0243" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request9, 32)); end if;
+                if address_memory = x"0248" then memory_out <= cell_b_temp_sense10; end if;
+                if address_memory = x"0249" then memory_out <= cell_b_current_sense10; end if;
+                if address_memory = x"024B" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request10, 32)); end if;
+                if address_memory = x"0250" then memory_out <= cell_b_temp_sense11; end if;
+                if address_memory = x"0251" then memory_out <= cell_b_current_sense11; end if;
+                if address_memory = x"0253" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request11, 32)); end if;
+                if address_memory = x"0258" then memory_out <= cell_b_temp_sense12; end if;
+                if address_memory = x"0259" then memory_out <= cell_b_current_sense12; end if;
+                if address_memory = x"025B" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request12, 32)); end if;
+                if address_memory = x"0260" then memory_out <= cell_b_temp_sense13; end if;
+                if address_memory = x"0261" then memory_out <= cell_b_current_sense13; end if;
+                if address_memory = x"0263" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request13, 32)); end if;
+                if address_memory = x"0268" then memory_out <= cell_b_temp_sense14; end if;
+                if address_memory = x"0269" then memory_out <= cell_b_current_sense14; end if;
+                if address_memory = x"026B" then memory_out <= std_logic_vector(resize(cell_b_pwm_duty_request14, 32)); end if;
+                if address_memory = x"0278" then memory_out <= cell_b_rtd_sense1; end if;
+                if address_memory = x"0279" then memory_out <= cell_b_rtd_sense2; end if;
 
-                -- Cell 2
-                if address_memory = x"0300" then memory_out <= temperature_samples(927 downto 896); end if;
-                if address_memory = x"0301" then memory_out <= current_samples(927 downto 896); end if;
-                if address_memory = x"0302" then memory_out <= std_logic_vector(resize(pwm_phase_delay(29 * (pwm_counter_width + 1) - 1 downto 28 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0303" then memory_out <= std_logic_vector(resize(pwm_duty_request(29 * pwm_counter_width - 1 downto 28 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0308" then memory_out <= temperature_samples(959 downto 928); end if;
-                if address_memory = x"0309" then memory_out <= current_samples(959 downto 928); end if;
-                if address_memory = x"030A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(30 * (pwm_counter_width + 1) - 1 downto 29 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"030B" then memory_out <= std_logic_vector(resize(pwm_duty_request(30 * pwm_counter_width - 1 downto 29 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0310" then memory_out <= temperature_samples(991 downto 960); end if;
-                if address_memory = x"0311" then memory_out <= current_samples(991 downto 960); end if;
-                if address_memory = x"0312" then memory_out <= std_logic_vector(resize(pwm_phase_delay(31 * (pwm_counter_width + 1) - 1 downto 30 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0313" then memory_out <= std_logic_vector(resize(pwm_duty_request(31 * pwm_counter_width - 1 downto 30 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0318" then memory_out <= temperature_samples(1023 downto 992); end if;
-                if address_memory = x"0319" then memory_out <= current_samples(1023 downto 992); end if;
-                if address_memory = x"031A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(32 * (pwm_counter_width + 1) - 1 downto 31 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"031B" then memory_out <= std_logic_vector(resize(pwm_duty_request(32 * pwm_counter_width - 1 downto 31 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0320" then memory_out <= temperature_samples(1055 downto 1024); end if;
-                if address_memory = x"0321" then memory_out <= current_samples(1055 downto 1024); end if;
-                if address_memory = x"0322" then memory_out <= std_logic_vector(resize(pwm_phase_delay(33 * (pwm_counter_width + 1) - 1 downto 32 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0323" then memory_out <= std_logic_vector(resize(pwm_duty_request(33 * pwm_counter_width - 1 downto 32 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0328" then memory_out <= temperature_samples(1087 downto 1056); end if;
-                if address_memory = x"0329" then memory_out <= current_samples(1087 downto 1056); end if;
-                if address_memory = x"032A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(34 * (pwm_counter_width + 1) - 1 downto 33 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"032B" then memory_out <= std_logic_vector(resize(pwm_duty_request(34 * pwm_counter_width - 1 downto 33 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0330" then memory_out <= temperature_samples(1119 downto 1088); end if;
-                if address_memory = x"0331" then memory_out <= current_samples(1119 downto 1088); end if;
-                if address_memory = x"0332" then memory_out <= std_logic_vector(resize(pwm_phase_delay(35 * (pwm_counter_width + 1) - 1 downto 34 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0333" then memory_out <= std_logic_vector(resize(pwm_duty_request(35 * pwm_counter_width - 1 downto 34 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0338" then memory_out <= temperature_samples(1151 downto 1120); end if;
-                if address_memory = x"0339" then memory_out <= current_samples(1151 downto 1120); end if;
-                if address_memory = x"033A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(36 * (pwm_counter_width + 1) - 1 downto 35 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"033B" then memory_out <= std_logic_vector(resize(pwm_duty_request(36 * pwm_counter_width - 1 downto 35 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0340" then memory_out <= temperature_samples(1183 downto 1152); end if;
-                if address_memory = x"0341" then memory_out <= current_samples(1183 downto 1152); end if;
-                if address_memory = x"0342" then memory_out <= std_logic_vector(resize(pwm_phase_delay(37 * (pwm_counter_width + 1) - 1 downto 36 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0343" then memory_out <= std_logic_vector(resize(pwm_duty_request(37 * pwm_counter_width - 1 downto 36 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0348" then memory_out <= temperature_samples(1215 downto 1184); end if;
-                if address_memory = x"0349" then memory_out <= current_samples(1215 downto 1184); end if;
-                if address_memory = x"034A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(38 * (pwm_counter_width + 1) - 1 downto 37 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"034B" then memory_out <= std_logic_vector(resize(pwm_duty_request(38 * pwm_counter_width - 1 downto 37 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0350" then memory_out <= temperature_samples(1247 downto 1216); end if;
-                if address_memory = x"0351" then memory_out <= current_samples(1247 downto 1216); end if;
-                if address_memory = x"0352" then memory_out <= std_logic_vector(resize(pwm_phase_delay(39 * (pwm_counter_width + 1) - 1 downto 38 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0353" then memory_out <= std_logic_vector(resize(pwm_duty_request(39 * pwm_counter_width - 1 downto 38 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0358" then memory_out <= temperature_samples(1279 downto 1248); end if;
-                if address_memory = x"0359" then memory_out <= current_samples(1279 downto 1248); end if;
-                if address_memory = x"035A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(40 * (pwm_counter_width + 1) - 1 downto 39 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"035B" then memory_out <= std_logic_vector(resize(pwm_duty_request(40 * pwm_counter_width - 1 downto 39 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0360" then memory_out <= temperature_samples(1311 downto 1280); end if;
-                if address_memory = x"0361" then memory_out <= current_samples(1311 downto 1280); end if;
-                if address_memory = x"0362" then memory_out <= std_logic_vector(resize(pwm_phase_delay(41 * (pwm_counter_width + 1) - 1 downto 40 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"0363" then memory_out <= std_logic_vector(resize(pwm_duty_request(41 * pwm_counter_width - 1 downto 40 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0368" then memory_out <= temperature_samples(1343 downto 1312); end if;
-                if address_memory = x"0369" then memory_out <= current_samples(1343 downto 1312); end if;
-                if address_memory = x"036A" then memory_out <= std_logic_vector(resize(pwm_phase_delay(42 * (pwm_counter_width + 1) - 1 downto 41 * (pwm_counter_width + 1)), 32)); end if;
-                if address_memory = x"036B" then memory_out <= std_logic_vector(resize(pwm_duty_request(42 * pwm_counter_width - 1 downto 41 * pwm_counter_width), 32)); end if;
-                if address_memory = x"0378" then memory_out <= rtd_samples(159 downto 128); end if;
-                if address_memory = x"0379" then memory_out <= rtd_samples(191 downto 160); end if;
+                -- Cell C
+                if address_memory = x"0300" then memory_out <= cell_c_temp_sense1; end if;
+                if address_memory = x"0301" then memory_out <= cell_c_current_sense1; end if;
+                if address_memory = x"0303" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request1, 32)); end if;
+                if address_memory = x"0308" then memory_out <= cell_c_temp_sense2; end if;
+                if address_memory = x"0309" then memory_out <= cell_c_current_sense2; end if;
+                if address_memory = x"030B" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request2, 32)); end if;
+                if address_memory = x"0310" then memory_out <= cell_c_temp_sense3; end if;
+                if address_memory = x"0311" then memory_out <= cell_c_current_sense3; end if;
+                if address_memory = x"0313" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request3, 32)); end if;
+                if address_memory = x"0318" then memory_out <= cell_c_temp_sense4; end if;
+                if address_memory = x"0319" then memory_out <= cell_c_current_sense4; end if;
+                if address_memory = x"031B" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request4, 32)); end if;
+                if address_memory = x"0320" then memory_out <= cell_c_temp_sense5; end if;
+                if address_memory = x"0321" then memory_out <= cell_c_current_sense5; end if;
+                if address_memory = x"0323" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request5, 32)); end if;
+                if address_memory = x"0328" then memory_out <= cell_c_temp_sense6; end if;
+                if address_memory = x"0329" then memory_out <= cell_c_current_sense6; end if;
+                if address_memory = x"032B" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request6, 32)); end if;
+                if address_memory = x"0330" then memory_out <= cell_c_temp_sense7; end if;
+                if address_memory = x"0331" then memory_out <= cell_c_current_sense7; end if;
+                if address_memory = x"0333" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request7, 32)); end if;
+                if address_memory = x"0338" then memory_out <= cell_c_temp_sense8; end if;
+                if address_memory = x"0339" then memory_out <= cell_c_current_sense8; end if;
+                if address_memory = x"033B" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request8, 32)); end if;
+                if address_memory = x"0340" then memory_out <= cell_c_temp_sense9; end if;
+                if address_memory = x"0341" then memory_out <= cell_c_current_sense9; end if;
+                if address_memory = x"0343" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request9, 32)); end if;
+                if address_memory = x"0348" then memory_out <= cell_c_temp_sense10; end if;
+                if address_memory = x"0349" then memory_out <= cell_c_current_sense10; end if;
+                if address_memory = x"034B" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request10, 32)); end if;
+                if address_memory = x"0350" then memory_out <= cell_c_temp_sense11; end if;
+                if address_memory = x"0351" then memory_out <= cell_c_current_sense11; end if;
+                if address_memory = x"0353" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request11, 32)); end if;
+                if address_memory = x"0358" then memory_out <= cell_c_temp_sense12; end if;
+                if address_memory = x"0359" then memory_out <= cell_c_current_sense12; end if;
+                if address_memory = x"035B" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request12, 32)); end if;
+                if address_memory = x"0360" then memory_out <= cell_c_temp_sense13; end if;
+                if address_memory = x"0361" then memory_out <= cell_c_current_sense13; end if;
+                if address_memory = x"0363" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request13, 32)); end if;
+                if address_memory = x"0368" then memory_out <= cell_c_temp_sense14; end if;
+                if address_memory = x"0369" then memory_out <= cell_c_current_sense14; end if;
+                if address_memory = x"036B" then memory_out <= std_logic_vector(resize(cell_c_pwm_duty_request14, 32)); end if;
+                if address_memory = x"0378" then memory_out <= cell_c_rtd_sense1; end if;
+                if address_memory = x"0379" then memory_out <= cell_c_rtd_sense2; end if;
 
             end if;
 
@@ -260,167 +522,353 @@ begin
                 if address_memory = x"0002" then mcu_settings1 <= memory_in; end if;
                 if address_memory = x"0004" then pwm_period <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
 
-                -- Cell 0
-                if address_memory = x"0102" then pwm_phase_delay(1 * (pwm_counter_width + 1) - 1 downto 0 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0103" then pwm_duty_request(1 * pwm_counter_width - 1 downto 0 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"010A" then pwm_phase_delay(2 * (pwm_counter_width + 1) - 1 downto 1 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"010B" then pwm_duty_request(2 * pwm_counter_width - 1 downto 1 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0112" then pwm_phase_delay(3 * (pwm_counter_width + 1) - 1 downto 2 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0113" then pwm_duty_request(3 * pwm_counter_width - 1 downto 2 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"011A" then pwm_phase_delay(4 * (pwm_counter_width + 1) - 1 downto 3 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"011B" then pwm_duty_request(4 * pwm_counter_width - 1 downto 3 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0122" then pwm_phase_delay(5 * (pwm_counter_width + 1) - 1 downto 4 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0123" then pwm_duty_request(5 * pwm_counter_width - 1 downto 4 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"012A" then pwm_phase_delay(6 * (pwm_counter_width + 1) - 1 downto 5 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"012B" then pwm_duty_request(6 * pwm_counter_width - 1 downto 5 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0132" then pwm_phase_delay(7 * (pwm_counter_width + 1) - 1 downto 6 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0133" then pwm_duty_request(7 * pwm_counter_width - 1 downto 6 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"013A" then pwm_phase_delay(8 * (pwm_counter_width + 1) - 1 downto 7 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"013B" then pwm_duty_request(8 * pwm_counter_width - 1 downto 7 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0142" then pwm_phase_delay(9 * (pwm_counter_width + 1) - 1 downto 8 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0143" then pwm_duty_request(9 * pwm_counter_width - 1 downto 8 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"014A" then pwm_phase_delay(10 * (pwm_counter_width + 1) - 1 downto 9 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"014B" then pwm_duty_request(10 * pwm_counter_width - 1 downto 9 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0152" then pwm_phase_delay(11 * (pwm_counter_width + 1) - 1 downto 10 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0153" then pwm_duty_request(11 * pwm_counter_width - 1 downto 10 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"015A" then pwm_phase_delay(12 * (pwm_counter_width + 1) - 1 downto 11 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"015B" then pwm_duty_request(12 * pwm_counter_width - 1 downto 11 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0162" then pwm_phase_delay(13 * (pwm_counter_width + 1) - 1 downto 12 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0163" then pwm_duty_request(13 * pwm_counter_width - 1 downto 12 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"016A" then pwm_phase_delay(14 * (pwm_counter_width + 1) - 1 downto 13 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"016B" then pwm_duty_request(14 * pwm_counter_width - 1 downto 13 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                -- Cell A
+                if address_memory = x"0103" then cell_a_pwm_duty_request1 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"010B" then cell_a_pwm_duty_request2 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0113" then cell_a_pwm_duty_request3 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"011B" then cell_a_pwm_duty_request4 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0123" then cell_a_pwm_duty_request5 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"012B" then cell_a_pwm_duty_request6 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0133" then cell_a_pwm_duty_request7 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"013B" then cell_a_pwm_duty_request8 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0143" then cell_a_pwm_duty_request9 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"014B" then cell_a_pwm_duty_request10 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0153" then cell_a_pwm_duty_request11 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"015B" then cell_a_pwm_duty_request12 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0163" then cell_a_pwm_duty_request13 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"016B" then cell_a_pwm_duty_request14 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
 
-                -- Cell 1
-                if address_memory = x"0202" then pwm_phase_delay(15 * (pwm_counter_width + 1) - 1 downto 14 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0203" then pwm_duty_request(15 * pwm_counter_width - 1 downto 14 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"020A" then pwm_phase_delay(16 * (pwm_counter_width + 1) - 1 downto 15 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"020B" then pwm_duty_request(16 * pwm_counter_width - 1 downto 15 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0212" then pwm_phase_delay(17 * (pwm_counter_width + 1) - 1 downto 16 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0213" then pwm_duty_request(17 * pwm_counter_width - 1 downto 16 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"021A" then pwm_phase_delay(18 * (pwm_counter_width + 1) - 1 downto 17 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"021B" then pwm_duty_request(18 * pwm_counter_width - 1 downto 17 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0222" then pwm_phase_delay(19 * (pwm_counter_width + 1) - 1 downto 18 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0223" then pwm_duty_request(19 * pwm_counter_width - 1 downto 18 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"022A" then pwm_phase_delay(20 * (pwm_counter_width + 1) - 1 downto 19 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"022B" then pwm_duty_request(20 * pwm_counter_width - 1 downto 19 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0232" then pwm_phase_delay(21 * (pwm_counter_width + 1) - 1 downto 20 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0233" then pwm_duty_request(21 * pwm_counter_width - 1 downto 20 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"023A" then pwm_phase_delay(22 * (pwm_counter_width + 1) - 1 downto 21 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"023B" then pwm_duty_request(22 * pwm_counter_width - 1 downto 21 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0242" then pwm_phase_delay(23 * (pwm_counter_width + 1) - 1 downto 22 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0243" then pwm_duty_request(23 * pwm_counter_width - 1 downto 22 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"024A" then pwm_phase_delay(24 * (pwm_counter_width + 1) - 1 downto 23 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"024B" then pwm_duty_request(24 * pwm_counter_width - 1 downto 23 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0252" then pwm_phase_delay(25 * (pwm_counter_width + 1) - 1 downto 24 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0253" then pwm_duty_request(25 * pwm_counter_width - 1 downto 24 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"025A" then pwm_phase_delay(26 * (pwm_counter_width + 1) - 1 downto 25 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"025B" then pwm_duty_request(26 * pwm_counter_width - 1 downto 25 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0262" then pwm_phase_delay(27 * (pwm_counter_width + 1) - 1 downto 26 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0263" then pwm_duty_request(27 * pwm_counter_width - 1 downto 26 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"026A" then pwm_phase_delay(28 * (pwm_counter_width + 1) - 1 downto 27 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"026B" then pwm_duty_request(28 * pwm_counter_width - 1 downto 27 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                -- Cell B
+                if address_memory = x"0203" then cell_b_pwm_duty_request1 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"020B" then cell_b_pwm_duty_request2 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0213" then cell_b_pwm_duty_request3 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"021B" then cell_b_pwm_duty_request4 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0223" then cell_b_pwm_duty_request5 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"022B" then cell_b_pwm_duty_request6 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0233" then cell_b_pwm_duty_request7 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"023B" then cell_b_pwm_duty_request8 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0243" then cell_b_pwm_duty_request9 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"024B" then cell_b_pwm_duty_request10 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0253" then cell_b_pwm_duty_request11 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"025B" then cell_b_pwm_duty_request12 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0263" then cell_b_pwm_duty_request13 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"026B" then cell_b_pwm_duty_request14 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
 
-                -- Cell 2
-                if address_memory = x"0302" then pwm_phase_delay(29 * (pwm_counter_width + 1) - 1 downto 28 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0303" then pwm_duty_request(29 * pwm_counter_width - 1 downto 28 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"030A" then pwm_phase_delay(30 * (pwm_counter_width + 1) - 1 downto 29 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"030B" then pwm_duty_request(30 * pwm_counter_width - 1 downto 29 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0312" then pwm_phase_delay(31 * (pwm_counter_width + 1) - 1 downto 30 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0313" then pwm_duty_request(31 * pwm_counter_width - 1 downto 30 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"031A" then pwm_phase_delay(32 * (pwm_counter_width + 1) - 1 downto 31 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"031B" then pwm_duty_request(32 * pwm_counter_width - 1 downto 31 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0322" then pwm_phase_delay(33 * (pwm_counter_width + 1) - 1 downto 32 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0323" then pwm_duty_request(33 * pwm_counter_width - 1 downto 32 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"032A" then pwm_phase_delay(34 * (pwm_counter_width + 1) - 1 downto 33 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"032B" then pwm_duty_request(34 * pwm_counter_width - 1 downto 33 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0332" then pwm_phase_delay(35 * (pwm_counter_width + 1) - 1 downto 34 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0333" then pwm_duty_request(35 * pwm_counter_width - 1 downto 34 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"033A" then pwm_phase_delay(36 * (pwm_counter_width + 1) - 1 downto 35 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"033B" then pwm_duty_request(36 * pwm_counter_width - 1 downto 35 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0342" then pwm_phase_delay(37 * (pwm_counter_width + 1) - 1 downto 36 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0343" then pwm_duty_request(37 * pwm_counter_width - 1 downto 36 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"034A" then pwm_phase_delay(38 * (pwm_counter_width + 1) - 1 downto 37 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"034B" then pwm_duty_request(38 * pwm_counter_width - 1 downto 37 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0352" then pwm_phase_delay(39 * (pwm_counter_width + 1) - 1 downto 38 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0353" then pwm_duty_request(39 * pwm_counter_width - 1 downto 38 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"035A" then pwm_phase_delay(40 * (pwm_counter_width + 1) - 1 downto 39 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"035B" then pwm_duty_request(40 * pwm_counter_width - 1 downto 39 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"0362" then pwm_phase_delay(41 * (pwm_counter_width + 1) - 1 downto 40 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"0363" then pwm_duty_request(41 * pwm_counter_width - 1 downto 40 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
-                if address_memory = x"036A" then pwm_phase_delay(42 * (pwm_counter_width + 1) - 1 downto 41 * (pwm_counter_width + 1)) <= unsigned(memory_in(pwm_counter_width downto 0)); end if;
-                if address_memory = x"036B" then pwm_duty_request(42 * pwm_counter_width - 1 downto 41 * pwm_counter_width) <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                -- Cell C
+                if address_memory = x"0303" then cell_c_pwm_duty_request1 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"030B" then cell_c_pwm_duty_request2 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0313" then cell_c_pwm_duty_request3 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"031B" then cell_c_pwm_duty_request4 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0323" then cell_c_pwm_duty_request5 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"032B" then cell_c_pwm_duty_request6 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0333" then cell_c_pwm_duty_request7 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"033B" then cell_c_pwm_duty_request8 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0343" then cell_c_pwm_duty_request9 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"034B" then cell_c_pwm_duty_request10 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0353" then cell_c_pwm_duty_request11 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"035B" then cell_c_pwm_duty_request12 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"0363" then cell_c_pwm_duty_request13 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
+                if address_memory = x"036B" then cell_c_pwm_duty_request14 <= unsigned(memory_in(pwm_counter_width - 1 downto 0)); end if;
 
             end if;
         end if;
     end process;
 
-    -- Board heater index = 14 * cell index + heater index within the cell.
-    cell_0 : entity work.cell_top
-        generic map (
-            pwm_counter_width => pwm_counter_width
-        )
+    cell_a : entity work.cell_top
+        generic map (pwm_counter_width => pwm_counter_width)
         port map (
-            clk              => clk,
-            reset            => reset,
-            global_sync      => global_sync,
-            adc_sclk         => adc_sclk(0),
-            adc_cs           => adc_cs(0),
-            pwm_period       => pwm_period,
-            pwm_phase_delay  => pwm_phase_delay(14 * (pwm_counter_width + 1) - 1 downto 0 * (pwm_counter_width + 1)),
-            pwm_duty_request => pwm_duty_request(14 * pwm_counter_width - 1 downto
-                                                 0 * pwm_counter_width),
-            pwm              => pwm(13 downto 0),
-            temp_adc_sdo     => temp_adc_sdo(13 downto 0),
-            temp_adc_data    => temperature_samples(447 downto 0),
-            current_adc_sdo  => current_adc_sdo(13 downto 0),
-            current_adc_data => current_samples(447 downto 0),
-            rtd_adc_sdo      => rtd_adc_sdo(1 downto 0),
-            rtd_adc_data     => rtd_samples(63 downto 0)
+            clk                => clk,
+            reset              => reset,
+            global_sync        => global_sync,
+            pwm_period         => pwm_period,
+            adc_sclk           => cell_a_adc_sclk,
+            adc_cs             => cell_a_adc_cs,
+            temp_sdo1          => cell_a_temp_sdo1,
+            current_sdo1       => cell_a_current_sdo1,
+            pwm1               => cell_a_pwm1,
+            temp_sense1        => cell_a_temp_sense1,
+            current_sense1     => cell_a_current_sense1,
+            pwm_duty_request1  => cell_a_pwm_duty_request1,
+            temp_sdo2          => cell_a_temp_sdo2,
+            current_sdo2       => cell_a_current_sdo2,
+            pwm2               => cell_a_pwm2,
+            temp_sense2        => cell_a_temp_sense2,
+            current_sense2     => cell_a_current_sense2,
+            pwm_duty_request2  => cell_a_pwm_duty_request2,
+            temp_sdo3          => cell_a_temp_sdo3,
+            current_sdo3       => cell_a_current_sdo3,
+            pwm3               => cell_a_pwm3,
+            temp_sense3        => cell_a_temp_sense3,
+            current_sense3     => cell_a_current_sense3,
+            pwm_duty_request3  => cell_a_pwm_duty_request3,
+            temp_sdo4          => cell_a_temp_sdo4,
+            current_sdo4       => cell_a_current_sdo4,
+            pwm4               => cell_a_pwm4,
+            temp_sense4        => cell_a_temp_sense4,
+            current_sense4     => cell_a_current_sense4,
+            pwm_duty_request4  => cell_a_pwm_duty_request4,
+            temp_sdo5          => cell_a_temp_sdo5,
+            current_sdo5       => cell_a_current_sdo5,
+            pwm5               => cell_a_pwm5,
+            temp_sense5        => cell_a_temp_sense5,
+            current_sense5     => cell_a_current_sense5,
+            pwm_duty_request5  => cell_a_pwm_duty_request5,
+            temp_sdo6          => cell_a_temp_sdo6,
+            current_sdo6       => cell_a_current_sdo6,
+            pwm6               => cell_a_pwm6,
+            temp_sense6        => cell_a_temp_sense6,
+            current_sense6     => cell_a_current_sense6,
+            pwm_duty_request6  => cell_a_pwm_duty_request6,
+            temp_sdo7          => cell_a_temp_sdo7,
+            current_sdo7       => cell_a_current_sdo7,
+            pwm7               => cell_a_pwm7,
+            temp_sense7        => cell_a_temp_sense7,
+            current_sense7     => cell_a_current_sense7,
+            pwm_duty_request7  => cell_a_pwm_duty_request7,
+            temp_sdo8          => cell_a_temp_sdo8,
+            current_sdo8       => cell_a_current_sdo8,
+            pwm8               => cell_a_pwm8,
+            temp_sense8        => cell_a_temp_sense8,
+            current_sense8     => cell_a_current_sense8,
+            pwm_duty_request8  => cell_a_pwm_duty_request8,
+            temp_sdo9          => cell_a_temp_sdo9,
+            current_sdo9       => cell_a_current_sdo9,
+            pwm9               => cell_a_pwm9,
+            temp_sense9        => cell_a_temp_sense9,
+            current_sense9     => cell_a_current_sense9,
+            pwm_duty_request9  => cell_a_pwm_duty_request9,
+            temp_sdo10         => cell_a_temp_sdo10,
+            current_sdo10      => cell_a_current_sdo10,
+            pwm10              => cell_a_pwm10,
+            temp_sense10       => cell_a_temp_sense10,
+            current_sense10    => cell_a_current_sense10,
+            pwm_duty_request10 => cell_a_pwm_duty_request10,
+            temp_sdo11         => cell_a_temp_sdo11,
+            current_sdo11      => cell_a_current_sdo11,
+            pwm11              => cell_a_pwm11,
+            temp_sense11       => cell_a_temp_sense11,
+            current_sense11    => cell_a_current_sense11,
+            pwm_duty_request11 => cell_a_pwm_duty_request11,
+            temp_sdo12         => cell_a_temp_sdo12,
+            current_sdo12      => cell_a_current_sdo12,
+            pwm12              => cell_a_pwm12,
+            temp_sense12       => cell_a_temp_sense12,
+            current_sense12    => cell_a_current_sense12,
+            pwm_duty_request12 => cell_a_pwm_duty_request12,
+            temp_sdo13         => cell_a_temp_sdo13,
+            current_sdo13      => cell_a_current_sdo13,
+            pwm13              => cell_a_pwm13,
+            temp_sense13       => cell_a_temp_sense13,
+            current_sense13    => cell_a_current_sense13,
+            pwm_duty_request13 => cell_a_pwm_duty_request13,
+            temp_sdo14         => cell_a_temp_sdo14,
+            current_sdo14      => cell_a_current_sdo14,
+            pwm14              => cell_a_pwm14,
+            temp_sense14       => cell_a_temp_sense14,
+            current_sense14    => cell_a_current_sense14,
+            pwm_duty_request14 => cell_a_pwm_duty_request14,
+            rtd_sdo1           => cell_a_rtd_sdo1,
+            rtd_sense1         => cell_a_rtd_sense1,
+            rtd_sdo2           => cell_a_rtd_sdo2,
+            rtd_sense2         => cell_a_rtd_sense2
         );
 
-    cell_1 : entity work.cell_top
-        generic map (
-            pwm_counter_width => pwm_counter_width
-        )
+    cell_b : entity work.cell_top
+        generic map (pwm_counter_width => pwm_counter_width)
         port map (
-            clk              => clk,
-            reset            => reset,
-            global_sync      => global_sync,
-            adc_sclk         => adc_sclk(1),
-            adc_cs           => adc_cs(1),
-            pwm_period       => pwm_period,
-            pwm_phase_delay  => pwm_phase_delay(28 * (pwm_counter_width + 1) - 1 downto 14 * (pwm_counter_width + 1)),
-            pwm_duty_request => pwm_duty_request(28 * pwm_counter_width - 1 downto
-                                                 14 * pwm_counter_width),
-            pwm              => pwm(27 downto 14),
-            temp_adc_sdo     => temp_adc_sdo(27 downto 14),
-            temp_adc_data    => temperature_samples(895 downto 448),
-            current_adc_sdo  => current_adc_sdo(27 downto 14),
-            current_adc_data => current_samples(895 downto 448),
-            rtd_adc_sdo      => rtd_adc_sdo(3 downto 2),
-            rtd_adc_data     => rtd_samples(127 downto 64)
+            clk                => clk,
+            reset              => reset,
+            global_sync        => global_sync,
+            pwm_period         => pwm_period,
+            adc_sclk           => cell_b_adc_sclk,
+            adc_cs             => cell_b_adc_cs,
+            temp_sdo1          => cell_b_temp_sdo1,
+            current_sdo1       => cell_b_current_sdo1,
+            pwm1               => cell_b_pwm1,
+            temp_sense1        => cell_b_temp_sense1,
+            current_sense1     => cell_b_current_sense1,
+            pwm_duty_request1  => cell_b_pwm_duty_request1,
+            temp_sdo2          => cell_b_temp_sdo2,
+            current_sdo2       => cell_b_current_sdo2,
+            pwm2               => cell_b_pwm2,
+            temp_sense2        => cell_b_temp_sense2,
+            current_sense2     => cell_b_current_sense2,
+            pwm_duty_request2  => cell_b_pwm_duty_request2,
+            temp_sdo3          => cell_b_temp_sdo3,
+            current_sdo3       => cell_b_current_sdo3,
+            pwm3               => cell_b_pwm3,
+            temp_sense3        => cell_b_temp_sense3,
+            current_sense3     => cell_b_current_sense3,
+            pwm_duty_request3  => cell_b_pwm_duty_request3,
+            temp_sdo4          => cell_b_temp_sdo4,
+            current_sdo4       => cell_b_current_sdo4,
+            pwm4               => cell_b_pwm4,
+            temp_sense4        => cell_b_temp_sense4,
+            current_sense4     => cell_b_current_sense4,
+            pwm_duty_request4  => cell_b_pwm_duty_request4,
+            temp_sdo5          => cell_b_temp_sdo5,
+            current_sdo5       => cell_b_current_sdo5,
+            pwm5               => cell_b_pwm5,
+            temp_sense5        => cell_b_temp_sense5,
+            current_sense5     => cell_b_current_sense5,
+            pwm_duty_request5  => cell_b_pwm_duty_request5,
+            temp_sdo6          => cell_b_temp_sdo6,
+            current_sdo6       => cell_b_current_sdo6,
+            pwm6               => cell_b_pwm6,
+            temp_sense6        => cell_b_temp_sense6,
+            current_sense6     => cell_b_current_sense6,
+            pwm_duty_request6  => cell_b_pwm_duty_request6,
+            temp_sdo7          => cell_b_temp_sdo7,
+            current_sdo7       => cell_b_current_sdo7,
+            pwm7               => cell_b_pwm7,
+            temp_sense7        => cell_b_temp_sense7,
+            current_sense7     => cell_b_current_sense7,
+            pwm_duty_request7  => cell_b_pwm_duty_request7,
+            temp_sdo8          => cell_b_temp_sdo8,
+            current_sdo8       => cell_b_current_sdo8,
+            pwm8               => cell_b_pwm8,
+            temp_sense8        => cell_b_temp_sense8,
+            current_sense8     => cell_b_current_sense8,
+            pwm_duty_request8  => cell_b_pwm_duty_request8,
+            temp_sdo9          => cell_b_temp_sdo9,
+            current_sdo9       => cell_b_current_sdo9,
+            pwm9               => cell_b_pwm9,
+            temp_sense9        => cell_b_temp_sense9,
+            current_sense9     => cell_b_current_sense9,
+            pwm_duty_request9  => cell_b_pwm_duty_request9,
+            temp_sdo10         => cell_b_temp_sdo10,
+            current_sdo10      => cell_b_current_sdo10,
+            pwm10              => cell_b_pwm10,
+            temp_sense10       => cell_b_temp_sense10,
+            current_sense10    => cell_b_current_sense10,
+            pwm_duty_request10 => cell_b_pwm_duty_request10,
+            temp_sdo11         => cell_b_temp_sdo11,
+            current_sdo11      => cell_b_current_sdo11,
+            pwm11              => cell_b_pwm11,
+            temp_sense11       => cell_b_temp_sense11,
+            current_sense11    => cell_b_current_sense11,
+            pwm_duty_request11 => cell_b_pwm_duty_request11,
+            temp_sdo12         => cell_b_temp_sdo12,
+            current_sdo12      => cell_b_current_sdo12,
+            pwm12              => cell_b_pwm12,
+            temp_sense12       => cell_b_temp_sense12,
+            current_sense12    => cell_b_current_sense12,
+            pwm_duty_request12 => cell_b_pwm_duty_request12,
+            temp_sdo13         => cell_b_temp_sdo13,
+            current_sdo13      => cell_b_current_sdo13,
+            pwm13              => cell_b_pwm13,
+            temp_sense13       => cell_b_temp_sense13,
+            current_sense13    => cell_b_current_sense13,
+            pwm_duty_request13 => cell_b_pwm_duty_request13,
+            temp_sdo14         => cell_b_temp_sdo14,
+            current_sdo14      => cell_b_current_sdo14,
+            pwm14              => cell_b_pwm14,
+            temp_sense14       => cell_b_temp_sense14,
+            current_sense14    => cell_b_current_sense14,
+            pwm_duty_request14 => cell_b_pwm_duty_request14,
+            rtd_sdo1           => cell_b_rtd_sdo1,
+            rtd_sense1         => cell_b_rtd_sense1,
+            rtd_sdo2           => cell_b_rtd_sdo2,
+            rtd_sense2         => cell_b_rtd_sense2
         );
 
-    cell_2 : entity work.cell_top
-        generic map (
-            pwm_counter_width => pwm_counter_width
-        )
+    cell_c : entity work.cell_top
+        generic map (pwm_counter_width => pwm_counter_width)
         port map (
-            clk              => clk,
-            reset            => reset,
-            global_sync      => global_sync,
-            adc_sclk         => adc_sclk(2),
-            adc_cs           => adc_cs(2),
-            pwm_period       => pwm_period,
-            pwm_phase_delay  => pwm_phase_delay(42 * (pwm_counter_width + 1) - 1 downto 28 * (pwm_counter_width + 1)),
-            pwm_duty_request => pwm_duty_request(42 * pwm_counter_width - 1 downto
-                                                 28 * pwm_counter_width),
-            pwm              => pwm(41 downto 28),
-            temp_adc_sdo     => temp_adc_sdo(41 downto 28),
-            temp_adc_data    => temperature_samples(1343 downto 896),
-            current_adc_sdo  => current_adc_sdo(41 downto 28),
-            current_adc_data => current_samples(1343 downto 896),
-            rtd_adc_sdo      => rtd_adc_sdo(5 downto 4),
-            rtd_adc_data     => rtd_samples(191 downto 128)
+            clk                => clk,
+            reset              => reset,
+            global_sync        => global_sync,
+            pwm_period         => pwm_period,
+            adc_sclk           => cell_c_adc_sclk,
+            adc_cs             => cell_c_adc_cs,
+            temp_sdo1          => cell_c_temp_sdo1,
+            current_sdo1       => cell_c_current_sdo1,
+            pwm1               => cell_c_pwm1,
+            temp_sense1        => cell_c_temp_sense1,
+            current_sense1     => cell_c_current_sense1,
+            pwm_duty_request1  => cell_c_pwm_duty_request1,
+            temp_sdo2          => cell_c_temp_sdo2,
+            current_sdo2       => cell_c_current_sdo2,
+            pwm2               => cell_c_pwm2,
+            temp_sense2        => cell_c_temp_sense2,
+            current_sense2     => cell_c_current_sense2,
+            pwm_duty_request2  => cell_c_pwm_duty_request2,
+            temp_sdo3          => cell_c_temp_sdo3,
+            current_sdo3       => cell_c_current_sdo3,
+            pwm3               => cell_c_pwm3,
+            temp_sense3        => cell_c_temp_sense3,
+            current_sense3     => cell_c_current_sense3,
+            pwm_duty_request3  => cell_c_pwm_duty_request3,
+            temp_sdo4          => cell_c_temp_sdo4,
+            current_sdo4       => cell_c_current_sdo4,
+            pwm4               => cell_c_pwm4,
+            temp_sense4        => cell_c_temp_sense4,
+            current_sense4     => cell_c_current_sense4,
+            pwm_duty_request4  => cell_c_pwm_duty_request4,
+            temp_sdo5          => cell_c_temp_sdo5,
+            current_sdo5       => cell_c_current_sdo5,
+            pwm5               => cell_c_pwm5,
+            temp_sense5        => cell_c_temp_sense5,
+            current_sense5     => cell_c_current_sense5,
+            pwm_duty_request5  => cell_c_pwm_duty_request5,
+            temp_sdo6          => cell_c_temp_sdo6,
+            current_sdo6       => cell_c_current_sdo6,
+            pwm6               => cell_c_pwm6,
+            temp_sense6        => cell_c_temp_sense6,
+            current_sense6     => cell_c_current_sense6,
+            pwm_duty_request6  => cell_c_pwm_duty_request6,
+            temp_sdo7          => cell_c_temp_sdo7,
+            current_sdo7       => cell_c_current_sdo7,
+            pwm7               => cell_c_pwm7,
+            temp_sense7        => cell_c_temp_sense7,
+            current_sense7     => cell_c_current_sense7,
+            pwm_duty_request7  => cell_c_pwm_duty_request7,
+            temp_sdo8          => cell_c_temp_sdo8,
+            current_sdo8       => cell_c_current_sdo8,
+            pwm8               => cell_c_pwm8,
+            temp_sense8        => cell_c_temp_sense8,
+            current_sense8     => cell_c_current_sense8,
+            pwm_duty_request8  => cell_c_pwm_duty_request8,
+            temp_sdo9          => cell_c_temp_sdo9,
+            current_sdo9       => cell_c_current_sdo9,
+            pwm9               => cell_c_pwm9,
+            temp_sense9        => cell_c_temp_sense9,
+            current_sense9     => cell_c_current_sense9,
+            pwm_duty_request9  => cell_c_pwm_duty_request9,
+            temp_sdo10         => cell_c_temp_sdo10,
+            current_sdo10      => cell_c_current_sdo10,
+            pwm10              => cell_c_pwm10,
+            temp_sense10       => cell_c_temp_sense10,
+            current_sense10    => cell_c_current_sense10,
+            pwm_duty_request10 => cell_c_pwm_duty_request10,
+            temp_sdo11         => cell_c_temp_sdo11,
+            current_sdo11      => cell_c_current_sdo11,
+            pwm11              => cell_c_pwm11,
+            temp_sense11       => cell_c_temp_sense11,
+            current_sense11    => cell_c_current_sense11,
+            pwm_duty_request11 => cell_c_pwm_duty_request11,
+            temp_sdo12         => cell_c_temp_sdo12,
+            current_sdo12      => cell_c_current_sdo12,
+            pwm12              => cell_c_pwm12,
+            temp_sense12       => cell_c_temp_sense12,
+            current_sense12    => cell_c_current_sense12,
+            pwm_duty_request12 => cell_c_pwm_duty_request12,
+            temp_sdo13         => cell_c_temp_sdo13,
+            current_sdo13      => cell_c_current_sdo13,
+            pwm13              => cell_c_pwm13,
+            temp_sense13       => cell_c_temp_sense13,
+            current_sense13    => cell_c_current_sense13,
+            pwm_duty_request13 => cell_c_pwm_duty_request13,
+            temp_sdo14         => cell_c_temp_sdo14,
+            current_sdo14      => cell_c_current_sdo14,
+            pwm14              => cell_c_pwm14,
+            temp_sense14       => cell_c_temp_sense14,
+            current_sense14    => cell_c_current_sense14,
+            pwm_duty_request14 => cell_c_pwm_duty_request14,
+            rtd_sdo1           => cell_c_rtd_sdo1,
+            rtd_sense1         => cell_c_rtd_sense1,
+            rtd_sdo2           => cell_c_rtd_sdo2,
+            rtd_sense2         => cell_c_rtd_sense2
         );
+
 end architecture structural;
